@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should load FormComponent should load FormComponent 1`] = `
+<styled.div>
+  <form
+    onSubmit={[Function]}
+  >
+    <styled.div>
+      <WithStyles(ForwardRef(Typography))>
+        Email
+      </WithStyles(ForwardRef(Typography))>
+    </styled.div>
+    <styled.div>
+      <WithStyles(ForwardRef(TextField))
+        fullWidth={true}
+        inputRef={
+          Object {
+            "current": "",
+          }
+        }
+        label="Email"
+        required={true}
+        type="email"
+        variant="outlined"
+      />
+    </styled.div>
+    <styled.div>
+      <WithStyles(ForwardRef(Typography))>
+        Contraseña
+      </WithStyles(ForwardRef(Typography))>
+    </styled.div>
+    <styled.div>
+      <WithStyles(ForwardRef(TextField))
+        fullWidth={true}
+        inputRef={
+          Object {
+            "current": "",
+          }
+        }
+        label="Contraseña"
+        required={true}
+        type="password"
+        variant="outlined"
+      />
+    </styled.div>
+    <styled.div>
+      <styled.div>
+        <WithStyles(ForwardRef(Checkbox))
+          checked={false}
+          checkedIcon={<UNDEFINED />}
+          className="without-padding"
+          icon={<UNDEFINED />}
+          onChange={[Function]}
+          style={
+            Object {
+              "background": "none",
+              "borderradius": "none",
+              "color": "#4A5568",
+            }
+          }
+        />
+        <WithStyles(WithStyles(ForwardRef(Typography)))
+          style={
+            Object {
+              "padding": "10px 0",
+            }
+          }
+          text="#2D3748"
+        >
+          Recordarme
+        </WithStyles(WithStyles(ForwardRef(Typography)))>
+      </styled.div>
+      <styled.div>
+        <WithStyles(WithStyles(ForwardRef(Typography)))
+          onClick={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+              "padding": "10px 0",
+            }
+          }
+          text="#2C5282"
+        >
+          ¿Olvidaste la contraseña?
+        </WithStyles(WithStyles(ForwardRef(Typography)))>
+      </styled.div>
+    </styled.div>
+    <WithStyles(ForwardRef(Button))
+      fullWidth={true}
+      style={
+        Object {
+          "background": "#950740",
+          "color": "white",
+          "height": "50px",
+          "textTransform": "none",
+        }
+      }
+      type="submit"
+    >
+      Entrar
+    </WithStyles(ForwardRef(Button))>
+  </form>
+  <WithStyles(ForwardRef(Button))
+    fullWidth={true}
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#2D3748",
+        "color": "white",
+        "height": "50px",
+        "marginTop": "20px",
+        "textTransform": "none",
+      }
+    }
+  >
+    <img
+      alt="logo"
+      height={20}
+      src="google.svg"
+      style={
+        Object {
+          "paddingRight": "11px",
+        }
+      }
+      width={20}
+    />
+    Entrar con Google
+  </WithStyles(ForwardRef(Button))>
+</styled.div>
+`;

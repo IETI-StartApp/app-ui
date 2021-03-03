@@ -5,21 +5,24 @@ import CircleChecked from '@material-ui/icons/CheckCircleOutline';
 import CircleUnchecked from '@material-ui/icons/RadioButtonUnchecked';
 
 import {CheckBoxArea, FooterWrapper, ForgotPasswdArea, InputArea, TextArea, Wrapper} from "./styles";
-import google from '../../icons/google.svg'
 import {CustomTypography} from "../ButtonCustom";
+import google from '../../icons/google.svg'
+import {useAuth} from "../../services/Auth";
+import {useHistory} from "react-router";
 
 
-export const Form = () => {
+export const Form: React.FunctionComponent = () => {
+    let signInWithEmailAndPassword, signInWithGoogle, currentUser;
+    useAuth() === undefined ? {signInWithEmailAndPassword, signInWithGoogle, currentUser} = () => {
+    } : {signInWithEmailAndPassword, signInWithGoogle, currentUser} = useAuth()
+
     const [checked, setChecked] = useState(false);
     const emailRef = useRef('');
     const passwdRef = useRef('');
+    const history = useHistory();
 
     function handleChange(event) {
         setChecked(event.target.checked)
-    }
-
-    async function signInWithEmailAndPassword(value, value2) {
-
     }
 
     const handleSubmit = async (e) => {
@@ -27,16 +30,11 @@ export const Form = () => {
         try {
             console.log(emailRef.current.value, passwdRef.current.value)
             await signInWithEmailAndPassword(emailRef.current.value, passwdRef.current.value)
-            console.log("You're signed in!")
+            history.push('/register-project')
         } catch (error) {
-            console.error(error)
+            alert(error)
         }
     }
-
-    function signInWithGoogle() {
-        //TODO tobe implenented
-    }
-
     return (
         <Wrapper>
             <form onSubmit={handleSubmit}>
@@ -78,7 +76,7 @@ export const Form = () => {
                             style={{padding: '10px 0', cursor: 'pointer'}}
                             text='#2C5282'
                             onClick={() => {
-                                console.log('shi')
+                                alert('You are going to be redirected!')
                             }}
                         >
                             ¿Olvidaste la contraseña?
@@ -97,7 +95,10 @@ export const Form = () => {
                     Entrar
                 </Button>
             </form>
-            <Button onClick={signInWithGoogle}
+            <Button onClick={() => {
+                signInWithGoogle()
+                currentUser ? history.push('/register-project') : console.log('error')
+            }}
                     fullWidth
                     style={{
                         background: "#2D3748",
@@ -111,4 +112,5 @@ export const Form = () => {
             </Button>
         </Wrapper>
     );
+
 };
