@@ -8,18 +8,18 @@ import {CheckBoxArea, FooterWrapper, ForgotPasswdArea, InputArea, TextArea, Wrap
 import {CustomTypography} from "../ButtonCustom";
 import google from '../../icons/google.svg'
 import {useAuth} from "../../services/Auth";
+import {useHistory} from "react-router";
+
 
 export const Form: React.FunctionComponent = () => {
-    if (useAuth() === undefined) {
-        let {signInWithEmailAndPassword, signInWithGoogle, currentUser} = () => {
-        }
-    } else {
-        let {signInWithEmailAndPassword, signInWithGoogle, currentUser} = useAuth()
-    }
+    let signInWithEmailAndPassword, signInWithGoogle, currentUser;
+    useAuth() === undefined ? {signInWithEmailAndPassword, signInWithGoogle, currentUser} = () => {
+    } : {signInWithEmailAndPassword, signInWithGoogle, currentUser} = useAuth()
 
     const [checked, setChecked] = useState(false);
     const emailRef = useRef('');
     const passwdRef = useRef('');
+    const history = useHistory();
 
     function handleChange(event) {
         setChecked(event.target.checked)
@@ -30,6 +30,7 @@ export const Form: React.FunctionComponent = () => {
         try {
             console.log(emailRef.current.value, passwdRef.current.value)
             await signInWithEmailAndPassword(emailRef.current.value, passwdRef.current.value)
+            history.push('/register-project')
         } catch (error) {
             alert(error)
         }
@@ -95,7 +96,8 @@ export const Form: React.FunctionComponent = () => {
                 </Button>
             </form>
             <Button onClick={() => {
-                signInWithGoogle().then(console.log(currentUser))
+                signInWithGoogle()
+                currentUser ? history.push('/register-project') : console.log('error')
             }}
                     fullWidth
                     style={{
