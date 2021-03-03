@@ -1,7 +1,7 @@
 import { Grid, Paper, List, ListItemText } from '@material-ui/core';
 import React from 'react';
 import {styles} from './styles'
-import { Button } from '../ButtonCustom/Button';
+import { Button } from '../ButtonCustom';
 
 
 export const InformacionFinazas = ({
