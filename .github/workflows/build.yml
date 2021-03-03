@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - run: npm test -- --coverage --watchAll=false
+      - run: npm test -- --coverage --watchAll=false -u
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
