@@ -10,8 +10,13 @@ import google from '../../icons/google.svg'
 import {useAuth} from "../../services/Auth";
 
 export const Form: React.FunctionComponent = () => {
+    if (useAuth() === undefined) {
+        let {signInWithEmailAndPassword, signInWithGoogle, currentUser} = () => {
+        }
+    } else {
+        let {signInWithEmailAndPassword, signInWithGoogle, currentUser} = useAuth()
+    }
 
-    const {signInWithEmailAndPassword, signInWithGoogle,currentUser} = useAuth();
     const [checked, setChecked] = useState(false);
     const emailRef = useRef('');
     const passwdRef = useRef('');
@@ -89,8 +94,8 @@ export const Form: React.FunctionComponent = () => {
                     Entrar
                 </Button>
             </form>
-            <Button onClick={()=>{
-                signInWithGoogle().then( console.log(currentUser))
+            <Button onClick={() => {
+                signInWithGoogle().then(console.log(currentUser))
             }}
                     fullWidth
                     style={{

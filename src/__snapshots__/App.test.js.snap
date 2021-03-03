@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing progress bar should render appº 1`] = `
+<Fragment>
+  <BrowserRouter>
+    <AuthProvider>
+      <Redirect
+        exact={true}
+        from="/"
+        to="/login"
+      />
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/login"
+        />
+      </Switch>
+    </AuthProvider>
+  </BrowserRouter>
+</Fragment>
+`;

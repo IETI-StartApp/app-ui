@@ -1,9 +1,15 @@
-import React from "react";
-import {render, screen} from '@testing-library/react';
+import '@testing-library/jest-dom';
+import {shallow} from 'enzyme';
+import React from 'react';
 import {Form} from "./index";
 
-test('renders learn react link', () => {
-    render(<Form/>);
-    const linkElement = screen.getByText(/¿Olvidaste la contraseña?/i);
-    expect(linkElement).toBeInTheDocument();
-});
+
+describe('should load FormComponent', () => {
+
+    const wrapper = shallow(<Form/>)
+
+    test('should load FormComponent', () => {
+        expect(wrapper).toMatchSnapshot();
+    })
+
+})

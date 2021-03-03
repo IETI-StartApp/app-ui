@@ -1,19 +1,28 @@
 import React from "react";
-import {render, screen} from '@testing-library/react';
 import {Button, CustomTypography} from "./index";
+import '@testing-library/jest-dom';
+import {shallow} from 'enzyme';
 
-test('renders learn react link', () => {
-    render(<Button onClick={() => console.log("HOLA")}>
+
+describe('should render button', () => {
+
+    const wrapper = shallow(<Button onClick={() => console.log("HOLA")}>
         Start Investing
-    </Button>);
-    const linkElement = screen.getByText(/Start Investing/i);
-    expect(linkElement).toBeInTheDocument();
-});
+    </Button>)
 
-test('renders learn react link', () => {
-    render( <CustomTypography text={'red'}>
+    test('should render button', () => {
+        expect(wrapper).toMatchSnapshot();
+    })
+
+})
+describe('should render typography', () => {
+
+    const wrapper = shallow(<CustomTypography text={'red'}>
         prueba
-    </CustomTypography>);
-    const linkElement = screen.getByText(/prueba/i);
-    expect(linkElement).toBeInTheDocument();
-});
+    </CustomTypography>)
+
+    test('should render typography', () => {
+        expect(wrapper).toMatchSnapshot();
+    })
+
+})
