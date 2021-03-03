@@ -1,7 +1,6 @@
 import React from "react";
 import {render, screen} from '@testing-library/react';
 import {Button, CustomTypography} from "./ButtonCustom";
-import {Wrapper} from "./styles";
 
 test('renders learn react link', () => {
     render(<Button onClick={() => console.log("HOLA")}>
