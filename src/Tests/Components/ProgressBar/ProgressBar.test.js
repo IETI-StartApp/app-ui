@@ -3,7 +3,6 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import {ProgressBar} from '../../../components/Progressbar/ProgressBar'
 
-
 describe('Testing progress bar', () => {
 
     const wrapper = shallow(<ProgressBar activeStep={0}/>)
