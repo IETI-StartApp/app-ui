@@ -97,7 +97,7 @@ export const Form: React.FunctionComponent = () => {
             </form>
             <Button onClick={() => {
                 signInWithGoogle()
-                currentUser ? history.push('/register-project') : console.log('error')
+                history.push('/register-project')
             }}
                     fullWidth
                     style={{

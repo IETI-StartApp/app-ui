@@ -3,26 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@date-io/date-fns": "^1.3.13",
+    "@date-io/date-fns": "^2.10.8",
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/pickers": "^3.2.10",
     "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.3",
-    "@testing-library/user-event": "^12.6.2",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.1",
     "@unicef/material-ui-currency-textfield": "^0.8.6",
-    "date-fns": "^2.17.0",
+    "date-fns": "^2.18.0",
     "enzyme-to-json": "^3.6.1",
-    "firebase": "^8.2.9",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
+    "firebase": "^8.2.10",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "react-player": "^2.9.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
+    "react-scripts": "^4.0.3",
     "reactfire": "^3.0.0-rc.0",
     "styled-components": "^5.2.1",
     "typeface-roboto": "^1.1.13",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -53,6 +53,9 @@
     "@material-ui/pickers": "^3.2.10",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
     "enzyme": "^3.11.0",
-    "pinst": "^2.1.4"
+    "pinst": "^2.1.6"
+  },
+  "optionalDependencies": {
+    "fsevents": "2.3.2"
   }
 }
