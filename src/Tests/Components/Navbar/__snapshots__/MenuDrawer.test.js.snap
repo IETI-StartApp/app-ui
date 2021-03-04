@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing menu drawer should load menu drawer 1`] = `
+<WithStyles(ForwardRef(Drawer))
+  anchor="left"
+  className="makeStyles-drawer-6"
+  classes={
+    Object {
+      "paper": "makeStyles-drawerPaper-7",
+    }
+  }
+  onClose={[MockFunction]}
+  open={true}
+  variant="temporary"
+>
+  <div
+    className="makeStyles-offset-10"
+  >
+    <div
+      className="makeStyles-menuHeader-9"
+    />
+  </div>
+  <MenuItems />
+</WithStyles(ForwardRef(Drawer))>
+`;

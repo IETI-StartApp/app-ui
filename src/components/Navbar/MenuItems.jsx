@@ -5,36 +5,28 @@ import LabelImportantIcon from '@material-ui/icons/LabelImportant';
 import { useStyles } from './styles';
 
 export default function MenuItems() {
+
     const classes = useStyles();
+    const items = [
+        {text:"Opción 1", icon: <LabelImportantIcon />},
+        {text:"Opción 2", icon: <LabelImportantIcon />},
+        {text:"Opción 3", icon: <LabelImportantIcon />},
+        {text:"Opción 4", icon: <LabelImportantIcon />},
+        {text:"Opción 5", icon: <LabelImportantIcon />}
+    ];
 
     return (
         <List component='nav'>
-            <ListItem div>
-            </ListItem>
-            <ListItem button className={classes.mainColor}>
-                <ListItemIcon>
-                    <LabelImportantIcon />
-                </ListItemIcon>
-                <ListItemText primary='Opción 1' />
-            </ListItem>
-            <ListItem button className={classes.mainColor}>
-                <ListItemIcon>
-                    <LabelImportantIcon />
-                </ListItemIcon>
-                <ListItemText primary='Opción 2' />
-            </ListItem>
-            <ListItem button className={classes.mainColor}>
-                <ListItemIcon>
-                    <LabelImportantIcon />
-                </ListItemIcon>
-                <ListItemText primary='Opción 3' />
-            </ListItem >
-            <ListItem button className={classes.mainColor}>
-                <ListItemIcon>
-                    <LabelImportantIcon />
-                </ListItemIcon>
-                <ListItemText primary='Opción 4' />
-            </ListItem>
+            {
+                items.map( (item) => (
+                    <ListItem button className={classes.mainColor} key={item.text}>
+                        <ListItemIcon>
+                            {item.icon}
+                        </ListItemIcon>
+                        <ListItemText primary={item.text} />
+                    </ListItem>
+                ))
+            }
         </List>
     );
 

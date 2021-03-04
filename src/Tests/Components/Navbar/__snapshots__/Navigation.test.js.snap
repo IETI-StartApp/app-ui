@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing navigation should load navigation  1`] = `
+<div>
+  <Navbar
+    handleDrawerToggle={[Function]}
+  />
+  <Hidden>
+    <MenuDrawer
+      onClose={[Function]}
+      open={false}
+    />
+  </Hidden>
+</div>
+`;

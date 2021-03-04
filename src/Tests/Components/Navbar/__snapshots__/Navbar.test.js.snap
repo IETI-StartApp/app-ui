@@ -16,27 +16,31 @@ exports[`Testing navbar should load navbar  1`] = `
       <Memo([object Object]) />
     </WithStyles(ForwardRef(IconButton))>
     <WithStyles(ForwardRef(Typography))
-      className="makeStyles-title-3"
+      className="makeStyles-title-4"
       variant="h6"
     >
       StartApp
     </WithStyles(ForwardRef(Typography))>
-    <WithStyles(ForwardRef(Button))
-      className="makeStyles-buttonBar-4"
+    <Hidden
+      smDown={true}
     >
-      Opción 1
-    </WithStyles(ForwardRef(Button))>
-    <WithStyles(ForwardRef(Button))
-      className="makeStyles-buttonBar-4"
-    >
-      Opción 2
-    </WithStyles(ForwardRef(Button))>
-    <WithStyles(ForwardRef(Button))
-      className="makeStyles-buttonBar-4"
-      variant="outlined"
-    >
-      Opción 3
-    </WithStyles(ForwardRef(Button))>
+      <WithStyles(ForwardRef(Button))
+        className="makeStyles-buttonBar-5"
+      >
+        Opción 1
+      </WithStyles(ForwardRef(Button))>
+      <WithStyles(ForwardRef(Button))
+        className="makeStyles-buttonBar-5"
+      >
+        Opción 2
+      </WithStyles(ForwardRef(Button))>
+      <WithStyles(ForwardRef(Button))
+        className="makeStyles-buttonBar-5"
+        variant="outlined"
+      >
+        Opción 3
+      </WithStyles(ForwardRef(Button))>
+    </Hidden>
   </WithStyles(ForwardRef(Toolbar))>
 </WithStyles(ForwardRef(AppBar))>
 `;
