@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing menu items should load menu items 1`] = `
+<WithStyles(ForwardRef(List))
+  component="nav"
+>
+  <WithStyles(ForwardRef(ListItem))
+    button={true}
+    className="makeStyles-mainColor-3"
+    key="Opción 1"
+  >
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <Memo([object Object]) />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
+      primary="Opción 1"
+    />
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(ListItem))
+    button={true}
+    className="makeStyles-mainColor-3"
+    key="Opción 2"
+  >
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <Memo([object Object]) />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
+      primary="Opción 2"
+    />
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(ListItem))
+    button={true}
+    className="makeStyles-mainColor-3"
+    key="Opción 3"
+  >
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <Memo([object Object]) />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
+      primary="Opción 3"
+    />
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(ListItem))
+    button={true}
+    className="makeStyles-mainColor-3"
+    key="Opción 4"
+  >
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <Memo([object Object]) />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
+      primary="Opción 4"
+    />
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(ListItem))
+    button={true}
+    className="makeStyles-mainColor-3"
+    key="Opción 5"
+  >
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <Memo([object Object]) />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
+      primary="Opción 5"
+    />
+  </WithStyles(ForwardRef(ListItem))>
+</WithStyles(ForwardRef(List))>
+`;
