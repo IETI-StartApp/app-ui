@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing progress graph should load ProgressGraph 1`] = `
+<Styled(MuiBox)
+  display="inline-flex"
+  position="relative"
+>
+  <WithStyles(ForwardRef(CircularProgress))
+    className="makeStyles-mainColor-2"
+    value={70}
+    variant="determinate"
+  />
+  <Styled(MuiBox)
+    alignItems="center"
+    bottom={0}
+    display="flex"
+    justifyContent="center"
+    left={0}
+    position="absolute"
+    right={0}
+    top={0}
+  >
+    <WithStyles(ForwardRef(Typography))
+      component="div"
+      variant="caption"
+    >
+      70%
+    </WithStyles(ForwardRef(Typography))>
+  </Styled(MuiBox)>
+</Styled(MuiBox)>
+`;
