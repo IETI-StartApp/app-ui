@@ -340,7 +340,7 @@ exports[`Testing Project Description should load <ProjectDescription /> correctl
         />
         <WithStyles(ForwardRef(Button))
           className="makeStyles-btn-5"
-          endIcon={<UNDEFINED />}
+          endIcon={<Memo />}
           onClick={[Function]}
           variant="contained"
         >

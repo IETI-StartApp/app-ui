@@ -315,13 +315,13 @@ exports[`Testing Project Presentation should load <ProjectPresentation /> correc
         <WithStyles(ForwardRef(TextField))
           InputProps={
             Object {
-              "startAdornment": <ForwardRef(WithStyles(ForwardRef(InputAdornment)))
+              "startAdornment": <WithStyles(ForwardRef(InputAdornment))
                 position="start"
               >
                 <span>
                   🏳️
                 </span>
-              </ForwardRef(WithStyles(ForwardRef(InputAdornment)))>,
+              </WithStyles(ForwardRef(InputAdornment))>,
             }
           }
           className="makeStyles-inputField-2"
@@ -345,13 +345,13 @@ exports[`Testing Project Presentation should load <ProjectPresentation /> correc
             <WithStyles(ForwardRef(TextField))
               InputProps={
                 Object {
-                  "startAdornment": <ForwardRef(WithStyles(ForwardRef(InputAdornment)))
+                  "startAdornment": <WithStyles(ForwardRef(InputAdornment))
                     position="start"
                   >
                     <span>
                       🎥
                     </span>
-                  </ForwardRef(WithStyles(ForwardRef(InputAdornment)))>,
+                  </WithStyles(ForwardRef(InputAdornment))>,
                 }
               }
               className="makeStyles-inputField-2"
@@ -368,7 +368,7 @@ exports[`Testing Project Presentation should load <ProjectPresentation /> correc
           >
             <WithStyles(ForwardRef(Button))
               className="makeStyles-btn-5"
-              endIcon={<UNDEFINED />}
+              endIcon={<Memo />}
               onClick={[Function]}
               variant="contained"
             >
@@ -378,7 +378,7 @@ exports[`Testing Project Presentation should load <ProjectPresentation /> correc
         </WithStyles(ForwardRef(Grid))>
         <WithStyles(ForwardRef(Button))
           className="makeStyles-btn-5"
-          endIcon={<UNDEFINED />}
+          endIcon={<Memo />}
           onClick={[MockFunction]}
           variant="contained"
         >

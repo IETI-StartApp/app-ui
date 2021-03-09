@@ -47,9 +47,9 @@ exports[`should load FormComponent should load FormComponent 1`] = `
       <styled.div>
         <WithStyles(ForwardRef(Checkbox))
           checked={false}
-          checkedIcon={<UNDEFINED />}
+          checkedIcon={<Memo />}
           className="without-padding"
-          icon={<UNDEFINED />}
+          icon={<Memo />}
           onChange={[Function]}
           style={
             Object {

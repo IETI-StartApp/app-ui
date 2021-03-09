@@ -4,7 +4,7 @@ import background from './background.png'
 import {FormSection, Wrapper} from "./styles";
 import {Grid, makeStyles, Typography} from "@material-ui/core";
 
-export const LoginPage = () => {
+export const LoginPage = ({signInWithEmailAndPassword, signInWithGoogle}) => {
     const useStyles = makeStyles((theme) => ({
         img: {
             width: "100%",
@@ -29,7 +29,7 @@ export const LoginPage = () => {
                                 <Typography variant='h4' style={{fontWeight: 700}}>
                                     Ingresa a tu cuenta
                                 </Typography>
-                                <Form/>
+                                <Form signInWithEmailAndPassword={signInWithEmailAndPassword} signInWithGoogle={signInWithGoogle}/>
                                 <Typography>
                                     ¿No tienes una cuenta? Registrate gratis hoy!
                                 </Typography>

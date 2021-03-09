@@ -6,12 +6,12 @@ exports[`Testing card project should load CardProject 1`] = `
 >
   <WithStyles(ForwardRef(CardHeader))
     avatar={
-      <ForwardRef(WithStyles(ForwardRef(Avatar)))
+      <WithStyles(ForwardRef(Avatar))
         aria-label="photo"
         src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg"
       />
     }
-    subheader="2021-11-2"
+    subheader="11/2/2021"
     title="Nombre de usuario"
   />
   <WithStyles(ForwardRef(CardMedia))

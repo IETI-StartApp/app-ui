@@ -11,10 +11,7 @@ import {useAuth} from "../../services/Auth";
 import {useHistory} from "react-router";
 
 
-export const Form: React.FunctionComponent = () => {
-    let signInWithEmailAndPassword, signInWithGoogle, currentUser;
-    useAuth() === undefined ? {signInWithEmailAndPassword, signInWithGoogle, currentUser} = () => {
-    } : {signInWithEmailAndPassword, signInWithGoogle, currentUser} = useAuth()
+export const Form = ({signInWithEmailAndPassword, signInWithGoogle}) => {
 
     const [checked, setChecked] = useState(false);
     const emailRef = useRef('');
