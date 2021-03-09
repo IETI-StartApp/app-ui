@@ -17,9 +17,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: rm -rf node_modules && yarn install --frozen-lockfile
-      - run: yarn build
-      - run: yarn test --coverage --watchAll=false -u
+      - run: npm ci
+      - run: npm run build --if-present
+      - run: npm test -- --coverage --watchAll=false -u
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
