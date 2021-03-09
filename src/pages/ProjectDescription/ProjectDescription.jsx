@@ -25,27 +25,27 @@ export const ProjectDescription = () => {
         "fechaFin": "24/02/2022"
     }
     const {nombre, imagen, emprendedor, video, link, pais, descripcion} = json;
-   
+
     return (
       <>
         <InformacioProyecto nombreProyecto = {nombre} nombreUsuario = {emprendedor} fotoPerfil = {imagen}/>
-        <Grid container alignItems="center" alignItems="flex-start">
+        <Grid container alignItems="flex-start">
           <Grid item xs={7}>
             <Video video = {video} ancho='100%' alto='460px'/>
             <BarInfo link = {link} pais = {pais} texto = {descripcion}/>
           </Grid>
           <Grid item xs={5}>
-          <InformacionFinazas 
-            valor = {finanzas.valor}  
-            inversionistas = {finanzas.numeroInversionistas} 
-            valoracion = {finanzas.valoracion} 
-            InversionMinima ={finanzas.inversionMinima} 
-            socios = {finanzas.socios} 
-            fechaInicio = {finanzas.fechaInicio} 
+          <InformacionFinazas
+            valor = {finanzas.valor}
+            inversionistas = {finanzas.numeroInversionistas}
+            valoracion = {finanzas.valoracion}
+            InversionMinima ={finanzas.inversionMinima}
+            socios = {finanzas.socios}
+            fechaInicio = {finanzas.fechaInicio}
             FechaFin = {finanzas.fechaFin}/>
-          </Grid> 
+          </Grid>
         </Grid>
-        
+
       </>
     );
   };

@@ -32,7 +32,7 @@ export const RegisterProjectPage = () => {
     const [activeStep, setActiveStep] = useState(0);
     const handleNext = useCallback(() => {
         setActiveStep(prevActiveStep => prevActiveStep + 1)}
-    );
+   ,[] );
     const handlePrev = () => {
         setActiveStep(prevActiveStep => prevActiveStep -1)
     }
@@ -45,8 +45,8 @@ export const RegisterProjectPage = () => {
         videoSource: ''
     });
     const [dueDate,setDueDate] = useState(new Date());
-    const handleDateChange = useCallback((date) => setDueDate(date));
-    const handleChange = useCallback(handleInputChange);
+    const handleDateChange = useCallback((date) => setDueDate(date),[]);
+    const handleChange = useCallback(handleInputChange,[]);
     const classes = useStyles();
     const dueDateString = dueDate.toDateString();
     const getStepContent = (stepIndex) => {
