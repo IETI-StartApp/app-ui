@@ -46,7 +46,7 @@ export const RegisterProjectPage = () => {
     });
     const [dueDate,setDueDate] = useState(new Date());
     const handleDateChange = useCallback((date) => setDueDate(date),[]);
-    const handleChange = useCallback(handleInputChange,[]);
+    const handleChange = useCallback(handleInputChange,[handleInputChange]);
     const classes = useStyles();
     const dueDateString = dueDate.toDateString();
     const getStepContent = (stepIndex) => {
