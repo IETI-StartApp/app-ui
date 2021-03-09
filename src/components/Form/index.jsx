@@ -7,7 +7,6 @@ import CircleUnchecked from '@material-ui/icons/RadioButtonUnchecked';
 import {CheckBoxArea, FooterWrapper, ForgotPasswdArea, InputArea, TextArea, Wrapper} from "./styles";
 import {CustomTypography} from "../ButtonCustom";
 import google from '../../icons/google.svg'
-import {useAuth} from "../../services/Auth";
 import {useHistory} from "react-router";
 
 
