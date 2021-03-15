@@ -12,7 +12,11 @@ const customRender = (ui, { providerProps, ...renderOptions }) => {
 
 test('renders learn react link', () => {
     console.log(contextValues)
-    customRender(<AuthForm functions={()=>{}}/>,contextValues)
+    const fun1 = () => {
+    }
+    const fun2 = () => {
+    }
+    customRender(<AuthForm functions={{fun1,fun2}}/>,contextValues)
     const linkElement = screen.getAllByText(/Email/i);
     expect(true)
 });

@@ -12,13 +12,7 @@ import {CustomTypography} from "../index";
 
 
 export const AuthForm = ({functions}) => {
-    if (functions === undefined) {
-        let {signInWithEmailAndPassword, signInWithGoogle} = () => {
-        }
-    } else {
-        let {signInWithEmailAndPassword, signInWithGoogle} = functions
-    }
-
+    const {signInWithEmailAndPassword, signInWithGoogle} = functions
     const [checked, setChecked] = useState(false);
     const emailRef = useRef('');
     const passwdRef = useRef('');

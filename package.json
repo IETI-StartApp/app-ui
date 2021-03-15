@@ -20,6 +20,7 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
+    "react-test-renderer": "^17.0.1",
     "reactfire": "^3.0.0-rc.0",
     "styled-components": "^5.2.1",
     "typeface-roboto": "^1.1.13",
@@ -54,6 +55,7 @@
     "@material-ui/pickers": "^3.2.10",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
     "enzyme": "^3.11.0",
-    "pinst": "^2.1.6"
+    "pinst": "^2.1.6",
+    "sinon": "^9.2.4"
   }
 }

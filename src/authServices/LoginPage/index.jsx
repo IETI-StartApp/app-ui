@@ -5,14 +5,25 @@ import {FormSection, Wrapper} from "./styles";
 import {Grid, makeStyles, Typography} from "@material-ui/core";
 import {useAuth} from "../Auth";
 
-export const LoginPage = ({test}) => {
+export const LoginPage = () => {
     const useStyles = makeStyles((theme) => ({
         img: {
             width: "100%",
             height: "100%"
         },
     }));
-    const styles = useStyles();
+    let styles
+    try {
+        styles = useStyles();
+    } catch (e) {
+        styles = {
+            img: {
+                width: "100%",
+                height: "100%"
+            },
+        };
+    }
+
     return (
         <Wrapper>
             <Grid container direction="row" justify="flex-end" alignItems="stretch">

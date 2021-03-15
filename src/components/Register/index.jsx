@@ -1,17 +1,16 @@
 import "./styles.js";
 import React, {useState} from 'react'
-import {TextField,  Grid} from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import {ButtonDesign, FormDesign, ErrorDesign, BackDesign} from "./styles";
-import {useAuth} from "../../authServices/Auth";
+import {Grid, TextField} from '@material-ui/core';
+import {makeStyles} from '@material-ui/core/styles';
+import {BackDesign, ButtonDesign, ErrorDesign, FormDesign} from "./styles";
 import {useHistory} from "react-router";
 import background from '../../authServices/LoginPage/background.png'
 
-const useStyles = makeStyles((theme) => ({
+const cssObject = {
     paper: {
-      width: "100%",
-      height: "100%",
-      overflowY: "auto"
+        width: "100%",
+        height: "100%",
+        overflowY: "auto"
 
     },
     root: {
@@ -29,119 +28,129 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
         margin: "1rem 0",
     },
-    Magin:{
+    Magin: {
         marginTop: "25px"
     }
+}
+const useStyles = makeStyles((theme) => (cssObject));
 
-  }));
-
-export const Register = () => {
+export const Register = ({auth}) => {
     const history = useHistory();
-    const {createUserWithEmailAndPassword} = useAuth();
-    const [values,setValues] = useState({
+    const {createUserWithEmailAndPassword} = auth
+    const [values, setValues] = useState({
         username: "",
-        email:"",
+        email: "",
         contra: "",
         contra2: ""
     })
-    const handleChange = e =>{
+    const handleChange = e => {
         setValues({
-            ...values,[e.target.name]: e.target.value
+            ...values, [e.target.name]: e.target.value
         })
     }
-    const [errors,setErrors] = useState({
-    })
+    const [errors, setErrors] = useState({})
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = e =>{
+    const handleSubmit = e => {
         e.preventDefault();
         setErrors(validationForm(values));
         setIsSubmitting(true)
-        if (Object.keys(errors) < 1 && isSubmitting){
-            createUserWithEmailAndPassword(values.email,values.contra,values.username).then(history.push('/register-project'))
+        if (Object.keys(errors) < 1 && isSubmitting) {
+            createUserWithEmailAndPassword(values.email, values.contra, values.username).then(history.push('/register-project'))
         }
 
     }
 
 
-
-    function validationForm(valor){
-        let errores= {}
-        if (!valor.username.trim()){
+    function validationForm(valor) {
+        let errores = {}
+        if (!valor.username.trim()) {
             errores.username = "Required"
             setIsSubmitting(false)
         }
         if (!valor.email) {
             errores.email = 'Required';
             setIsSubmitting(false)
-          } else if (!/\S+@\S+\.\S+/.test(valor.email)) {
+        } else if (!/\S+@\S+\.\S+/.test(valor.email)) {
             errores.email = 'Email address is invalid';
             setIsSubmitting(false)
         }
-        if (!valor.contra){
-            errores.contra ="Required"
+        if (!valor.contra) {
+            errores.contra = "Required"
             setIsSubmitting(false)
-        }else if (valor.contra.length < 6){
-            errores.contra ="Needs at least 6 characters "
+        } else if (valor.contra.length < 6) {
+            errores.contra = "Needs at least 6 characters "
             setIsSubmitting(false)
         }
-        if (!valor.contra2){
-            errores.contra2 ="Required"
+        if (!valor.contra2) {
+            errores.contra2 = "Required"
             setIsSubmitting(false)
-        }else if(valor.contra !== valor.contra2){
-            errores.contra2 ="Do not match"
+        } else if (valor.contra !== valor.contra2) {
+            errores.contra2 = "Do not match"
             setIsSubmitting(false)
         }
         return errores;
     }
-    const classes =  useStyles();
+
+    let classes;
+    try {
+        classes = useStyles()
+    } catch (e) {
+        classes = cssObject
+    }
+
     return (
 
         <Grid container direction="row" justify="flex-end" alignItems="stretch" className={classes.root}>
-            <Grid item xs={6} >
-            <img className={classes.paper} alt="" src={background}/>
+            <Grid item xs={6}>
+                <img className={classes.paper} alt="" src={background}/>
 
             </Grid>
             <Grid item xs={6}>
-            <Grid container className={classes.Magin} direction="row-reverse" justify="space-around" alignItems="center"  >
-            <Grid item xs={8}>
-            </Grid>
-                <BackDesign href='#'> Back</BackDesign>
-            </Grid>
-            <div className={classes.formContainer}>
-            <FormDesign className = "form"  onSubmit={handleSubmit}>
+                <Grid container className={classes.Magin} direction="row-reverse" justify="space-around"
+                      alignItems="center">
+                    <Grid item xs={8}>
+                    </Grid>
+                    <BackDesign href='#'> Back</BackDesign>
+                </Grid>
+                <div className={classes.formContainer}>
+                    <FormDesign className="form" onSubmit={handleSubmit}>
 
 
-                <h1>Completa tu perfil </h1>
-                <h3>A efectos de la regulación del sector, se requieren los datos de su perfil</h3>
+                        <h1>Completa tu perfil </h1>
+                        <h3>A efectos de la regulación del sector, se requieren los datos de su perfil</h3>
 
-                <div>
-                <TextField className={classes.inputField} id="outlined-basic" label="Nombre" name="username" type="text" value={values.username} onChange={handleChange}/>
-                    {errors.username && <ErrorDesign>{errors.username}</ErrorDesign>}
+                        <div>
+                            <TextField className={classes.inputField} id="outlined-basic" label="Nombre" name="username"
+                                       type="text" value={values.username} onChange={handleChange}/>
+                            {errors.username && <ErrorDesign>{errors.username}</ErrorDesign>}
+
+                        </div>
+
+                        <div className="inputs">
+                            <TextField className={classes.inputField} id="standard-basic" label="Email" type="email"
+                                       name="email" value={values.email} onChange={handleChange}/>
+                            {errors.email && <ErrorDesign>{errors.email}</ErrorDesign>}
+                        </div>
+                        <div className="inputs">
+                            <TextField className={classes.inputField} id="standard-basic" label="Password"
+                                       type="password" name="contra" value={values.contra} onChange={handleChange}/>
+                            {errors.contra && <ErrorDesign>{errors.contra}</ErrorDesign>}
+                        </div>
+                        <div className="inputs">
+                            <TextField className={classes.inputField} id="standard-basic" label="Confirmed Password"
+                                       type="password" name="contra2" value={values.contra2} onChange={handleChange}/>
+                            {errors.contra2 && <ErrorDesign>{errors.contra2}</ErrorDesign>}
+                        </div>
+
+
+                        <ButtonDesign className="button" type="submit">
+                            Sign Up
+                        </ButtonDesign>
+
+                    </FormDesign>
 
                 </div>
-
-                <div className="inputs">
-                    <TextField  className={classes.inputField} id="standard-basic" label="Email" type="email" name="email"   value={values.email} onChange={handleChange}/>
-                        {errors.email && <ErrorDesign>{errors.email}</ErrorDesign>}
-                </div>
-                <div className="inputs">
-                    <TextField  className={classes.inputField} id="standard-basic" label="Password" type="password" name="contra" value={values.contra} onChange={handleChange}/>
-                        {errors.contra && <ErrorDesign>{errors.contra}</ErrorDesign>}
-                </div>
-                <div className="inputs">
-                    <TextField  className={classes.inputField} id="standard-basic" label="Confirmed Password" type="password" name="contra2" value={values.contra2} onChange={handleChange}/>
-                        {errors.contra2 && <ErrorDesign>{errors.contra2}</ErrorDesign>}
-                </div>
-
-
-                <ButtonDesign className="button" type="submit">
-                    Sign Up
-                </ButtonDesign>
-
-            </FormDesign>
-
-            </div>
 
             </Grid>
         </Grid>

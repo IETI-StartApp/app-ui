@@ -12,21 +12,21 @@ const google = new firebase.auth.GoogleAuthProvider();
 
 export const useAuth = () => useContext(AuthContext);
 
-export const createUserWithEmailAndPassword = (email, password) =>
+const createUserWithEmailAndPassword = (email, password) =>
     Auth.createUserWithEmailAndPassword(email, password)
 
-export const signInWithEmailAndPassword = (email, password) => {
+const signInWithEmailAndPassword = (email, password) => {
     return Auth.signInWithEmailAndPassword(email, password)
 }
 
-export const signOut = () => {
+ const signOut = () => {
     return Auth.signOut()
 }
 
-export const resetPassword = (email) => {
+ const resetPassword = (email) => {
     return Auth.sendPasswordResetEmail(email)
 }
-export const signInWithGoogle = () => {
+ const signInWithGoogle = () => {
     return Auth.signInWithPopup(google)
 }
 
