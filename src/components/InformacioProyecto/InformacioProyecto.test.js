@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import {InformacioProyecto} from './InformacioProyecto'
+import {InformacioProyecto} from './index'
 
 test('renders learn react link', () => {
   render(<InformacioProyecto nombreProyecto = "WI buckets" nombreUsuario = "Sergio Alejandro" fotoPerfil = 'Ruta de la foto de perfil'/>);

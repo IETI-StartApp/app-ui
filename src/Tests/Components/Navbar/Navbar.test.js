@@ -1,23 +1,10 @@
-import '@testing-library/jest-dom';
-import { shallow } from 'enzyme';
-import React from 'react';
-import Navbar from '../../../components/Navbar/Navbar';
-import { IconButton } from '@material-ui/core';
+import { mount } from "enzyme";
+import Navbar from "../../../components/Navbar"; // mount instead of `shallow` here
 
-describe('Testing navbar', () => {
+it('should render', () => {
+    const component = mount(<Navbar handleDrawerToggle={()=>{}} signOut={()=>{}} />); // `mount` here as well
+    const wrapper = component.find('myClassName');
+    expect(wrapper.length).toBe(0);
+});
 
-    const handleDrawerToggle = jest.fn();
 
-    const wrapper = shallow(<Navbar handleDrawerToggle={handleDrawerToggle}/>)
-
-    test('should load navbar ', () => {
-        expect(wrapper).toMatchSnapshot();
-    })
-
-    test('should call handleDrawerToggle function', () => {
-        const iconButton = wrapper.find(IconButton).at(0);
-        iconButton.simulate("Click");
-        expect( handleDrawerToggle ).toHaveBeenCalled();
-    })
-    
-})

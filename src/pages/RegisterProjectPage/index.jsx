@@ -1,5 +1,5 @@
 import React, { useState,useCallback } from 'react'
-import { ProgressBar } from '../../components/Progressbar/ProgressBar'
+import { ProgressBar } from '../../components/Progressbar'
 import { makeStyles, Fab } from '@material-ui/core';
 import steps from './steps';
 import {ProjectDescription} from '../../components/ProjectForm/ProjectDescription';
@@ -9,6 +9,7 @@ import {useForm} from "../../hooks/useForm";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import {ThemeProvider} from "@material-ui/core/styles";
 import globalTheme from "../../globalTheme";
+import Navigation from "../../components/Navbar/Navigation";
 
 const useStyles = makeStyles({
     root: {
@@ -32,7 +33,7 @@ export const RegisterProjectPage = () => {
     const [activeStep, setActiveStep] = useState(0);
     const handleNext = useCallback(() => {
         setActiveStep(prevActiveStep => prevActiveStep + 1)}
-    );
+        ,[]);
     const handlePrev = () => {
         setActiveStep(prevActiveStep => prevActiveStep -1)
     }
@@ -45,8 +46,8 @@ export const RegisterProjectPage = () => {
         videoSource: ''
     });
     const [dueDate,setDueDate] = useState(new Date());
-    const handleDateChange = useCallback((date) => setDueDate(date));
-    const handleChange = useCallback(handleInputChange);
+    const handleDateChange = useCallback((date) => setDueDate(date),[]);
+    const handleChange = useCallback(handleInputChange,[handleInputChange]);
     const classes = useStyles();
     const dueDateString = dueDate.toDateString();
     const getStepContent = (stepIndex) => {
@@ -72,6 +73,7 @@ export const RegisterProjectPage = () => {
     }
     return (
         <ThemeProvider theme={globalTheme}>
+            <Navigation/>
             <div className={classes.root}>
                 <ProgressBar activeStep={activeStep}/>
                 {activeStep === steps.length ? "Finished": (

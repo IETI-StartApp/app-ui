@@ -1,20 +1,23 @@
 import React, {useRef, useState} from 'react';
+import {useHistory} from "react-router";
 import {Button, Checkbox, TextField, Typography} from "@material-ui/core";
 import 'typeface-roboto';
 import CircleChecked from '@material-ui/icons/CheckCircleOutline';
 import CircleUnchecked from '@material-ui/icons/RadioButtonUnchecked';
 
 import {CheckBoxArea, FooterWrapper, ForgotPasswdArea, InputArea, TextArea, Wrapper} from "./styles";
-import {CustomTypography} from "../ButtonCustom";
 import google from '../../icons/google.svg'
-import {useAuth} from "../../services/Auth";
-import {useHistory} from "react-router";
+import {Auth} from "../../authServices/firebase-config";
+import {CustomTypography} from "../index";
 
 
-export const Form: React.FunctionComponent = () => {
-    let signInWithEmailAndPassword, signInWithGoogle, currentUser;
-    useAuth() === undefined ? {signInWithEmailAndPassword, signInWithGoogle, currentUser} = () => {
-    } : {signInWithEmailAndPassword, signInWithGoogle, currentUser} = useAuth()
+export const AuthForm = ({functions}) => {
+    if (functions === undefined) {
+        let {signInWithEmailAndPassword, signInWithGoogle} = () => {
+        }
+    } else {
+        let {signInWithEmailAndPassword, signInWithGoogle} = functions
+    }
 
     const [checked, setChecked] = useState(false);
     const emailRef = useRef('');
@@ -30,10 +33,17 @@ export const Form: React.FunctionComponent = () => {
         try {
             console.log(emailRef.current.value, passwdRef.current.value)
             await signInWithEmailAndPassword(emailRef.current.value, passwdRef.current.value)
-            history.push('/register-project')
+            if (Auth.currentUser) {
+                history.push('/register-project')
+            }
         } catch (error) {
             alert(error)
         }
+    }
+
+    const googleSignIn = async () => {
+        await signInWithGoogle()
+        await Auth.currentUser ? history.push('/register-project') : history.push('/signin')
     }
     return (
         <Wrapper>
@@ -95,10 +105,7 @@ export const Form: React.FunctionComponent = () => {
                     Entrar
                 </Button>
             </form>
-            <Button onClick={() => {
-                signInWithGoogle()
-                currentUser ? history.push('/register-project') : console.log('error')
-            }}
+            <Button onClick={googleSignIn}
                     fullWidth
                     style={{
                         background: "#2D3748",

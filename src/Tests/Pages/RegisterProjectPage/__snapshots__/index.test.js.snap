@@ -293,6 +293,7 @@ exports[`Testing register page should render register page 1`] = `
     }
   }
 >
+  <Navigation />
   <div
     className="makeStyles-root-1"
   >

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import {BarInfo} from './BarInfo';
+import {BarInfo} from './index';
 const json={
   "nombre": "WI buckets",
   "imagen": "https://cdn.discordapp.com/attachments/471909299753451523/814307715815309352/unknown.png",

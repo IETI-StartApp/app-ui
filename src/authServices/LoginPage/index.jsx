@@ -1,10 +1,11 @@
 import React from "react";
-import {Form} from "../../components";
+import {AuthForm} from "../../components";
 import background from './background.png'
 import {FormSection, Wrapper} from "./styles";
 import {Grid, makeStyles, Typography} from "@material-ui/core";
+import {useAuth} from "../Auth";
 
-export const LoginPage = () => {
+export const LoginPage = ({test}) => {
     const useStyles = makeStyles((theme) => ({
         img: {
             width: "100%",
@@ -29,7 +30,7 @@ export const LoginPage = () => {
                                 <Typography variant='h4' style={{fontWeight: 700}}>
                                     Ingresa a tu cuenta
                                 </Typography>
-                                <Form/>
+                                <AuthForm functions={useAuth()}/>
                                 <Typography>
                                     ¿No tienes una cuenta? Registrate gratis hoy!
                                 </Typography>

@@ -3,8 +3,9 @@ import React, {useState} from 'react'
 import {TextField,  Grid} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import {ButtonDesign, FormDesign, ErrorDesign, BackDesign} from "./styles";
-import {useAuth} from "../../services/Auth";
+import {useAuth} from "../../authServices/Auth";
 import {useHistory} from "react-router";
+import background from '../../authServices/LoginPage/background.png'
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -98,7 +99,7 @@ export const Register = () => {
 
         <Grid container direction="row" justify="flex-end" alignItems="stretch" className={classes.root}>
             <Grid item xs={6} >
-            <img className={classes.paper} alt="" src="https://media.discordapp.net/attachments/745690056441987075/813964535899619328/image2.png?width=519&height=662"/>
+            <img className={classes.paper} alt="" src={background}/>
 
             </Grid>
             <Grid item xs={6}>
