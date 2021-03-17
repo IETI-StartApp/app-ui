@@ -46,7 +46,7 @@ export const AuthProvider = ({children}) => {
 
     useEffect(() => {
         return Auth.onAuthStateChanged(user => {
-            //TODO send UID to backend
+            //send UID to backend
             setCurrentUser(user)
             setLoading(false)
         })

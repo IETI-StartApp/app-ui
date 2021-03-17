@@ -17,9 +17,7 @@ export default function Navigation() {
     return (
         <div className={classes.root}>
             <Navbar
-                handleDrawerToggle={handleDrawerToggle}
-                undeFunction={() => {
-                }}/>
+                handleDrawerToggle={handleDrawerToggle}/>
             <Hidden>
                 <MenuDrawer
                     open={menuOpen}

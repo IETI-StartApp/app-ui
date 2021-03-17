@@ -8,7 +8,7 @@ import background from '../LoginPage/background.png'
 
 export const UserSelect = () => {
     const classes = styleCard();
-    //TODO link to signin
+    // link to signin
     return (
         <div>
             <Grid container direction="row" justify="flex-end" alignItems="stretch" className={classes.root}>

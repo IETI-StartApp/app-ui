@@ -37,7 +37,7 @@ export const AuthForm = ({functions}) => {
 
     const googleSignIn = async () => {
         await signInWithGoogle()
-        await Auth.currentUser ? history.push('/register-project') : history.push('/signin')
+        Auth.currentUser ? history.push('/register-project') : history.push('/signin')
     }
     return (
         <Wrapper>

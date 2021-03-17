@@ -8,7 +8,7 @@ import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 export default function CardProject({projectId}) {
 
     const classes = useStyles();
-//TODO pass it as props
+// pass it as props
     const ownerImage = "https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg";
     const owner = "Nombre de usuario";
     const creationDate = new Date(2021, 10, 2);
