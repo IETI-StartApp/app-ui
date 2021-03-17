@@ -1,35 +1,17 @@
 import React from "react";
 import {AuthForm} from "../../components";
 import background from './background.png'
-import {FormSection, Wrapper} from "./styles";
-import {Grid, makeStyles, Typography} from "@material-ui/core";
-import {useAuth} from "../Auth";
+import {FormSection, ImgBackground, Wrapper} from "./styles";
+import {Grid, Typography} from "@material-ui/core";
+import {useAuth} from "../../authServices/Auth";
 
 export const LoginPage = () => {
-    const useStyles = makeStyles((theme) => ({
-        img: {
-            width: "100%",
-            height: "100%"
-        },
-    }));
-    let styles
-    try {
-        styles = useStyles();
-    } catch (e) {
-        styles = {
-            img: {
-                width: "100%",
-                height: "100%"
-            },
-        };
-    }
 
     return (
         <Wrapper>
             <Grid container direction="row" justify="flex-end" alignItems="stretch">
                 <Grid item xs={6}>
-                    <img className={styles.img} alt=""
-                         src={background}/>
+                    <ImgBackground src={background}/>
                 </Grid>
                 <Grid item xs={6}>
                     <Grid container justify="space-around" alignItems="center">

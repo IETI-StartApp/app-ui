@@ -1,4 +1,4 @@
-export * from '../authServices/LoginPage'
+export * from './LoginPage'
 export * from './RegisterPage/RegisterForm';
 export * from './ProjectDescription/ProjectDescription';
 export * from './RegisterProjectPage';

@@ -15,3 +15,8 @@ export const FormSection = styled.div`
   flex: 1 1 200px;
   padding-top: 232px;
 `;
+
+export const ImgBackground = styled.img`
+  width: 100%;
+  height: 100%;
+`;

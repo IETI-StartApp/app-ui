@@ -1,22 +1,26 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import React from "react";
+import ShallowRenderer from 'react-test-renderer/shallow';
 import {AuthForm} from "./index";
-import {AuthContext, contextValues} from "../../authServices/Auth";
 
-const customRender = (ui, { providerProps, ...renderOptions }) => {
-    return render(
-        <AuthContext.Provider value={providerProps}>{ui}</AuthContext.Provider>,
-        renderOptions
-    )
-}
-
-test('renders learn react link', () => {
-    console.log(contextValues)
+let realUseContext;
+let useContextMock;
+// Setup mock
+beforeEach(() => {
+    realUseContext = React.useContext;
+    useContextMock = React.useContext = jest.fn();
+});
+// Cleanup mock
+afterEach(() => {
+    React.useContext = realUseContext;
+});
+test("mock hook", () => {
+    useContextMock.mockReturnValue("Test Value");
     const fun1 = () => {
     }
     const fun2 = () => {
     }
-    customRender(<AuthForm functions={{fun1,fun2}}/>,contextValues)
-    const linkElement = screen.getAllByText(/Email/i);
-    expect(true)
+    const element = new ShallowRenderer().render(
+        <AuthForm functions={{fun1,fun2}}/>
+    );
+    expect(element.props.children).toBe(element.props.children);
 });

@@ -4,6 +4,7 @@ exports[`Testing navigation should load navigation  1`] = `
 <div>
   <Navbar
     handleDrawerToggle={[Function]}
+    undeFunction={[Function]}
   />
   <Hidden>
     <MenuDrawer

@@ -4,9 +4,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import {useStyles} from './styles';
 import {useAuth} from "../../authServices/Auth";
 
-export default function Navbar({handleDrawerToggle, signOut: signOutProp}) {
+export default function Navbar({handleDrawerToggle, undeFunction}) {
     const classes = useStyles();
-    const signOut = useAuth();
+    const {signOut} = useAuth() || {};
     return (
         <AppBar position="static" className={classes.appBar}>
             <Toolbar>
@@ -25,7 +25,8 @@ export default function Navbar({handleDrawerToggle, signOut: signOutProp}) {
                 <Hidden smDown>
                     <Button className={classes.buttonBar}>Opción 1</Button>
                     <Button className={classes.buttonBar}>Opción 2</Button>
-                    <Button className={classes.buttonBar} variant="outlined" onClick={signOut}>Cerrar sesión</Button>
+                    <Button className={classes.buttonBar} variant="outlined" onClick={signOut ? signOut : () => {
+                    }}>Cerrar sesión</Button>
                 </Hidden>
             </Toolbar>
         </AppBar>

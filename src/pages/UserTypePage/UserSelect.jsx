@@ -3,7 +3,7 @@ import {Grid} from '@material-ui/core'
 import {BackDesign} from "../../components/Register/styles";
 import {Card} from "../../components/Register/Card"
 import {styleCard} from "../../components/Register/styleCard"
-import background from '../../authServices/LoginPage/background.png'
+import background from '../LoginPage/background.png'
 
 
 export const UserSelect = () => {

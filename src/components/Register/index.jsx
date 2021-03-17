@@ -1,42 +1,14 @@
 import "./styles.js";
 import React, {useState} from 'react'
 import {Grid, TextField} from '@material-ui/core';
-import {makeStyles} from '@material-ui/core/styles';
 import {BackDesign, ButtonDesign, ErrorDesign, FormDesign} from "./styles";
+import {useAuth} from "../../authServices/Auth";
 import {useHistory} from "react-router";
-import background from '../../authServices/LoginPage/background.png'
+import background from '../../pages/LoginPage/background.png'
 
-const cssObject = {
-    paper: {
-        width: "100%",
-        height: "100%",
-        overflowY: "auto"
-
-    },
-    root: {
-        overflowY: "auto"
-    },
-    formContainer: {
-        position: "relative",
-        '@media (min-width:780px)': {
-            width: '28.125rem'
-        },
-        height: "auto",
-        padding: "6rem"
-    },
-    inputField: {
-        width: "100%",
-        margin: "1rem 0",
-    },
-    Magin: {
-        marginTop: "25px"
-    }
-}
-const useStyles = makeStyles((theme) => (cssObject));
-
-export const Register = ({auth}) => {
+export const Register = () => {
     const history = useHistory();
-    const {createUserWithEmailAndPassword} = auth
+    const {createUserWithEmailAndPassword} = useAuth() || {};
     const [values, setValues] = useState({
         username: "",
         email: "",
@@ -60,7 +32,6 @@ export const Register = ({auth}) => {
         }
 
     }
-
 
     function validationForm(valor) {
         let errores = {}
@@ -92,66 +63,96 @@ export const Register = ({auth}) => {
         return errores;
     }
 
-    let classes;
-    try {
-        classes = useStyles()
-    } catch (e) {
-        classes = cssObject
-    }
-
     return (
-
-        <Grid container direction="row" justify="flex-end" alignItems="stretch" className={classes.root}>
+        <Grid container
+              direction="row"
+              justify="flex-end"
+              alignItems="stretch"
+              style={{overflowY: "auto"}}>
             <Grid item xs={6}>
-                <img className={classes.paper} alt="" src={background}/>
-
+                <img alt="" src={background} style={{
+                    width: "100%",
+                    height: "100%",
+                    overflowY: "auto"
+                }}/>
             </Grid>
             <Grid item xs={6}>
-                <Grid container className={classes.Magin} direction="row-reverse" justify="space-around"
+                <Grid container style={{
+                    marginTop: "25px"
+                }} direction="row-reverse" justify="space-around"
                       alignItems="center">
                     <Grid item xs={8}>
                     </Grid>
                     <BackDesign href='#'> Back</BackDesign>
                 </Grid>
-                <div className={classes.formContainer}>
+                <div style={{
+                    position: "relative",
+                    '@media (min-width:780px)': {
+                        width: '28.125rem'
+                    },
+                    height: "auto",
+                    padding: "6rem"
+                }}>
                     <FormDesign className="form" onSubmit={handleSubmit}>
-
-
                         <h1>Completa tu perfil </h1>
                         <h3>A efectos de la regulación del sector, se requieren los datos de su perfil</h3>
-
                         <div>
-                            <TextField className={classes.inputField} id="outlined-basic" label="Nombre" name="username"
-                                       type="text" value={values.username} onChange={handleChange}/>
+                            <TextField style={{
+                                width: "100%",
+                                margin: "1rem 0",
+                            }}
+                                       id="outlined-basic"
+                                       label="Nombre"
+                                       name="username"
+                                       type="text"
+                                       value={values.username}
+                                       onChange={handleChange}/>
                             {errors.username && <ErrorDesign>{errors.username}</ErrorDesign>}
-
                         </div>
-
                         <div className="inputs">
-                            <TextField className={classes.inputField} id="standard-basic" label="Email" type="email"
-                                       name="email" value={values.email} onChange={handleChange}/>
+                            <TextField style={{
+                                width: "100%",
+                                margin: "1rem 0",
+                            }}
+                                       id="standard-basic"
+                                       label="Email"
+                                       type="email"
+                                       name="email"
+                                       value={values.email}
+                                       onChange={handleChange}/>
                             {errors.email && <ErrorDesign>{errors.email}</ErrorDesign>}
                         </div>
                         <div className="inputs">
-                            <TextField className={classes.inputField} id="standard-basic" label="Password"
-                                       type="password" name="contra" value={values.contra} onChange={handleChange}/>
+                            <TextField style={{
+                                width: "100%",
+                                margin: "1rem 0",
+                            }}
+                                       id="standard-basic"
+                                       label="Password"
+                                       type="password"
+                                       name="contra"
+                                       value={values.contra}
+                                       onChange={handleChange}/>
                             {errors.contra && <ErrorDesign>{errors.contra}</ErrorDesign>}
                         </div>
                         <div className="inputs">
-                            <TextField className={classes.inputField} id="standard-basic" label="Confirmed Password"
-                                       type="password" name="contra2" value={values.contra2} onChange={handleChange}/>
+                            <TextField style={{
+                                width: "100%",
+                                margin: "1rem 0",
+                            }}
+                                       id="standard-basic"
+                                       label="Confirmed Password"
+                                       type="password"
+                                       name="contra2"
+                                       value={values.contra2}
+                                       onChange={handleChange}/>
                             {errors.contra2 && <ErrorDesign>{errors.contra2}</ErrorDesign>}
                         </div>
-
-
                         <ButtonDesign className="button" type="submit">
                             Sign Up
                         </ButtonDesign>
-
                     </FormDesign>
-
                 </div>
-
             </Grid>
         </Grid>
     )

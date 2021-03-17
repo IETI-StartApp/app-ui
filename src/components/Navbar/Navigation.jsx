@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Hidden } from '@material-ui/core/';
+import React, {useState} from 'react';
+import {Hidden} from '@material-ui/core/';
 import Navbar from './index';
 import MenuDrawer from './MenuDrawer';
-import { useStyles } from './styles';
+import {useStyles} from './styles';
 
 export default function Navigation() {
 
@@ -17,7 +17,9 @@ export default function Navigation() {
     return (
         <div className={classes.root}>
             <Navbar
-                handleDrawerToggle={handleDrawerToggle}/>
+                handleDrawerToggle={handleDrawerToggle}
+                undeFunction={() => {
+                }}/>
             <Hidden>
                 <MenuDrawer
                     open={menuOpen}
