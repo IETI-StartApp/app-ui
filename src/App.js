@@ -19,6 +19,7 @@ function App() {
                     </Switch>
                 </AuthProvider>
             </Router>
+            <>StartApp</>
         </>
     );
 }

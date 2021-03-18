@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { shallow } from 'enzyme';
 import React from 'react';
-import {ProgressBar} from '../../../components/Progressbar'
+import {ProgressBar} from '../../../components'
 
 describe('Testing progress bar', () => {
 

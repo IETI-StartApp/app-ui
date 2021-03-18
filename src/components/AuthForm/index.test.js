@@ -20,7 +20,7 @@ test("mock hook", () => {
     const fun2 = () => {
     }
     const element = new ShallowRenderer().render(
-        <AuthForm functions={{fun1,fun2}}/>
+        <AuthForm functions={{fun1, fun2}}/>
     );
     expect(element.props.children).toBe(element.props.children);
 });

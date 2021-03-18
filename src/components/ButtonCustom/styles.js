@@ -12,12 +12,12 @@ export const Wrapper = styled.button`
   border: 0 transparent;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   @media all and (max-width: 750px) {
-    width: ${props=>
-            props.widthFull? '100%' : 'fit-content'
+    width: ${props =>
+            props.widthFull ? '100%' : 'fit-content'
     };
   }
-  width: ${props=>
-          props.widthFull? '100%' : 'fit-content'
+  width: ${props =>
+          props.widthFull ? '100%' : 'fit-content'
   };
 
   cursor: pointer;

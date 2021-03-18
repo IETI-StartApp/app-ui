@@ -24,6 +24,7 @@ test('renders learn react link', () => {
   const linkElement = screen.getByText(/8/i);
   expect(linkElement).toBeInTheDocument();
 });
+
 test('renders learn react link', () => {
   render(<InformacionFinazas
     valor = {finanzas.valor}
@@ -36,6 +37,7 @@ test('renders learn react link', () => {
   const linkElement = screen.getByText(/1.000.000/i);
   expect(linkElement).toBeInTheDocument();
 });
+
 test('renders learn react link', () => {
   render(<InformacionFinazas
     valor = {finanzas.valor}
@@ -48,6 +50,7 @@ test('renders learn react link', () => {
   const linkElement = screen.getByText(/8/i);
   expect(linkElement).toBeInTheDocument();
 });
+
 test('renders learn react link', () => {
   render(<InformacionFinazas
     valor = {finanzas.valor}
@@ -60,6 +63,7 @@ test('renders learn react link', () => {
   const linkElement = screen.getByText(/Inversionistas/i);
   expect(linkElement).toBeInTheDocument();
 });
+
 test('renders learn react link', () => {
   render(<InformacionFinazas
     valor = {finanzas.valor}
@@ -72,6 +76,7 @@ test('renders learn react link', () => {
   const linkElement = screen.getByText(/50.000/i);
   expect(linkElement).toBeInTheDocument();
 });
+
 test('renders learn react link', () => {
   render(<InformacionFinazas
     valor = {finanzas.valor}
@@ -84,6 +89,7 @@ test('renders learn react link', () => {
   const linkElement = screen.getByText(/Valoración/i);
   expect(linkElement).toBeInTheDocument();
 });
+
 test('renders learn react link', () => {
   render(<InformacionFinazas
     valor = {finanzas.valor}
@@ -96,6 +102,7 @@ test('renders learn react link', () => {
   const linkElement = screen.getByText(/30.000/i);
   expect(linkElement).toBeInTheDocument();
 });
+
 test('renders learn react link', () => {
   render(<InformacionFinazas
     valor = {finanzas.valor}
@@ -108,6 +115,7 @@ test('renders learn react link', () => {
   const linkElement = screen.getByText(/Inversión minima/i);
   expect(linkElement).toBeInTheDocument();
 });
+
 test('renders learn react link', () => {
   render(<InformacionFinazas
     valor = {finanzas.valor}
@@ -120,6 +128,7 @@ test('renders learn react link', () => {
   const linkElement = screen.getByText(/465/i);
   expect(linkElement).toBeInTheDocument();
 });
+
 test('renders learn react link', () => {
   render(<InformacionFinazas
     valor = {finanzas.valor}
@@ -145,6 +154,7 @@ test('renders learn react link', () => {
   const linkElement = screen.getByText(/Fecha inicio/i);
   expect(linkElement).toBeInTheDocument();
 });
+
 test('renders learn react link', () => {
   render(<InformacionFinazas
     valor = {finanzas.valor}

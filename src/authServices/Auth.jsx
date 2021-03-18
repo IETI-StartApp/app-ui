@@ -19,14 +19,14 @@ const signInWithEmailAndPassword = (email, password) => {
     return Auth.signInWithEmailAndPassword(email, password)
 }
 
- const signOut = () => {
+const signOut = () => {
     return Auth.signOut()
 }
 
- const resetPassword = (email) => {
+const resetPassword = (email) => {
     return Auth.sendPasswordResetEmail(email)
 }
- const signInWithGoogle = () => {
+const signInWithGoogle = () => {
     return Auth.signInWithPopup(google)
 }
 
