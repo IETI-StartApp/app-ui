@@ -1,15 +1,15 @@
 import React from 'react';
-import { Box, CircularProgress, Typography } from '@material-ui/core';
-import { useStyles } from './styles';
+import {Box, CircularProgress, Typography} from '@material-ui/core';
+import {useStyles} from './styles';
 
-export default function ProgressGraph( { projectId }){
+export default function ProgressGraph({projectId}) {
 
     const classes = useStyles();
     const progress = 70;
 
     return (
         <Box position="relative" display="inline-flex">
-            <CircularProgress variant="determinate" value={ progress } className={classes.mainColor} />
+            <CircularProgress variant="determinate" value={progress} className={classes.mainColor}/>
             <Box
                 top={0}
                 left={0}

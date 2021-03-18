@@ -16,7 +16,8 @@ afterEach(() => {
 });
 
 test("mock hook", () => {
-    const googleFunction = ()=>{}
+    const googleFunction = () => {
+    }
     useContextMock.mockReturnValue("Test Value");
     const element = new ShallowRenderer().render(
         <Register auth={{googleFunction}} classes={cssObject}/>
