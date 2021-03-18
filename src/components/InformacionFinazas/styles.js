@@ -1,28 +1,28 @@
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 
 export const styles = makeStyles((theme) => ({
     paper: {
         margin: 'auto',
         //display:'Grid',
-        '@media (min-width:50px)': { 
-          width: '60%'
+        '@media (min-width:50px)': {
+            width: '60%'
         },
-        '@media (min-width:480px)': { 
-          width: '60%'
+        '@media (min-width:480px)': {
+            width: '60%'
         },
-        '@media (min-width:600px)': { 
-          width: '61%'
+        '@media (min-width:600px)': {
+            width: '61%'
         },
-        '@media (min-width:801px)': { 
-          width: '63%'
+        '@media (min-width:801px)': {
+            width: '63%'
         },
-        '@media (min-width:1025px)': { 
-          width: '65%'
+        '@media (min-width:1025px)': {
+            width: '65%'
         },
         padding: theme.spacing(2),
-       
-      },
-    valores:{
+
+    },
+    valores: {
 
         fontFamily: 'Roboto',
         fontStyle: 'Roboto',
@@ -30,13 +30,13 @@ export const styles = makeStyles((theme) => ({
         textAlign: 'center',
         fontSize: '3vw',
     },
-    numeros:{
+    numeros: {
         fontFamily: 'Roboto',
         fontStyle: 'Roboto',
         fontWeight: 'Roboto',
         fontSize: '2vw',
     },
-    descripcion:{
+    descripcion: {
         fontFamily: 'Roboto',
         fontStyle: 'Roboto',
         fontWeight: 'Roboto',
