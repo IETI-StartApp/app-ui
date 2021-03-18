@@ -1,12 +1,12 @@
 import React from 'react'
-import { Grid } from '@material-ui/core'
+import {Grid} from '@material-ui/core'
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
-import { styleCard } from "./styleCard"
+import {styleCard} from "./styleCard"
 
 
-export const Card = ({ userImage, userType, userDescription, arrowImage }) => {
+export const Card = ({userImage, userType, userDescription, arrowImage}) => {
     const classes = styleCard();
     return (
         <div>
@@ -15,7 +15,7 @@ export const Card = ({ userImage, userType, userDescription, arrowImage }) => {
                     <Grid container spacing={2}>
                         <Grid item>
                             <ButtonBase className={classes.image}>
-                                <img className={classes.img} alt="complex" src={userImage} />
+                                <img className={classes.img} alt="complex" src={userImage}/>
                             </ButtonBase>
                         </Grid>
                         <Grid item xs={12} sm container>
@@ -32,7 +32,7 @@ export const Card = ({ userImage, userType, userDescription, arrowImage }) => {
                             </Grid>
                             <Grid item>
                                 <ButtonBase className={classes.image}>
-                                    <img className={classes.img} alt="complex" src={arrowImage} />
+                                    <img className={classes.img} alt="complex" src={arrowImage}/>
                                 </ButtonBase>
                             </Grid>
                         </Grid>
