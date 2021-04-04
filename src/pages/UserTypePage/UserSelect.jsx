@@ -1,18 +1,20 @@
 import React from 'react';
-import { Grid } from '@material-ui/core'
-import { BackDesign } from "../../components/Register/styles";
-import { Card } from "../../components/Register/Card"
-import { styleCard } from "../../components/Register/styleCard"
+import {Grid} from '@material-ui/core'
+import {BackDesign} from "../../components/Register/styles";
+import {Card} from "../../components/Register/Card"
+import {styleCard} from "../../components/Register/styleCard"
+import background from '../LoginPage/background.png'
 
 
 export const UserSelect = () => {
     const classes = styleCard();
+    // link to signin
     return (
         <div>
             <Grid container direction="row" justify="flex-end" alignItems="stretch" className={classes.root}>
                 <Grid item xs={6}>
                     <img className={classes.paper} alt=""
-                         src="https://media.discordapp.net/attachments/781412743537491969/814353548065374228/background.png?width=530&height=662"></img>
+                         src={background}/>
                 </Grid>
                 <Grid item xs={6} justify="flex-end">
                     <Grid container item xs={10} alignItems="center">
@@ -32,26 +34,24 @@ export const UserSelect = () => {
                                     <p>Para comenzar este viaje, díganos qué tipo de cuenta desea abrir</p>
                                 </div>
                                 <br></br>
-                                <Card userImage="https://media.discordapp.net/attachments/781412743537491969/814340479393988709/emprendedor_1.png"
+                                <Card
+                                    userImage="https://media.discordapp.net/attachments/781412743537491969/814340479393988709/emprendedor_1.png"
                                     userType="Emprendedor"
                                     userDescription="Cuenta personal para gestionar su proyecto y obtener inversiones."
-                                    arrowImage="https://media.discordapp.net/attachments/781412743537491969/814340827269955594/flecha-correcta_1.png" />
+                                    arrowImage="https://media.discordapp.net/attachments/781412743537491969/814340827269955594/flecha-correcta_1.png"/>
 
                                 <br></br>
-                                <Card userImage="https://media.discordapp.net/attachments/781412743537491969/814339858901893160/investing_2.png"
+                                <Card
+                                    userImage="https://media.discordapp.net/attachments/781412743537491969/814339858901893160/investing_2.png"
                                     userType="Inversionista"
                                     userDescription="Cuenta personal para invertir en proyectos TI."
-                                    arrowImage="https://media.discordapp.net/attachments/781412743537491969/814340827269955594/flecha-correcta_1.png" />
+                                    arrowImage="https://media.discordapp.net/attachments/781412743537491969/814340827269955594/flecha-correcta_1.png"/>
                             </Grid>
                         </div>
                     </Grid>
                 </Grid>
             </Grid>
         </div>
-
-
-
-
 
 
     )

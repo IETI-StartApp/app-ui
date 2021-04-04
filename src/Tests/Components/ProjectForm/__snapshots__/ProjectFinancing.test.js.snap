@@ -315,11 +315,11 @@ exports[`Testing Project Financing should load project financing 1`] = `
         <WithStyles(ForwardRef(TextField))
           InputProps={
             Object {
-              "startAdornment": <ForwardRef(WithStyles(ForwardRef(InputAdornment)))
+              "startAdornment": <WithStyles(ForwardRef(InputAdornment))
                 position="start"
               >
                 $
-              </ForwardRef(WithStyles(ForwardRef(InputAdornment)))>,
+              </WithStyles(ForwardRef(InputAdornment))>,
             }
           }
           className="makeStyles-inputField-2"
@@ -332,11 +332,11 @@ exports[`Testing Project Financing should load project financing 1`] = `
         <WithStyles(ForwardRef(TextField))
           InputProps={
             Object {
-              "startAdornment": <ForwardRef(WithStyles(ForwardRef(InputAdornment)))
+              "startAdornment": <WithStyles(ForwardRef(InputAdornment))
                 position="start"
               >
                 $
-              </ForwardRef(WithStyles(ForwardRef(InputAdornment)))>,
+              </WithStyles(ForwardRef(InputAdornment))>,
             }
           }
           className="makeStyles-inputField-2"
@@ -374,7 +374,7 @@ exports[`Testing Project Financing should load project financing 1`] = `
         </MuiPickersUtilsProvider>
         <WithStyles(ForwardRef(Button))
           className="makeStyles-btn-5"
-          endIcon={<UNDEFINED />}
+          endIcon={<Memo />}
           onClick={[MockFunction]}
           variant="contained"
         >

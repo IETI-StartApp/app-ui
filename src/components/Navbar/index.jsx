@@ -1,12 +1,12 @@
 import React from 'react';
-import { AppBar, Toolbar, IconButton, Button, Typography, Hidden } from '@material-ui/core';
+import {AppBar, Button, Hidden, IconButton, Toolbar, Typography} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import { useStyles } from './styles';
+import {useStyles} from './styles';
+import {useAuth} from "../../authServices/Auth";
 
-export default function Navbar({ handleDrawerToggle }) {
-
+export default function Navbar({handleDrawerToggle}) {
     const classes = useStyles();
-
+    const {signOut} = useAuth() || {};
     return (
         <AppBar position="static" className={classes.appBar}>
             <Toolbar>
@@ -17,7 +17,7 @@ export default function Navbar({ handleDrawerToggle }) {
                     aria-label="menu"
                     onClick={() => handleDrawerToggle()}
                 >
-                    <MenuIcon />
+                    <MenuIcon/>
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>
                     StartApp
@@ -25,7 +25,8 @@ export default function Navbar({ handleDrawerToggle }) {
                 <Hidden smDown>
                     <Button className={classes.buttonBar}>Opción 1</Button>
                     <Button className={classes.buttonBar}>Opción 2</Button>
-                    <Button className={classes.buttonBar} variant="outlined" >Opción 3</Button>
+                    <Button className={classes.buttonBar} variant="outlined" onClick={signOut}>Cerrar sesión
+                    </Button>
                 </Hidden>
             </Toolbar>
         </AppBar>

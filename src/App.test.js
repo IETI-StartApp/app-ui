@@ -1,15 +1,9 @@
-import '@testing-library/jest-dom';
-import { shallow } from 'enzyme';
-import React from 'react';
+import {mount} from "enzyme";
+import React from "react";
 import App from "./App";
 
-
-describe('Testing progress bar', () => {
-
-    const wrapper = shallow(<App/>)
-
-    test('should render appº', () => {
-        expect(wrapper).toMatchSnapshot();
-    })
-
-})
+it('should render', () => {
+    const component = mount(<App />); // `mount` here as well
+    const wrapper = component.find('myClassName');
+    expect(wrapper.length).toBe(0);
+});

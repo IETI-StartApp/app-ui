@@ -1,67 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Testing projects grid should load CardProject 1`] = `
-<WithStyles(ForwardRef(Container))
-  className="makeStyles-cardGrid-4"
->
-  <WithStyles(ForwardRef(Grid))
-    container={true}
-    spacing={4}
+<Fragment>
+  <Navigation />
+  <WithStyles(ForwardRef(Container))
+    className="makeStyles-cardGrid-4"
   >
     <WithStyles(ForwardRef(Grid))
-      item={true}
-      key="1"
-      md={4}
-      sm={6}
-      xs={12}
+      container={true}
+      spacing={4}
     >
-      <CardProject />
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        key="1"
+        md={4}
+        sm={6}
+        xs={12}
+      >
+        <CardProject />
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        key="2"
+        md={4}
+        sm={6}
+        xs={12}
+      >
+        <CardProject />
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        key="3"
+        md={4}
+        sm={6}
+        xs={12}
+      >
+        <CardProject />
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        key="4"
+        md={4}
+        sm={6}
+        xs={12}
+      >
+        <CardProject />
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        key="5"
+        md={4}
+        sm={6}
+        xs={12}
+      >
+        <CardProject />
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        key="6"
+        md={4}
+        sm={6}
+        xs={12}
+      >
+        <CardProject />
+      </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      key="2"
-      md={4}
-      sm={6}
-      xs={12}
-    >
-      <CardProject />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      key="3"
-      md={4}
-      sm={6}
-      xs={12}
-    >
-      <CardProject />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      key="4"
-      md={4}
-      sm={6}
-      xs={12}
-    >
-      <CardProject />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      key="5"
-      md={4}
-      sm={6}
-      xs={12}
-    >
-      <CardProject />
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Grid))
-      item={true}
-      key="6"
-      md={4}
-      sm={6}
-      xs={12}
-    >
-      <CardProject />
-    </WithStyles(ForwardRef(Grid))>
-  </WithStyles(ForwardRef(Grid))>
-</WithStyles(ForwardRef(Container))>
+  </WithStyles(ForwardRef(Container))>
+</Fragment>
 `;

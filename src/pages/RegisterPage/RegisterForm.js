@@ -1,21 +1,13 @@
 import React from 'react'
 
-import Register from '../../components/Register/Register'
-
-
-
+import Register from '../../components/Register'
+import {useAuth} from "../../authServices/Auth";
 
 export const RegisterForm = () => {
     return (
-
-        
         <div>
-            <Register/>
+            <Register auth={useAuth()}/>
         </div>
-            
-
-
-
     )
 }
 

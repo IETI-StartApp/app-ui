@@ -1,6 +1,6 @@
 import React from "react";
 import ShallowRenderer from 'react-test-renderer/shallow';
-import {LoginPage} from "./index";
+import {AuthForm} from "./index";
 
 let realUseContext;
 let useContextMock;
@@ -15,8 +15,12 @@ afterEach(() => {
 });
 test("mock hook", () => {
     useContextMock.mockReturnValue("Test Value");
+    const fun1 = () => {
+    }
+    const fun2 = () => {
+    }
     const element = new ShallowRenderer().render(
-        <LoginPage/>
+        <AuthForm functions={{fun1, fun2}}/>
     );
     expect(element.props.children).toBe(element.props.children);
 });

@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Hidden } from '@material-ui/core/';
-import Navbar from './Navbar';
+import React, {useState} from 'react';
+import {Hidden} from '@material-ui/core/';
+import Navbar from './index';
 import MenuDrawer from './MenuDrawer';
-import { useStyles } from './styles';
+import {useStyles} from './styles';
 
 export default function Navigation() {
 
     const classes = useStyles();
-    
+
     const [menuOpen, setMenuOpen] = useState(false);
 
     const handleDrawerToggle = () => {
@@ -16,10 +16,10 @@ export default function Navigation() {
 
     return (
         <div className={classes.root}>
-            <Navbar 
+            <Navbar
                 handleDrawerToggle={handleDrawerToggle}/>
             <Hidden>
-                <MenuDrawer 
+                <MenuDrawer
                     open={menuOpen}
                     onClose={handleDrawerToggle}/>
             </Hidden>
