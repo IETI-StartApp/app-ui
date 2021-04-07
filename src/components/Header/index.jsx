@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
@@ -7,7 +7,9 @@ import {useHistory} from "react-router";
 import logo from "./startapp.png";
 
 export const Header = () => {
-    const history = useHistory();
+    const history = useHistory() || [];
+    const handleOnClick = () => history.push('/signin')
+    const buttonref = useRef(null)
 
     return (
         <>
@@ -30,7 +32,7 @@ export const Header = () => {
                     padding: '10px 20px',
                     width: '106px',
                     height: '50px'
-                }} size="small" onClick={() => history.push('/signin')}>
+                }} size="small" onClick={handleOnClick} ref={buttonref} id='buttonLog'>
                     Sign in
                 </Button>
             </Toolbar>
