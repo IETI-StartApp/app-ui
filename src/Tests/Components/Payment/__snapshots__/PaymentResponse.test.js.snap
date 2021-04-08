@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing PaymentResponse should load PaymentResponse 1`] = `
+<Fragment>
+  <Navigation />
+  <br />
+  <div
+    className="makeStyles-root-1"
+  >
+    <Response />
+  </div>
+</Fragment>
+`;

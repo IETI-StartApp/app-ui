@@ -1,6 +1,11 @@
-const express = require('express')
+const express = require('express');
 const crypto = require('crypto');
-const router = express.Router()
+const router = express.Router();
+
+router.get("/api/something", (req, res) => {
+  res.json({ status: "OK" })
+})
+
 
 router.post("/epayco/confirmation", (req, res) => {
 
