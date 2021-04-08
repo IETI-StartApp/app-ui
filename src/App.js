@@ -17,7 +17,7 @@ function App() {
                         <Route exact path='/signup' render={()=><RegisterForm/>}/>
                         <PrivateRoute exact path='/project-description' component={ProjectDescription}/>
                         <PrivateRoute exact path='/register-project' component={RegisterProjectPage}/>
-                        <Route exact path='/epayco/response' component={PaymentResponse}/>
+                        <PrivateRoute exact path='/epayco/response' component={PaymentResponse}/>
                         <Route exact path='/user-type' component={UserSelect}/>
                     </Switch>
                 </AuthProvider>
