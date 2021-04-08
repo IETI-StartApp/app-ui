@@ -40,7 +40,7 @@ export const contextValues = {
 
 export const AuthProvider = ({children}) => {
 
-    const [currentUser, setCurrentUser] = useState(undefined)
+    const [currentUser, setCurrentUser] = useState({})
 
     const [loading, setLoading] = useState(true)
 

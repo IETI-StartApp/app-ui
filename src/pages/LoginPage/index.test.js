@@ -1,6 +1,7 @@
 import React from "react";
 import ShallowRenderer from 'react-test-renderer/shallow';
 import {LoginPage} from "./index";
+import {fireEvent, queryByAttribute, render} from "@testing-library/react";
 
 let realUseContext;
 let useContextMock;
@@ -19,4 +20,11 @@ test("mock hook", () => {
         <LoginPage/>
     );
     expect(element.props.children).toBe(element.props.children);
+});
+
+test("Click", () => {
+
+    const element = new ShallowRenderer().render(
+        <LoginPage/>
+    );
 });
