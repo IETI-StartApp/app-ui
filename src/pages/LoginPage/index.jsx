@@ -28,6 +28,7 @@ export const LoginPage = () => {
                                 <CustomTypography
                                     style={{padding: '10px 0', cursor: 'pointer'}}
                                     text='#2C5282'
+                                    id={'buttonLog'}
                                     onClick={() => {
                                         history.push('/signup')
                                     }}
