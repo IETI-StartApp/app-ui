@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 
 export default function MenuDrawer({open, onClose}) {
     const classes = useStyles();
-    const {currentUser} = useAuth() || {};
+    const {currentUser} = useAuth() || {currentUser: {photoURL: '', displayName: ''}};
     console.log(currentUser)
 
     return (
