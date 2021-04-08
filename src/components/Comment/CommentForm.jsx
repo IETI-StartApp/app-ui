@@ -33,13 +33,13 @@ export const Comment = () => {
             ...values, [e.target.name]: e.target.value
         })
     }
-    const addComment = (author, body, qualifier) => {
+    const addComment = (author, body, totalRate) => {
         const rating = {
             "author": author,
             "data": body,
-            "rate": qualifier
+            "rate": totalRate
         }
-        alert(author + "Acabamos de registrar tu comentario y gracias por la calificacion de " + qualifier)
+        alert(author + " Acabamos de registrar tu comentario y gracias por la calificacion de " + qualifier)
         console.log(rating)
     }
     
