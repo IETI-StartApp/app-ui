@@ -42,7 +42,7 @@ export const Comment = () => {
         alert(author + "Acabamos de registrar tu comentario y gracias por la calificacion de " + qualifier)
         console.log(rating)
     }
-    const calificacion = 0;
+    
     const handleSubmit = (event) => {
         event.preventDefault();
         addComment(values.author, values.data, qualifier);
