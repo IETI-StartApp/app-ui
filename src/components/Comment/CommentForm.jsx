@@ -40,7 +40,7 @@ export const Comment = () => {
             "rate": totalRate
         }
         alert(author + " Acabamos de registrar tu comentario y gracias por la calificacion de " + qualifier)
-        console.log(rating)
+        
     }
     
     const handleSubmit = (event) => {
@@ -49,7 +49,7 @@ export const Comment = () => {
     }
     const ratingChanged = (e, newRating) => {
         setQualifier(newRating);
-        console.log(newRating);
+        
     };
     return (
         <div className="comment-box">

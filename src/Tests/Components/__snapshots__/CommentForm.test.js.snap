@@ -97,6 +97,12 @@ exports[`Testing comment page should render comment page 1`] = `
 </div>
 `;
 
+exports[`Testing comment page should render comment page 2`] = `
+<div>
+  Imagenes
+</div>
+`;
+
 exports[`Testing register page should render register page 1`] = `
 <div
   className="comment-box"

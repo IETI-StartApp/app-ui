@@ -1,11 +1,10 @@
 import React from 'react'
 
-const SlideBar = () => {
+export const SlideBar = () => {
     return (
         <div>
-            
+            Imagenes
         </div>
     )
 }
 
-export default SlideBar
