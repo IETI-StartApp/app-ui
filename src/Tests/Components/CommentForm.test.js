@@ -18,12 +18,7 @@ describe('Testing comment page', () => {
     test('deberia mostrar el comentar', () => {
         const btn = wrapper.find('ButtonDesign')
     });
-    test('deberia mostrar el comentar', () => {
-        const mockedEvent = { target: {}, preventDefault: () => { } }
-        const spy = jest.spyOn(wrapper.instance(), 'onSubmit')
-        wrapper.find('form').simulate('submit', mockedEvent)
-        expect(spy).toHaveBeenCalled()
-    });
+    
     test('renders learn react link', () => {
         render(<Comment />);
         const linkElement = screen.getByText(/Califica el proyecto y deja un comentario/i);
