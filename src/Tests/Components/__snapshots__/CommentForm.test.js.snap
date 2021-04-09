@@ -1,5 +1,102 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Testing comment page should render comment page 1`] = `
+<div
+  className="comment-box"
+>
+  <WithStyles(ForwardRef(Grid))
+    alignItems="stretch"
+    container={true}
+    direction="row"
+    justify="flex-end"
+    style={
+      Object {
+        "overflowY": "auto",
+      }
+    }
+  >
+    <WithStyles(ForwardRef(Grid))
+      item={true}
+      xs={8}
+    >
+      <h1>
+        Califica el proyecto y deja un comentario 
+      </h1>
+      <styled.form
+        className="form"
+        onSubmit={[Function]}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+          xs={11}
+        >
+          <div
+            className="makeStyles-root-1"
+          >
+            <WithStyles(ForwardRef(Rating))
+              align-content="center"
+              name="qualifier"
+              onChange={[Function]}
+              precision={1}
+              size="large"
+              value={null}
+            />
+          </div>
+          <div
+            className="comment-form-fields"
+          >
+            <WithStyles(ForwardRef(TextField))
+              name="author"
+              onChange={[Function]}
+              placeholder="Name"
+              required={true}
+              style={
+                Object {
+                  "margin": "1rem 0",
+                  "width": "50%",
+                }
+              }
+              value=""
+            />
+            <br />
+            <WithStyles(ForwardRef(TextField))
+              defaultValue="Default Value"
+              id="standard-multiline-static"
+              label="Comment"
+              multiline={true}
+              name="data"
+              onChange={[Function]}
+              required={true}
+              rows={4}
+              style={
+                Object {
+                  "margin": "1rem 0",
+                  "width": "50%",
+                }
+              }
+              value=""
+            />
+          </div>
+          <div
+            className="comment-form-actions"
+          >
+            <styled.button
+              className="button"
+              type="submit"
+            >
+              ¡Comentar!
+            </styled.button>
+          </div>
+          <h2>
+            Tus comentarios ayudaran a la mejora del proyecto!
+          </h2>
+        </WithStyles(ForwardRef(Grid))>
+      </styled.form>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Grid))>
+</div>
+`;
+
 exports[`Testing register page should render register page 1`] = `
 <div
   className="comment-box"
