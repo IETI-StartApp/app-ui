@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import {Video} from '../../components/Video/Video';
 import Navigation from "../../components/Navbar";
 import {BarInfo, InformacionFinazas, InformacioProyecto} from "../../components";
+import { Comment } from '../../components/Comment/CommentForm';
 
 export const ProjectDescription = () => {
     const json = {
@@ -46,6 +47,8 @@ export const ProjectDescription = () => {
                         FechaFin={finanzas.fechaFin}/>
                 </Grid>
             </Grid>
+            <Comment/>
+            
 
         </>
     );
