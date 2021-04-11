@@ -7,7 +7,7 @@ import {useHistory} from "react-router";
 import background from '../../pages/LoginPage/background.png'
 
 export const Register = () => {
-    const history = useHistory();
+    const history = useHistory() || [];
     const {createUserWithEmailAndPassword} = useAuth() || {};
     const [values, setValues] = useState({
         username: "",
@@ -83,7 +83,7 @@ export const Register = () => {
                       alignItems="center">
                     <Grid item xs={8}>
                     </Grid>
-                    <BackDesign href='#'> Back</BackDesign>
+                    <BackDesign> Back</BackDesign>
                 </Grid>
                 <div style={{
                     position: "relative",

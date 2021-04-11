@@ -1,5 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+
 exports[`Testing register page should render register page 1`] = `
 <div
   className="comment-box"

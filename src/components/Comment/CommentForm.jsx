@@ -33,23 +33,15 @@ export const Comment = () => {
             ...values, [e.target.name]: e.target.value
         })
     }
-    const addComment = (author, body, totalRate) => {
-        const rating = {
-            "author": author,
-            "data": body,
-            "rate": totalRate
-        }
-        alert(author + " Acabamos de registrar tu comentario y gracias por la calificacion de " + qualifier)
-        console.log(rating)
-    }
-    
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        addComment(values.author, values.data, qualifier);
+        
     }
     const ratingChanged = (e, newRating) => {
         setQualifier(newRating);
-        console.log(newRating);
+        
+
     };
     return (
         <div className="comment-box">

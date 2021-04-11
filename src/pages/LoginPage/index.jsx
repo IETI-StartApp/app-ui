@@ -1,12 +1,13 @@
 import React from "react";
-import {AuthForm} from "../../components";
+import {AuthForm, CustomTypography} from "../../components";
 import background from './background.png'
 import {FormSection, ImgBackground, Wrapper} from "./styles";
 import {Grid, Typography} from "@material-ui/core";
 import {useAuth} from "../../authServices/Auth";
+import {useHistory} from "react-router";
 
 export const LoginPage = () => {
-
+    const history = useHistory() || [];
     return (
         <Wrapper>
             <Grid container direction="row" justify="flex-end" alignItems="stretch">
@@ -24,9 +25,16 @@ export const LoginPage = () => {
                                     Ingresa a tu cuenta
                                 </Typography>
                                 <AuthForm functions={useAuth()}/>
-                                <Typography>
+                                <CustomTypography
+                                    style={{padding: '10px 0', cursor: 'pointer'}}
+                                    text='#2C5282'
+                                    id={'buttonLog'}
+                                    onClick={() => {
+                                        history.push('/signup')
+                                    }}
+                                >
                                     ¿No tienes una cuenta? Registrate gratis hoy!
-                                </Typography>
+                                </CustomTypography>
                             </FormSection>
                         </div>
                     </Grid>
