@@ -32,7 +32,7 @@ export const ButtonDesign = styled.button`
   font-size: 1rem;
 
 `;
-export const BackDesign = styled.a`
+export const BackDesign = styled.div`
   color: #950740;
   line-height: 10%
 `;

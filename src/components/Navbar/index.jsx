@@ -23,8 +23,8 @@ export default function Navbar({handleDrawerToggle}) {
                     StartApp
                 </Typography>
                 <Hidden smDown>
-                    <Button className={classes.buttonBar}>Opción 1</Button>
-                    <Button className={classes.buttonBar}>Opción 2</Button>
+                    <Button className={classes.buttonBar}>Agregar proyecto</Button>
+                    <Button className={classes.buttonBar}>Ver mis proyectos</Button>
                     <Button className={classes.buttonBar} variant="outlined" onClick={signOut}>Cerrar sesión
                     </Button>
                 </Hidden>
