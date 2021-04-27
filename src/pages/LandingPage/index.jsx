@@ -1,11 +1,7 @@
 import {useEffect, useState} from 'react'
 import JsonData from '../../data/data.json'
 import SmoothScroll from 'smooth-scroll'
-import {Navigation} from "../../components/navigation";
-import {HeaderT} from "../../components";
-import {Features} from "../../components/Features";
-import {About} from "../../components/About";
-import {Team} from "../../components/Team";
+import {About, Features, HeaderT, Navigation, Team} from "../../components";
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
     speed: 1000,
@@ -20,7 +16,8 @@ export const LandingPage = () => {
 
     return (
         <div>
-            <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/><link rel="apple-touch-icon" href="img/apple-touch-icon.png"/>
+            <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+            <link rel="apple-touch-icon" href="img/apple-touch-icon.png"/>
             <link
                 rel="apple-touch-icon"
                 sizes="72x72"
