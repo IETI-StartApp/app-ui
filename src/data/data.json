@@ -101,6 +101,11 @@
       "img": "img/team/c.jpeg",
       "name": "Alejandro Bohorquez",
       "job": "Ingeniero"
+    },
+    {
+      "img": "img/team/e.jpeg",
+      "name": "Angi Jimenez",
+      "job": "Ingeniero"
     }
   ],
   "Features": [

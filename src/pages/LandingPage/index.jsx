@@ -20,8 +20,7 @@ export const LandingPage = () => {
 
     return (
         <div>
-            <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
-            <link rel="apple-touch-icon" href="img/apple-touch-icon.png"/>
+            <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/><link rel="apple-touch-icon" href="img/apple-touch-icon.png"/>
             <link
                 rel="apple-touch-icon"
                 sizes="72x72"
