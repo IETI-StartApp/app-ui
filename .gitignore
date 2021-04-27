@@ -29,3 +29,6 @@ lib
 /coverage
 
 /build
+/public/css
+/public/fonts
+/public/styles
