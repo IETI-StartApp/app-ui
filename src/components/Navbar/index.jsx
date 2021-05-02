@@ -3,10 +3,12 @@ import {AppBar, Button, Hidden, IconButton, Toolbar, Typography} from '@material
 import MenuIcon from '@material-ui/icons/Menu';
 import {useStyles} from './styles';
 import {useAuth} from "../../authServices/Auth";
+import {useHistory} from "react-router";
 
 export default function Navbar({handleDrawerToggle}) {
     const classes = useStyles();
     const {signOut} = useAuth() || {};
+    const history = useHistory() || {};
     return (
         <AppBar position="static" className={classes.appBar}>
             <Toolbar>
@@ -23,8 +25,11 @@ export default function Navbar({handleDrawerToggle}) {
                     StartApp
                 </Typography>
                 <Hidden smDown>
-                    <Button className={classes.buttonBar}>Agregar proyecto</Button>
-                    <Button className={classes.buttonBar}>Ver mis proyectos</Button>
+                    <Button className={classes.buttonBar} onClick={() => history.push('/register-project')}>Agregar
+                        proyecto</Button>
+                    <Button className={classes.buttonBar} onClick={() => history.push('/')}>Ver mis proyectos</Button>
+                    <Button className={classes.buttonBar} onClick={() => history.push('/projects')}>Ver todos los
+                        proyectos</Button>
                     <Button className={classes.buttonBar} variant="outlined" onClick={signOut}>Cerrar sesión
                     </Button>
                 </Hidden>

@@ -5,7 +5,28 @@ import ProgressGraph from './ProgressGraph';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 
-export default function CardProject({projectId}) {
+export default function CardProject({project}) {
+
+    console.log(project)
+    const a = "{\n" +
+        "    \"id\": \"6060c953394ecb3f0eda5fe5\",\n" +
+        "    \"name\": \"proyectodad\",\n" +
+        "    \"image\": \"image.html\",\n" +
+        "    \"video\": \"videox\",\n" +
+        "    \"country\": \"countryx\",\n" +
+        "    \"description\": \"x\",\n" +
+        "    \"finance\": {\n" +
+        "      \"value\": 1,\n" +
+        "      \"investorNumber\": 3,\n" +
+        "      \"valuation\": 5,\n" +
+        "      \"minimumInvestment\": 1,\n" +
+        "      \"startDate\": \"2019-02-16T05:00:00.000+00:00\",\n" +
+        "      \"endDate\": \"2019-02-16T05:00:00.000+00:00\"\n" +
+        "    }\n" +
+        "  },"
+
+    const {id, name, image, video, country, description, finance} = project;
+    const {value, investorNumber, valuation, minimumInvestment, startDate, endDate} = finance;
 
     const classes = useStyles();
 // pass it as props
@@ -23,27 +44,24 @@ export default function CardProject({projectId}) {
         <Card className={classes.sizeCard}>
             <CardHeader
                 avatar={
-                    <Avatar aria-label="photo" src={ownerImage}>
+                    <Avatar aria-label="photo" src={image}>
                     </Avatar>
                 }
                 title={owner}
-                subheader={creationDate.toLocaleDateString()}
+                subheader={startDate}
             />
             <CardMedia
                 component="img"
                 alt="Project image"
                 height="210"
-                image={projectImage}
+                image={image}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                    {projectName}
+                    {name}
                 </Typography>
                 <Typography variant="body2" component="p">
-                    {pReturn}% de retorno efectivo anual
-                </Typography>
-                <Typography variant="body2" component="p">
-                    $ {fObjective} Meta de financiación
+                    $ {valuation} Meta de financiación
                 </Typography>
                 <Box position="relative" display="inline-flex" mt={2}>
                     <Box mr={5}>
@@ -51,18 +69,11 @@ export default function CardProject({projectId}) {
                             <Avatar className={classes.avatar}><MonetizationOnIcon/></Avatar>
                         </Box>
                         <Typography> Financiado </Typography>
-                        <Typography className={classes.mainColor}> $ {financed}</Typography>
+                        <Typography className={classes.mainColor}> $ {value}</Typography>
                     </Box>
                     <Box mr={5}>
-                        <ProgressGraph/>
+                        <ProgressGraph progress={value*100/valuation}/>
                         <Typography> Progreso </Typography>
-                    </Box>
-                    <Box>
-                        <Box position="relative" display="inline-flex">
-                            <Avatar className={classes.avatar}><SupervisedUserCircleIcon/></Avatar>
-                        </Box>
-                        <Typography> Socios </Typography>
-                        <Typography className={classes.mainColor}>{partners}</Typography>
                     </Box>
                 </Box>
             </CardContent>

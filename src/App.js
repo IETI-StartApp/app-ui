@@ -1,7 +1,15 @@
 import React from "react";
 import './App.css';
 import {AuthProvider} from "./authServices/Auth";
-import {LandingPage, LoginPage, ProjectDescription, RegisterForm, RegisterProjectPage, UserSelect} from "./pages";
+import {
+    LandingPage,
+    LoginPage,
+    ProjectDescription,
+    ProjectsGridPage,
+    RegisterForm,
+    RegisterProjectPage,
+    UserSelect
+} from "./pages";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import {PrivateRoute} from "./components";
 
@@ -17,6 +25,7 @@ function App() {
                         <PrivateRoute exact path='/project-description' component={ProjectDescription}/>
                         <PrivateRoute exact path='/register-project' component={RegisterProjectPage}/>
                         <Route exact path='/user-type' component={UserSelect}/>
+                        <Route exact path='/projects' component={ProjectsGridPage}/>
                     </Switch>
                 </AuthProvider>
             </Router>
