@@ -4,8 +4,8 @@ import {useStyles} from './styles';
 import ProgressGraph from './ProgressGraph';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 
-export default function CardProject({project}) {
-    const { name, image, finance} = project;
+export default function CardProject({project = {finance:{}}}) {
+    const {name, image, finance} = project;
     const {value, valuation, startDate} = finance;
     const classes = useStyles();
     const owner = "Nombre de usuario";
