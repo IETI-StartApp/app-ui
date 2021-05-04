@@ -8,6 +8,7 @@ exports[`Testing projects grid should load CardProject 1`] = `
   >
     <WithStyles(ForwardRef(Grid))
       container={true}
+      key="project-items-key"
       spacing={4}
     >
       <WithStyles(ForwardRef(Grid))

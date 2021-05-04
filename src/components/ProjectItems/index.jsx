@@ -4,7 +4,7 @@ import CardProject from './CardProject';
 import {useStyles} from './styles';
 import Navigation from "../Navbar/Navigation";
 
-export function ProjectsGrid({projects = {}}) {
+export function ProjectsItems({projects = {}}) {
 
     const classes = useStyles();
 
@@ -13,6 +13,7 @@ export function ProjectsGrid({projects = {}}) {
             <Navigation/>
             <Container className={classes.cardGrid}>
                 <Grid
+                    key={'project-items-key'}
                     container
                     spacing={4}
                 >

@@ -1,5 +1,5 @@
 import React from 'react';
-import {ProjectsGrid} from "../../components";
+import {ProjectsItems} from "../../components";
 
 export const ProjectsGridPage = () => {
     const [items, setItems] = React.useState([]);
@@ -18,6 +18,6 @@ export const ProjectsGridPage = () => {
     }, []);
 
     return (
-        <ProjectsGrid projects={items}/>
+        <ProjectsItems projects={items}/>
     );
 }
