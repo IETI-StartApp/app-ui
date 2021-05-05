@@ -15,7 +15,7 @@ export const ProjectsGridPage = ({testing}) => {
         }
 
         if (!testing) fetchData();
-    }, []);
+    }, [testing]);
 
     return (
         <ProjectsItems projects={items}/>
