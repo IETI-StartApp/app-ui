@@ -6,7 +6,7 @@ export const ProjectsGridPage = ({testing}) => {
 
     React.useEffect(() => {
         async function fetchData() {
-            const data = await fetch(`${process.env.REACT_APP_API_PROTOCOL}://${process.env.REACT_APP_API_HOST}/api/v1/projects`).then(res => {
+            const data = testing ? {test: 'a'} : await fetch(`${process.env.REACT_APP_API_PROTOCOL}://${process.env.REACT_APP_API_HOST}/api/v1/projects`).then(res => {
                 return res.json();
             });
 
@@ -14,7 +14,7 @@ export const ProjectsGridPage = ({testing}) => {
             console.log(data);
         }
 
-        if (!testing) fetchData();
+        fetchData();
     }, [testing]);
 
     return (
