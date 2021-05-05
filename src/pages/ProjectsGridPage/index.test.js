@@ -7,3 +7,9 @@ test('renders learn react link', () => {
     const linkElement = screen.getByText(/StartApp/i);
     expect(linkElement).toBeInTheDocument();
 });
+
+test('renders learn react link', () => {
+    render(<ProjectsGridPage />);
+    const linkElement = screen.getByText(/StartApp/i);
+    expect(linkElement).toBeInTheDocument();
+});

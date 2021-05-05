@@ -3,7 +3,7 @@ import {NavButton} from "./styles";
 import {useHistory} from "react-router";
 
 export const Navigation = () => {
-  const history = useHistory() || {};
+  const history = useHistory() || [];
     return (
         <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
             <div className='container'>
@@ -42,7 +42,7 @@ export const Navigation = () => {
                         </li>
                         <li>
                             <li>
-                                <NavButton onClick={() => history.push('/signin')}>Ingresa</NavButton>
+                                <NavButton id={'btn-signin'} onClick={() => history.push('/signin')}>Ingresa</NavButton>
                             </li>
                         </li>
                     </ul>
