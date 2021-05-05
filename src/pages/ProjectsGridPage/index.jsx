@@ -1,12 +1,11 @@
 import React from 'react';
 import {ProjectsItems} from "../../components";
 
-export const ProjectsGridPage = ({testing}) => {
-    const [items, setItems] = React.useState([]);
-
+export const ProjectsGridPage = ({testing,objects}) => {
+    const [items, setItems] = React.useState(objects);
     React.useEffect(() => {
         async function fetchData() {
-            const data = testing ? {test: 'a'} : await fetch(`${process.env.REACT_APP_API_PROTOCOL}://${process.env.REACT_APP_API_HOST}/api/v1/projects`).then(res => {
+            const data = testing ? objects : await fetch(`${process.env.REACT_APP_API_PROTOCOL}://${process.env.REACT_APP_API_HOST}/api/v1/projects`).then(res => {
                 return res.json();
             });
 
@@ -16,7 +15,7 @@ export const ProjectsGridPage = ({testing}) => {
 
         fetchData();
     }, [testing]);
-
+    console.log(items)
     return (
         <ProjectsItems projects={items}/>
     );
