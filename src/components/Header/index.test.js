@@ -1,19 +1,12 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import {HeaderT} from './index';
+import {fireEvent, getByTestId, queryByAttribute, render} from '@testing-library/react'
+import {Header} from "./index";
 
-const header = {
-    "title": "StartApp"
-}
+test("Click", () => {
 
-test('renders learn react link', () => {
-    render(<HeaderT/>);
-    const linkElement = screen.getByText(/Cargando/i);
-    expect(linkElement).toBeInTheDocument();
-});
+    const getById = queryByAttribute.bind(null, 'id');
 
-test('renders learn react link', () => {
-    render(<HeaderT data={header}/>);
-    const linkElement = screen.getByText(/StartApp/i);
-    expect(linkElement).toBeInTheDocument();
+    const dom = render(<Header />);
+    const button = getById(dom.container, 'buttonLog');
+    fireEvent.click(button);
 });
