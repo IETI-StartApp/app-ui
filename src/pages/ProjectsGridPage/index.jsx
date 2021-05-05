@@ -1,7 +1,7 @@
 import React from 'react';
 import {ProjectsItems} from "../../components";
 
-export const ProjectsGridPage = ({testing,objects}) => {
+export const ProjectsGridPage = ({testing, objects}) => {
     const [items, setItems] = React.useState(objects);
     React.useEffect(() => {
         async function fetchData() {
@@ -14,7 +14,7 @@ export const ProjectsGridPage = ({testing,objects}) => {
         }
 
         fetchData();
-    }, [testing]);
+    }, [testing, objects]);
     console.log(items)
     return (
         <ProjectsItems projects={items}/>
