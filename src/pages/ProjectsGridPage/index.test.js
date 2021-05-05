@@ -9,7 +9,7 @@ test('renders learn react link', () => {
 });
 
 test('renders learn react link', () => {
-    render(<ProjectsGridPage />);
+    render(<ProjectsGridPage testing/>);
     const linkElement = screen.getByText(/StartApp/i);
     expect(linkElement).toBeInTheDocument();
 });
