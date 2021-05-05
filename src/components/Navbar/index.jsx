@@ -5,10 +5,20 @@ import {useStyles} from './styles';
 import {useAuth} from "../../authServices/Auth";
 import {useHistory} from "react-router";
 
-export default function Navbar({handleDrawerToggle}) {
+export default function Navbar({handleDrawerToggle, test}) {
     const classes = useStyles();
     const {signOut} = useAuth() || {};
-    const history = useHistory() || {};
+    const history = useHistory() || [];
+    const buttons = <>
+        <Button className={classes.buttonBar} onClick={() => history.push('/register-project')}>Agregar
+            proyecto</Button>
+        <Button className={classes.buttonBar} onClick={() => history.push('/')}>Ver mis
+            proyectos</Button>
+        <Button className={classes.buttonBar} onClick={() => history.push('/projects')}>Ver todos los
+            proyectos</Button>
+        <Button className={classes.buttonBar} variant="outlined" onClick={signOut}>Cerrar sesión
+        </Button>
+    </>
     return (
         <AppBar position="static" className={classes.appBar}>
             <Toolbar>
@@ -24,14 +34,11 @@ export default function Navbar({handleDrawerToggle}) {
                 <Typography variant="h6" className={classes.title}>
                     StartApp
                 </Typography>
+                {
+                    test && buttons
+                }
                 <Hidden smDown>
-                    <Button className={classes.buttonBar} onClick={() => history.push('/register-project')}>Agregar
-                        proyecto</Button>
-                    <Button className={classes.buttonBar} onClick={() => history.push('/')}>Ver mis proyectos</Button>
-                    <Button className={classes.buttonBar} onClick={() => history.push('/projects')}>Ver todos los
-                        proyectos</Button>
-                    <Button className={classes.buttonBar} variant="outlined" onClick={signOut}>Cerrar sesión
-                    </Button>
+                    {buttons}
                 </Hidden>
             </Toolbar>
         </AppBar>

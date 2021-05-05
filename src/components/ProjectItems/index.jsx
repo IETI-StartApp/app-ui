@@ -4,7 +4,7 @@ import CardProject from './CardProject';
 import {useStyles} from './styles';
 import Navigation from "../Navbar/Navigation";
 
-export function ProjectsItems({projects = {}}) {
+export function ProjectsItems({projects}) {
 
     const classes = useStyles();
 
