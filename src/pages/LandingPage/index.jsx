@@ -1,67 +1,22 @@
-import {useEffect, useState} from 'react'
-import JsonData from '../../data/data.json'
-import SmoothScroll from 'smooth-scroll'
-import {About, Features, HeaderT, Navigation, Team} from "../../components";
+import React from 'react';
+import Container from '@material-ui/core/Container';
+import {Footer, Header, ItemContainer} from "../../components";
+import CssBaseline from "@material-ui/core/CssBaseline";
 
-export const scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 1000,
-    speedAsDuration: true,
-})
+const IMG_URL = 'https://images.unsplash.com/photo-1504805572947-34fad45aed93?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2550&q=80'
 
 export const LandingPage = () => {
-    const [landingPageData, setLandingPageData] = useState({})
-    useEffect(() => {
-        setLandingPageData(JsonData)
-    }, [])
-
     return (
-        <div>
-            <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
-            <link rel="apple-touch-icon" href="img/apple-touch-icon.png"/>
-            <link
-                rel="apple-touch-icon"
-                sizes="72x72"
-                href="img/apple-touch-icon-72x72.png"
-            />
-            <link
-                rel="apple-touch-icon"
-                sizes="114x114"
-                href="img/apple-touch-icon-114x114.png"
-            />
-
-            <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-            <link
-                rel="stylesheet"
-                type="text/css"
-                href="fonts/font-awesome/css/font-awesome.css"
-            />
-            <link rel="stylesheet" type="text/css" href="css/style.css"/>
-            <link
-                rel="stylesheet"
-                type="text/css"
-                href="css/nivo-lightbox/nivo-lightbox.css"
-            />
-            <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css"/>
-            <link
-                href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
-                rel="stylesheet"
-            />
-            <link
-                href="https://fonts.googleapis.com/css?family=Lato:400,700"
-                rel="stylesheet"
-            />
-            <link
-                href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900"
-                rel="stylesheet"
-            />
-            <link rel="stylesheet"
-                  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-            <Navigation/>
-            <HeaderT data={landingPageData.Header}/>
-            <Features data={landingPageData.Features}/>
-            <About data={landingPageData.About}/>
-            <Team data={landingPageData.Team}/>
-        </div>
-    )
+        <>
+            <CssBaseline/>
+            <Header title="StartApp"/>
+            <Container maxWidth="lg">
+                <main>
+                    <ItemContainer img={IMG_URL}/>
+                </main>
+                <div style={{height: '30vh'}}><br/></div>
+            </Container>
+            <Footer title="StartApp"/>
+        </>
+    );
 }
-
