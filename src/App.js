@@ -25,7 +25,7 @@ function App() {
                         <PrivateRoute exact path='/project-description' component={ProjectDescription}/>
                         <PrivateRoute exact path='/register-project' component={RegisterProjectPage}/>
                         <Route exact path='/user-type' component={UserSelect}/>
-                        <Route exact path='/projects' render={() => <ProjectsGridPage objects={[]}/>}/>
+                        <PrivateRoute exact path='/projects' component={() => <ProjectsGridPage objects={[]}/>}/>
                     </Switch>
                 </AuthProvider>
             </Router>
