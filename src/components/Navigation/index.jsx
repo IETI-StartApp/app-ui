@@ -1,5 +1,9 @@
-export const Navigation = (props) => {
-  return (
+import {useHistory} from "react-router";
+import {NavButton} from "./styles";
+
+export const Navigation = () => {
+    const history = useHistory() || [];
+    return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
       <div className='container'>
         <div className='navbar-header'>
@@ -37,9 +41,14 @@ export const Navigation = (props) => {
             </li>
             <li>
               <a href='#team' className='page-scroll'>
-                Equipo
+                Conoce el equipo
               </a>
             </li>
+              <li>
+                  <li>
+                      <NavButton id={'btn-signin'} onClick={() => history.push('/signin')}>Ingresa</NavButton>
+                  </li>
+              </li>
           </ul>
         </div>
       </div>
