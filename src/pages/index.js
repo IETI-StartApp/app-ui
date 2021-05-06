@@ -4,3 +4,4 @@ export * from './ProjectDescription/ProjectDescription';
 export * from './RegisterProjectPage';
 export * from './UserTypePage/UserSelect';
 export * from './LandingPage'
+export * from './ProjectsGridPage'

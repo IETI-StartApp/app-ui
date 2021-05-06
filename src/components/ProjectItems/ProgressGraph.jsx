@@ -2,10 +2,9 @@ import React from 'react';
 import {Box, CircularProgress, Typography} from '@material-ui/core';
 import {useStyles} from './styles';
 
-export default function ProgressGraph({projectId}) {
+export default function ProgressGraph({progress}) {
 
     const classes = useStyles();
-    const progress = 70;
 
     return (
         <Box position="relative" display="inline-flex">

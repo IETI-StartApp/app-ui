@@ -6,7 +6,7 @@ import { Typography } from '@material-ui/core';
 
 describe('Testing progress graph', () => {
 
-    const wrapper = shallow(<ProgressGraph/>)
+    const wrapper = shallow(<ProgressGraph progress={0.5}/>)
 
     test('should load ProgressGraph', () => {
         expect(wrapper).toMatchSnapshot();
