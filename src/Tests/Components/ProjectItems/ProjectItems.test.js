@@ -1,14 +1,12 @@
-import '@testing-library/jest-dom';
-import {shallow} from 'enzyme';
 import React from 'react';
+import {render, screen} from '@testing-library/react';
 import {ProjectsItems} from "../../../components";
 
-describe('Testing projects grid', () => {
-
-    const wrapper = shallow(<ProjectsItems
+test('renders learn react link', () => {
+    render(<ProjectsItems
         projects={[
             {
-                name: "a",
+                name: "testing",
                 image: "a",
                 finance: {}
             },
@@ -21,10 +19,7 @@ describe('Testing projects grid', () => {
                 name: "a",
                 image: "a",
                 finance: {}
-            }]}/>)
-
-    test('should load CardProject', () => {
-        expect(wrapper).toMatchSnapshot();
-    })
-
-})
+            }]}/>);
+    const linkElement = screen.getByText(/testing/i);
+    expect(linkElement).toBeInTheDocument();
+});

@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 
+
 exports[`Testing register page should render register page 1`] = `
+
 <div
   className="comment-box"
 >
@@ -97,3 +99,11 @@ exports[`Testing register page should render register page 1`] = `
   </WithStyles(ForwardRef(Grid))>
 </div>
 `;
+
+
+exports[`Testing comment page should render comment page 2`] = `
+<div>
+  Imagenes
+</div>
+`;
+

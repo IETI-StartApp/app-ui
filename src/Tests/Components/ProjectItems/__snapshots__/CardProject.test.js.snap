@@ -8,17 +8,21 @@ exports[`Testing card project should load CardProject 1`] = `
     avatar={
       <WithStyles(ForwardRef(Avatar))
         aria-label="photo"
-        src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg"
+        src="https://images.unsplash.com/photo-1619537765439-1469ac26014a?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
       />
     }
-    subheader="11/2/2021"
+    subheader={
+      Object {
+        "$date": "2019-02-16T05:00:00.000Z",
+      }
+    }
     title="Nombre de usuario"
   />
   <WithStyles(ForwardRef(CardMedia))
     alt="Project image"
     component="img"
     height="210"
-    image="https://e00-expansion.uecdn.es/assets/multimedia/imagenes/2018/07/25/15325097324389.jpg"
+    image="https://images.unsplash.com/photo-1619537765439-1469ac26014a?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
   />
   <WithStyles(ForwardRef(CardContent))>
     <WithStyles(ForwardRef(Typography))
@@ -26,21 +30,14 @@ exports[`Testing card project should load CardProject 1`] = `
       gutterBottom={true}
       variant="h5"
     >
-      Nombre del proyecto
-    </WithStyles(ForwardRef(Typography))>
-    <WithStyles(ForwardRef(Typography))
-      component="p"
-      variant="body2"
-    >
-      15
-      % de retorno efectivo anual
+      Beach & talk
     </WithStyles(ForwardRef(Typography))>
     <WithStyles(ForwardRef(Typography))
       component="p"
       variant="body2"
     >
       $ 
-      30000000
+      50000
        Meta de financiación
     </WithStyles(ForwardRef(Typography))>
     <Styled(MuiBox)
@@ -68,35 +65,17 @@ exports[`Testing card project should load CardProject 1`] = `
           className="makeStyles-mainColor-2"
         >
            $ 
-          21000000
+          10000
         </WithStyles(ForwardRef(Typography))>
       </Styled(MuiBox)>
       <Styled(MuiBox)
         mr={5}
       >
-        <ProgressGraph />
+        <ProgressGraph
+          progress={20}
+        />
         <WithStyles(ForwardRef(Typography))>
            Progreso 
-        </WithStyles(ForwardRef(Typography))>
-      </Styled(MuiBox)>
-      <Styled(MuiBox)>
-        <Styled(MuiBox)
-          display="inline-flex"
-          position="relative"
-        >
-          <WithStyles(ForwardRef(Avatar))
-            className="makeStyles-avatar-3"
-          >
-            <Memo([object Object]) />
-          </WithStyles(ForwardRef(Avatar))>
-        </Styled(MuiBox)>
-        <WithStyles(ForwardRef(Typography))>
-           Socios 
-        </WithStyles(ForwardRef(Typography))>
-        <WithStyles(ForwardRef(Typography))
-          className="makeStyles-mainColor-2"
-        >
-          10
         </WithStyles(ForwardRef(Typography))>
       </Styled(MuiBox)>
     </Styled(MuiBox)>
