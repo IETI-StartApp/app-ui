@@ -1,8 +1,16 @@
 import { makeStyles } from '@material-ui/core';
 
 export const useStyles = makeStyles((theme) => ({
+    root: {
+        display: 'flex',
+    },
     appBar: {
         backgroundColor: '#fff',
+        zIndex: theme.zIndex.drawer + 1,
+        [theme.breakpoints.up('md')]: {
+            width: `calc(100% - ${300}px)`,
+            marginLeft: 300,
+        },
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -24,18 +32,12 @@ export const useStyles = makeStyles((theme) => ({
         flexShrink: 0,
     },
     drawerPaper: {
-        width: 350,
-    },
-    content: {
-        [theme.breakpoints.up('sm')]: {
-            marginLeft: 236
-        },
-        padding:theme.spacing(10,2)
+        width: 300,
     },
     menuHeader: {
         height: theme.spacing(12),
         backgroundColor: "#950740",
         color: "#fff",
     },
-    offset: theme.mixins.toolbar
+    offset: theme.mixins.toolbar,
 }));
