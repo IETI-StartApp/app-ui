@@ -1,359 +1,76 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Testing navigation should load navigation  1`] = `
-<Fragment>
-  <Navigation />
-  <div
-    className="makeStyles-offset-14"
-  />
-  <div
-    className="makeStyles-root-1"
-  >
-    <WithStyles(ForwardRef(Grid))
-      alignItems="center"
-      className="makeStyles-allItems-8"
-      container={true}
-      direction="col"
-      justify="center"
-      spacing={2}
-    >
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          direction="row"
-          justify="center"
-          spacing={2}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            lg={3}
-            sm={5}
-            xs={12}
-          >
-            <div
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "justifyContent": "center",
-                }
-              }
-            >
-              <WithStyles(ForwardRef(Card))
-                className="makeStyles-dashItem-2"
-                variant="outlined"
-              >
-                <WithStyles(ForwardRef(Avatar))
-                  className="makeStyles-cardAvatar-4"
-                  variant="rounded"
-                >
-                  <Memo([object Object])
-                    fontSize="large"
-                  />
-                </WithStyles(ForwardRef(Avatar))>
-                <WithStyles(ForwardRef(CardActionArea))
-                  onClick={[Function]}
-                >
-                  <WithStyles(ForwardRef(CardContent))
-                    className="makeStyles-itemContent-3"
-                  >
-                    <WithStyles(ForwardRef(Typography))
-                      align="center"
-                      className="makeStyles-mainColor-7"
-                      variant="h4"
-                    >
-                      4
-                    </WithStyles(ForwardRef(Typography))>
-                    <WithStyles(ForwardRef(Typography))
-                      align="center"
-                    >
-                      Proyectos Financiados
-                    </WithStyles(ForwardRef(Typography))>
-                  </WithStyles(ForwardRef(CardContent))>
-                </WithStyles(ForwardRef(CardActionArea))>
-              </WithStyles(ForwardRef(Card))>
-            </div>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            lg={3}
-            sm={5}
-            xs={12}
-          >
-            <div
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "justifyContent": "center",
-                }
-              }
-            >
-              <WithStyles(ForwardRef(Card))
-                className="makeStyles-dashItem-2"
-                variant="outlined"
-              >
-                <WithStyles(ForwardRef(Avatar))
-                  className="makeStyles-cardAvatar-4"
-                  variant="rounded"
-                >
-                  <Memo([object Object])
-                    fontSize="large"
-                  />
-                </WithStyles(ForwardRef(Avatar))>
-                <WithStyles(ForwardRef(CardActionArea))
-                  onClick={[Function]}
-                >
-                  <WithStyles(ForwardRef(CardContent))
-                    className="makeStyles-itemContent-3"
-                  >
-                    <WithStyles(ForwardRef(Typography))
-                      align="center"
-                      className="makeStyles-mainColor-7"
-                      variant="h4"
-                    >
-                      3.5M
-                    </WithStyles(ForwardRef(Typography))>
-                    <WithStyles(ForwardRef(Typography))
-                      align="center"
-                    >
-                      Capital invertido
-                    </WithStyles(ForwardRef(Typography))>
-                  </WithStyles(ForwardRef(CardContent))>
-                </WithStyles(ForwardRef(CardActionArea))>
-              </WithStyles(ForwardRef(Card))>
-            </div>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            lg={3}
-            sm={5}
-            xs={12}
-          >
-            <div
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "justifyContent": "center",
-                }
-              }
-            >
-              <WithStyles(ForwardRef(Card))
-                className="makeStyles-dashItem-2"
-                variant="outlined"
-              >
-                <WithStyles(ForwardRef(Avatar))
-                  className="makeStyles-cardAvatar-4"
-                  variant="rounded"
-                >
-                  <Memo([object Object])
-                    fontSize="large"
-                  />
-                </WithStyles(ForwardRef(Avatar))>
-                <WithStyles(ForwardRef(CardActionArea))
-                  onClick={[Function]}
-                >
-                  <WithStyles(ForwardRef(CardContent))
-                    className="makeStyles-itemContent-3"
-                  >
-                    <WithStyles(ForwardRef(Typography))
-                      align="center"
-                      className="makeStyles-mainColor-7"
-                      variant="h4"
-                    >
-                      1000
-                    </WithStyles(ForwardRef(Typography))>
-                    <WithStyles(ForwardRef(Typography))
-                      align="center"
-                    >
-                      Oportunidades de inversión 
-                    </WithStyles(ForwardRef(Typography))>
-                  </WithStyles(ForwardRef(CardContent))>
-                </WithStyles(ForwardRef(CardActionArea))>
-              </WithStyles(ForwardRef(Card))>
-            </div>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            lg={3}
-            sm={5}
-            xs={12}
-          >
-            <div
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "justifyContent": "center",
-                }
-              }
-            >
-              <WithStyles(ForwardRef(Card))
-                className="makeStyles-dashItem-2"
-                variant="outlined"
-              >
-                <WithStyles(ForwardRef(Avatar))
-                  className="makeStyles-cardAvatar-4"
-                  variant="rounded"
-                >
-                  <Memo([object Object])
-                    fontSize="large"
-                  />
-                </WithStyles(ForwardRef(Avatar))>
-                <WithStyles(ForwardRef(CardActionArea))
-                  onClick={[Function]}
-                >
-                  <WithStyles(ForwardRef(CardContent))
-                    className="makeStyles-itemContent-3"
-                  >
-                    <WithStyles(ForwardRef(Typography))
-                      align="center"
-                      className="makeStyles-mainColor-7"
-                      variant="h4"
-                    >
-                      2
-                    </WithStyles(ForwardRef(Typography))>
-                    <WithStyles(ForwardRef(Typography))
-                      align="center"
-                    >
-                      Proyectos guardados
-                    </WithStyles(ForwardRef(Typography))>
-                  </WithStyles(ForwardRef(CardContent))>
-                </WithStyles(ForwardRef(CardActionArea))>
-              </WithStyles(ForwardRef(Card))>
-            </div>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-      <WithStyles(ForwardRef(Grid))
-        item={true}
-        xs={12}
-      >
-        <WithStyles(ForwardRef(Grid))
-          container={true}
-          direction="row"
-          justify="center"
-          spacing={2}
-        >
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            lg={6}
-            sm={10}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Card))
-              className="makeStyles-cardChart-5"
-              variant="outlined"
-            >
-              <WithStyles(ForwardRef(CardContent))>
-                <WithStyles(ForwardRef(Typography))
-                  className="makeStyles-mainColor-7"
-                  display="block"
-                  variant="button"
-                >
-                  Inversiones en los últimos 6 meses
-                </WithStyles(ForwardRef(Typography))>
-                <Styled(MuiBox)
-                  p={3}
-                >
-                  <InvestmentsChart />
-                </Styled(MuiBox)>
-              </WithStyles(ForwardRef(CardContent))>
-            </WithStyles(ForwardRef(Card))>
-          </WithStyles(ForwardRef(Grid))>
-          <WithStyles(ForwardRef(Grid))
-            item={true}
-            lg={6}
-            sm={10}
-            xs={12}
-          >
-            <WithStyles(ForwardRef(Card))
-              className="makeStyles-projects-6"
-              variant="outlined"
-            >
-              <WithStyles(ForwardRef(CardContent))>
-                <WithStyles(ForwardRef(Typography))
-                  className="makeStyles-mainColor-7"
-                  display="block"
-                  variant="button"
-                >
-                  Oportunidades de inversión
-                </WithStyles(ForwardRef(Typography))>
-                <div
-                  className="makeStyles-rootProjects-10"
-                >
-                  <WithStyles(ForwardRef(GridList))
-                    className="makeStyles-gridList-11"
-                  >
-                    <WithStyles(ForwardRef(GridListTile))
-                      className="makeStyles-gridListTile-12"
-                    >
-                      <CardProject
-                        project={
-                          Object {
-                            "finance": Object {
-                              "startDate": "10/03/2021",
-                              "valuation": 20000000,
-                              "value": 15000000,
-                            },
-                            "image": "https://www.binarias.org/wp-content/uploads/2020/12/tegnologia.jpeg",
-                            "name": "Proyecto 1",
-                          }
-                        }
-                      />
-                    </WithStyles(ForwardRef(GridListTile))>
-                    <WithStyles(ForwardRef(GridListTile))
-                      className="makeStyles-gridListTile-12"
-                    >
-                      <CardProject
-                        project={
-                          Object {
-                            "finance": Object {
-                              "startDate": "12/02/2021",
-                              "valuation": 17500000,
-                              "value": 10000000,
-                            },
-                            "image": "https://s3-us-west-2.amazonaws.com/wp-mpro-blog/wp-content/uploads/2016/03/14133959/s3-blog-tecnologia-como-prioridad-min.png",
-                            "name": "Proyecto 2",
-                          }
-                        }
-                      />
-                    </WithStyles(ForwardRef(GridListTile))>
-                    <WithStyles(ForwardRef(GridListTile))
-                      className="makeStyles-gridListTile-12"
-                    >
-                      <CardProject
-                        project={
-                          Object {
-                            "finance": Object {
-                              "startDate": "21/01/2021",
-                              "valuation": 12000000,
-                              "value": 8000000,
-                            },
-                            "image": "https://thelogisticsworld.com/wp-content/uploads/2020/02/empresario-analizando-informe-financiero-empresa-graficos-realidad-aumentada_34141-360.jpg",
-                            "name": "Proyecto 3",
-                          }
-                        }
-                      />
-                    </WithStyles(ForwardRef(GridListTile))>
-                  </WithStyles(ForwardRef(GridList))>
-                </div>
-              </WithStyles(ForwardRef(CardContent))>
-            </WithStyles(ForwardRef(Card))>
-          </WithStyles(ForwardRef(Grid))>
-        </WithStyles(ForwardRef(Grid))>
-      </WithStyles(ForwardRef(Grid))>
-    </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Fab))
-      aria-label="Chat"
-      className="makeStyles-fab-13"
-    >
-      <Memo([object Object]) />
-    </WithStyles(ForwardRef(Fab))>
-  </div>
-</Fragment>
+<Dashboard
+  chart={<InvestmentsChart />}
+  chartTitle=" Inversiones en los últimos 6 meses"
+  items={
+    Array [
+      Object {
+        "description": "Proyectos Financiados",
+        "icon": <Memo
+          fontSize="large"
+        />,
+        "number": "4",
+        "path": "/",
+      },
+      Object {
+        "description": "Capital invertido",
+        "icon": <Memo
+          fontSize="large"
+        />,
+        "number": "3.5M",
+        "path": "/dashboard",
+      },
+      Object {
+        "description": "Oportunidades de inversión ",
+        "icon": <Memo
+          fontSize="large"
+        />,
+        "number": "1000",
+        "path": "/",
+      },
+      Object {
+        "description": "Proyectos guardados",
+        "icon": <Memo
+          fontSize="large"
+        />,
+        "number": "2",
+        "path": "/",
+      },
+    ]
+  }
+  projects={
+    Array [
+      Object {
+        "finance": Object {
+          "startDate": "10/03/2021",
+          "valuation": 20000000,
+          "value": 15000000,
+        },
+        "image": "https://www.binarias.org/wp-content/uploads/2020/12/tegnologia.jpeg",
+        "name": "Proyecto 1",
+      },
+      Object {
+        "finance": Object {
+          "startDate": "12/02/2021",
+          "valuation": 17500000,
+          "value": 10000000,
+        },
+        "image": "https://s3-us-west-2.amazonaws.com/wp-mpro-blog/wp-content/uploads/2016/03/14133959/s3-blog-tecnologia-como-prioridad-min.png",
+        "name": "Proyecto 2",
+      },
+      Object {
+        "finance": Object {
+          "startDate": "21/01/2021",
+          "valuation": 12000000,
+          "value": 8000000,
+        },
+        "image": "https://thelogisticsworld.com/wp-content/uploads/2020/02/empresario-analizando-informe-financiero-empresa-graficos-realidad-aumentada_34141-360.jpg",
+        "name": "Proyecto 3",
+      },
+    ]
+  }
+  projectsTitle="Oportunidades de inversión"
+/>
 `;

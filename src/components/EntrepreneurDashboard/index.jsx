@@ -1,17 +1,17 @@
 import React from 'react';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
-import TrendingUpIcon from '@material-ui/icons/TrendingUp';
-import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import { Dashboard } from '../Dashboard/index';
-import { InvestmentsChart } from './InvestmentsChart';
+import { ProjectsChart } from './ProjectsChart';
+import PermIdentityIcon from '@material-ui/icons/PermIdentity';
+import CheckIcon from '@material-ui/icons/Check';
 
-export const InvestorDashboard = () => {
+export const EntrepreneurDashboard = () => {
     const items = [
-        { number: "4", description: "Proyectos Financiados", icon: <StarBorderIcon fontSize="large" />, path: "/" },
-        { number: "3.5M", description: "Capital invertido", icon: <AttachMoneyIcon fontSize="large" />, path: "/dashboard" },
-        { number: "1000", description: "Oportunidades de inversión ", icon: <TrendingUpIcon fontSize="large" />, path: "/" },
-        { number: "2", description: "Proyectos guardados", icon: <BookmarkBorderIcon fontSize="large" />, path: "/" }
+        { number: "5", description: "Proyectos Creados", icon: <StarBorderIcon fontSize="large" />, path: "/" },
+        { number: "3.5M", description: "Capital recaudado", icon: <AttachMoneyIcon fontSize="large" />, path: "/dashboard" },
+        { number: "17", description: "Socios", icon: <PermIdentityIcon fontSize="large" />, path: "/" },
+        { number: "0", description: "Proyectos exitosos", icon: <CheckIcon fontSize="large" />, path: "/" }
     ];
     const projects = [
         {
@@ -35,9 +35,9 @@ export const InvestorDashboard = () => {
         <Dashboard 
             items={ items }
             projects={ projects }
-            chart={ <InvestmentsChart /> }
-            projectsTitle={ "Oportunidades de inversión" }
-            chartTitle={ " Inversiones en los últimos 6 meses" }
+            chart={ <ProjectsChart /> }
+            projectsTitle={ "Mis proyectos" }
+            chartTitle={ "Mis proyectos: porcentaje financiado" }
         />
     );
 }

@@ -1,14 +1,18 @@
 import React from 'react';
-import { InvestorDashboard } from "../../components";
+import { InvestorDashboard, EntrepreneurDashboard} from "../../components";
 
 export const Dashboard = ( ) => {
-    const userType = "Investor";
+    const userType = "Entrepreneur";
 
     return (
         <>
             {
                 userType === "Investor" &&
                 <InvestorDashboard />
+            }
+            {
+                userType === "Entrepreneur" &&
+                <EntrepreneurDashboard />
             }
         </>
     );
