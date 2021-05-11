@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing Projects Chart should load Projects Chart 1`] = `
+<WithStyles(ForwardRef(Paper))>
+  <Component
+    data={
+      Array [
+        Object {
+          "financed": 75,
+          "name": "Proyecto 1",
+        },
+        Object {
+          "financed": 57,
+          "name": "Proyecto 2",
+        },
+        Object {
+          "financed": 67,
+          "name": "Proyecto 3",
+        },
+        Object {
+          "financed": 17,
+          "name": "Proyecto 4",
+        },
+        Object {
+          "financed": 2,
+          "name": "Proyecto 5",
+        },
+      ]
+    }
+  >
+    <Component />
+    <Component />
+    <Component
+      argumentField="name"
+      barWidth={0.3}
+      color="#950740"
+      valueField="financed"
+    />
+    <AnimationBase
+      duration={1000}
+      easing={[Function]}
+    />
+  </Component>
+</WithStyles(ForwardRef(Paper))>
+`;

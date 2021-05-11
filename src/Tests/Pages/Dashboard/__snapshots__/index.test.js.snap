@@ -2,6 +2,6 @@
 
 exports[`Testing dashboard should render dashboard 1`] = `
 <Fragment>
-  <InvestorDashboard />
+  <EntrepreneurDashboard />
 </Fragment>
 `;

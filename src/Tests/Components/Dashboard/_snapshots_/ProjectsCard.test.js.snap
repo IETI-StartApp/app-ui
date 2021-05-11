@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing projects card 1`] = `
+<Card variant="outlined" className={classes.projects}>
+            <CardContent>
+                <Typography className={classes.mainColor} variant="button" display="block">{ title }</Typography>
+                <div className={classes.rootProjects}>
+                    <GridList className={classes.gridList}>
+                        {projects.map((project) => (
+                            <GridListTile className={classes.gridListTile}>
+                                <CardProject project={project} />
+                            </GridListTile>
+                        ))}
+                    </GridList>
+                </div>
+            </CardContent>
+        </Card>
+`;

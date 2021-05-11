@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing items grid should items grid 1`] = `
+<WithStyles(ForwardRef(Grid))
+  container={true}
+  direction="row"
+  justify="center"
+  spacing={2}
+>
+  <WithStyles(ForwardRef(Grid))
+    item={true}
+    lg={3}
+    sm={5}
+    xs={12}
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <WithStyles(ForwardRef(Card))
+        className="makeStyles-dashItem-2"
+        variant="outlined"
+      >
+        <WithStyles(ForwardRef(Avatar))
+          className="makeStyles-cardAvatar-4"
+          variant="rounded"
+        >
+          <Memo([object Object])
+            fontSize="large"
+          />
+        </WithStyles(ForwardRef(Avatar))>
+        <WithStyles(ForwardRef(CardActionArea))
+          onClick={[Function]}
+        >
+          <WithStyles(ForwardRef(CardContent))
+            className="makeStyles-itemContent-3"
+          >
+            <WithStyles(ForwardRef(Typography))
+              align="center"
+              className="makeStyles-mainColor-7"
+              variant="h4"
+            >
+              5
+            </WithStyles(ForwardRef(Typography))>
+            <WithStyles(ForwardRef(Typography))
+              align="center"
+            >
+              Proyectos Creados
+            </WithStyles(ForwardRef(Typography))>
+          </WithStyles(ForwardRef(CardContent))>
+        </WithStyles(ForwardRef(CardActionArea))>
+      </WithStyles(ForwardRef(Card))>
+    </div>
+  </WithStyles(ForwardRef(Grid))>
+</WithStyles(ForwardRef(Grid))>
+`;

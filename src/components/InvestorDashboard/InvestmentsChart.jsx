@@ -36,7 +36,7 @@ export const InvestmentsChart = () => {
                 >
                     <ArgumentAxis />
                     <ValueAxis />
-                    <LineSeries valueField="Total" argumentField="Month" />
+                    <LineSeries valueField="Total" argumentField="Month" color="#950740"/>
                     <Animation />
                 </Chart>
             </Paper>

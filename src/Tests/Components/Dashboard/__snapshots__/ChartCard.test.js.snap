@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing chart card should load chart card  1`] = `
+<WithStyles(ForwardRef(Card))
+  className="makeStyles-cardChart-5"
+  variant="outlined"
+>
+  <WithStyles(ForwardRef(CardContent))>
+    <WithStyles(ForwardRef(Typography))
+      className="makeStyles-mainColor-7"
+      display="block"
+      variant="button"
+    />
+    <Styled(MuiBox)
+      p={3}
+    />
+  </WithStyles(ForwardRef(CardContent))>
+</WithStyles(ForwardRef(Card))>
+`;

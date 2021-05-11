@@ -26,7 +26,7 @@ export default function MenuDrawer({ open, onClose, variant }) {
                     {currentUser.displayName}
                 </Typography>
             </div>
-            <MenuItems userType="Investor" />
+            <MenuItems userType="Entrepreneur" />
         </Drawer>
     );
 }
