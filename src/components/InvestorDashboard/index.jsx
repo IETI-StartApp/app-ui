@@ -15,29 +15,24 @@ export const InvestorDashboard = () => {
     ];
     const projects = [
         {
-            name: "Proyecto 1", 
-            image:"https://www.binarias.org/wp-content/uploads/2020/12/tegnologia.jpeg", 
-            finance: { value:15000000, valuation:20000000, startDate: "10/03/2021"}
+            name: "Proyecto 4", 
+            image:"https://fundacioncompartir.org/sites/default/files/la-nueva-tecnologia-que-esta-moviendo-al-mundo.jpg", 
+            finance: { value:15500000, valuation:30000000, startDate: "11/03/2021"}
         },
         {
-            name: "Proyecto 2", 
-            image:"https://s3-us-west-2.amazonaws.com/wp-mpro-blog/wp-content/uploads/2016/03/14133959/s3-blog-tecnologia-como-prioridad-min.png", 
-            finance: { value:10000000, valuation:17500000, startDate: "12/02/2021"},
+            name: "Proyecto 5", 
+            image:"https://i1.wp.com/tiempodenegocios.com/wp-content/uploads/2019/05/5798-750x406.jpg", 
+            finance: { value:8000000, valuation:18000000, startDate: "15/02/2021"},
         },
         {
-            name: "Proyecto 3", 
-            image:"https://thelogisticsworld.com/wp-content/uploads/2020/02/empresario-analizando-informe-financiero-empresa-graficos-realidad-aumentada_34141-360.jpg", 
-            finance: { value:8000000, valuation:12000000, startDate: "21/01/2021"},
+            name: "Proyecto 6", 
+            image:"https://assets.entrepreneur.com/content/3x2/2000/tecnologia16.jpg", 
+            finance: { value:8550000, valuation:12500000, startDate: "25/01/2021"},
         },
     ];
 
+
     return (
-        <Dashboard 
-            items={ items }
-            projects={ projects }
-            chart={ <InvestmentsChart /> }
-            projectsTitle={ "Oportunidades de inversión" }
-            chartTitle={ " Inversiones en los últimos 6 meses" }
-        />
+        <Dashboard items={ items } projects={ projects } chart={ <InvestmentsChart /> } projectsTitle={ "Oportunidades de inversión" } chartTitle={ " Inversiones en los últimos 6 meses" } />
     );
 }

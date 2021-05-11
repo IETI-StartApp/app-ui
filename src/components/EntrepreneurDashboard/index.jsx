@@ -9,7 +9,7 @@ import CheckIcon from '@material-ui/icons/Check';
 export const EntrepreneurDashboard = () => {
     const items = [
         { number: "5", description: "Proyectos Creados", icon: <StarBorderIcon fontSize="large" />, path: "/" },
-        { number: "3.5M", description: "Capital recaudado", icon: <AttachMoneyIcon fontSize="large" />, path: "/dashboard" },
+        { number: "4.5M", description: "Capital recaudado", icon: <AttachMoneyIcon fontSize="large" />, path: "/dashboard" },
         { number: "17", description: "Socios", icon: <PermIdentityIcon fontSize="large" />, path: "/" },
         { number: "0", description: "Proyectos exitosos", icon: <CheckIcon fontSize="large" />, path: "/" }
     ];
@@ -32,12 +32,6 @@ export const EntrepreneurDashboard = () => {
     ];
 
     return (
-        <Dashboard 
-            items={ items }
-            projects={ projects }
-            chart={ <ProjectsChart /> }
-            projectsTitle={ "Mis proyectos" }
-            chartTitle={ "Mis proyectos: porcentaje financiado" }
-        />
+        <Dashboard items={ items } projects={ projects } chart={ <ProjectsChart /> } projectsTitle={ "Mis proyectos" } chartTitle={ "Mis proyectos: porcentaje financiado" } />
     );
 }
