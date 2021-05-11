@@ -5,3 +5,4 @@ export * from './RegisterProjectPage';
 export * from './UserTypePage/UserSelect';
 export * from './LandingPage'
 export * from './ProjectsGridPage'
+export * from './Dashboard'

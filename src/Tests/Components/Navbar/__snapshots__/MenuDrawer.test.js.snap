@@ -3,41 +3,38 @@
 exports[`Testing menu drawer should load menu drawer 1`] = `
 <WithStyles(ForwardRef(Drawer))
   anchor="left"
-  className="makeStyles-drawer-6"
+  className="makeStyles-drawer-7"
   classes={
     Object {
-      "paper": "makeStyles-drawerPaper-7",
+      "paper": "makeStyles-drawerPaper-8",
     }
   }
   onClose={[MockFunction]}
   open={true}
-  variant="temporary"
 >
   <div
-    className="makeStyles-offset-10"
+    className="makeStyles-menuHeader-9"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+      }
+    }
   >
-    <div
-      className="makeStyles-menuHeader-9"
+    <img
+      alt=""
+      src=""
+    />
+    <WithStyles(ForwardRef(Typography))
       style={
         Object {
-          "alignItems": "center",
-          "display": "flex",
+          "paddingLeft": "20px",
         }
       }
-    >
-      <img
-        alt=""
-        src=""
-      />
-      <WithStyles(ForwardRef(Typography))
-        style={
-          Object {
-            "paddingLeft": "20px",
-          }
-        }
-      />
-    </div>
+    />
   </div>
-  <MenuItems />
+  <MenuItems
+    userType="Investor"
+  />
 </WithStyles(ForwardRef(Drawer))>
 `;

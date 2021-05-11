@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing comment page should render comment page 1`] = `
+{
+                userType === "Investor" &&
+                <InvestorDashboard />
+            }
+`;
