@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing navbar should load navbar  1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <WithStyles(CssBaseline) />
+  <WithStyles(ForwardRef(AppBar))
+    className="makeStyles-appBar-2"
+    position="fixed"
+  >
+    <WithStyles(ForwardRef(Toolbar))>
+      <Hidden
+        mdUp={true}
+      >
+        <WithStyles(ForwardRef(IconButton))
+          aria-label="menu"
+          className="makeStyles-menuButton-3"
+          color="inherit"
+          edge="start"
+          onClick={[Function]}
+        >
+          <Memo([object Object]) />
+        </WithStyles(ForwardRef(IconButton))>
+      </Hidden>
+      <WithStyles(ForwardRef(Typography))
+        className="makeStyles-title-5"
+        variant="h6"
+      >
+        StartApp
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Button))
+        className="makeStyles-buttonBar-6"
+        onClick={[Function]}
+        startIcon={<Memo />}
+      >
+        Inicio
+      </WithStyles(ForwardRef(Button))>
+      <WithStyles(ForwardRef(Button))
+        className="makeStyles-buttonBar-6"
+        startIcon={<Memo />}
+      >
+        Salir
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(Toolbar))>
+  </WithStyles(ForwardRef(AppBar))>
+</div>
+`;

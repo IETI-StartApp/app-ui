@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing navigation should load navigation  1`] = `
+<Fragment>
+  <WithStyles(ForwardRef(Paper))>
+    <Component
+      className="makeStyles-chart-9"
+      data={
+        Array [
+          Object {
+            "Month": "Diciembre",
+            "Total": 0,
+          },
+          Object {
+            "Month": "Enero",
+            "Total": 0,
+          },
+          Object {
+            "Month": "Febrero",
+            "Total": 0,
+          },
+          Object {
+            "Month": "Marzo",
+            "Total": 700000,
+          },
+          Object {
+            "Month": "Abril",
+            "Total": 1800000,
+          },
+          Object {
+            "Month": "Mayo",
+            "Total": 1000000,
+          },
+        ]
+      }
+    >
+      <Component />
+      <Component />
+      <Component
+        argumentField="Month"
+        valueField="Total"
+      />
+      <AnimationBase
+        duration={1000}
+        easing={[Function]}
+      />
+    </Component>
+  </WithStyles(ForwardRef(Paper))>
+</Fragment>
+`;
