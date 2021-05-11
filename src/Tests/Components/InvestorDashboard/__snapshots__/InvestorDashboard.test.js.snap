@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing navigation should load navigation  1`] = `
+exports[`Testing Investor Dashboard should load Investor Dashboard  1`] = `
 <Dashboard
   chart={<InvestmentsChart />}
   chartTitle=" Inversiones en los últimos 6 meses"
@@ -44,30 +44,30 @@ exports[`Testing navigation should load navigation  1`] = `
     Array [
       Object {
         "finance": Object {
-          "startDate": "10/03/2021",
-          "valuation": 20000000,
-          "value": 15000000,
+          "startDate": "11/03/2021",
+          "valuation": 30000000,
+          "value": 15500000,
         },
-        "image": "https://www.binarias.org/wp-content/uploads/2020/12/tegnologia.jpeg",
-        "name": "Proyecto 1",
+        "image": "https://fundacioncompartir.org/sites/default/files/la-nueva-tecnologia-que-esta-moviendo-al-mundo.jpg",
+        "name": "Proyecto 4",
       },
       Object {
         "finance": Object {
-          "startDate": "12/02/2021",
-          "valuation": 17500000,
-          "value": 10000000,
-        },
-        "image": "https://s3-us-west-2.amazonaws.com/wp-mpro-blog/wp-content/uploads/2016/03/14133959/s3-blog-tecnologia-como-prioridad-min.png",
-        "name": "Proyecto 2",
-      },
-      Object {
-        "finance": Object {
-          "startDate": "21/01/2021",
-          "valuation": 12000000,
+          "startDate": "15/02/2021",
+          "valuation": 18000000,
           "value": 8000000,
         },
-        "image": "https://thelogisticsworld.com/wp-content/uploads/2020/02/empresario-analizando-informe-financiero-empresa-graficos-realidad-aumentada_34141-360.jpg",
-        "name": "Proyecto 3",
+        "image": "https://i1.wp.com/tiempodenegocios.com/wp-content/uploads/2019/05/5798-750x406.jpg",
+        "name": "Proyecto 5",
+      },
+      Object {
+        "finance": Object {
+          "startDate": "25/01/2021",
+          "valuation": 12500000,
+          "value": 8550000,
+        },
+        "image": "https://assets.entrepreneur.com/content/3x2/2000/tecnologia16.jpg",
+        "name": "Proyecto 6",
       },
     ]
   }

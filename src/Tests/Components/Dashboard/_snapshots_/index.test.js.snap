@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing dashboard 1`] = `
+<Navigation />
+            <div className={classes.offset}></div>
+            <div className={classes.root}>
+                <Grid container spacing={2} direction="col" justify="center" alignItems="center" className={classes.allItems}>
+                    <Grid item xs={12}>
+                        <ItemsGrid items={items} />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Grid container spacing={2} direction="row" justify="center">
+                            <Grid item xs={12} sm={10} lg={6}>
+                                <ChartCard title= { chartTitle } chart = { chart } />
+                            </Grid>
+                            <Grid item xs={12} sm={10} lg={6}>
+                                <ProjectsCard title={ projectsTitle } projects={ projects } />
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Fab aria-label="Chat" className={classes.fab}>
+                    <ChatBubbleOutlineIcon />
+                </Fab>
+            </div>
+
+`;

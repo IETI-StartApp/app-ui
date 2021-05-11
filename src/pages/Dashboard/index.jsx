@@ -1,9 +1,7 @@
 import React from 'react';
 import { InvestorDashboard, EntrepreneurDashboard} from "../../components";
 
-export const Dashboard = ( ) => {
-    const userType = "Entrepreneur";
-
+export const Dashboard = ({ userType="Entrepreneur" }) => {
     return (
         <>
             {

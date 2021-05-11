@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing navigation should load navigation  1`] = `
+exports[`Testing Investments Chart should load Investments Chart  1`] = `
 <Fragment>
   <WithStyles(ForwardRef(Paper))>
     <Component
