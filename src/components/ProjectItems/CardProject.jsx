@@ -27,7 +27,7 @@ export default function CardProject({project}) {
                 height="210"
                 image={image}
             />
-            <CardActionArea onClick={() => { }}>
+            <CardActionArea>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                         {name}
