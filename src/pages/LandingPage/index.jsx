@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import JsonData from '../../data/data.json'
 import SmoothScroll from 'smooth-scroll'
 import {About, Features, HeaderT, Navigation, Team} from "../../components";
