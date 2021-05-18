@@ -1,15 +1,17 @@
 import React from 'react';
 import { InvestorDashboard, EntrepreneurDashboard} from "../../components";
+import { useLocation } from "react-router-dom";
 
-export const Dashboard = ({ userType="Entrepreneur" }) => {
+export const Dashboard = () => {
+    const {state : {role} = "ENTREPENEUR"} = useLocation();
     return (
         <>
             {
-                userType === "Investor" &&
+                role === "INVESTOR" &&
                 <InvestorDashboard />
             }
             {
-                userType === "Entrepreneur" &&
+                role === "ENTREPRENEUR" &&
                 <EntrepreneurDashboard />
             }
         </>

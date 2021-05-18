@@ -9,7 +9,8 @@ import {
     RegisterForm,
     RegisterProjectPage,
     UserSelect,
-    Dashboard
+    Dashboard,
+    CompleteInfo
 } from "./pages";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import {PrivateRoute} from "./components";
@@ -26,8 +27,10 @@ function App() {
                         <PrivateRoute exact path='/project-description' component={ProjectDescription}/>
                         <PrivateRoute exact path='/register-project' component={RegisterProjectPage}/>
                         <Route exact path='/user-type' component={UserSelect}/>
+                        <PrivateRoute exact path='/complete-info' component={CompleteInfo}/>
                         <PrivateRoute exact path='/projects' component={() => <ProjectsGridPage objects={[]}/>}/>
-                        <Route exact path='/dashboard' component={Dashboard}/>
+                        <PrivateRoute exact path='/dashboard' component={Dashboard}/>
+                        
                     </Switch>
                 </AuthProvider>
             </Router>
