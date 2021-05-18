@@ -12,7 +12,7 @@ export const postUser = async(user) => {
             }
             })
     }catch(e){
-        throw e;
+        console.log(e);
     }  
 };
 
@@ -26,7 +26,7 @@ export const getUserByEmail = async(email) => {
     }else{
         return null;
     }
-        
+
 };
 
 

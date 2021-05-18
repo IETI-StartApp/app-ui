@@ -7,8 +7,8 @@ jest.mock('react-router-dom', () => ({
       pathname: '/dashboard',
       search: '',
       hash: '',
-      state: {role: "ENTREPRENEUR"},
-      key: 'ENTREPRENEUR',
+      state: {role: "INVESTOR"},
+      key: 'INVESTOR',
     }),
 }));
 describe('Testing dashboard', () => {
