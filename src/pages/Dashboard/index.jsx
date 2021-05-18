@@ -3,7 +3,8 @@ import { InvestorDashboard, EntrepreneurDashboard} from "../../components";
 import { useLocation } from "react-router-dom";
 
 export const Dashboard = () => {
-    const {state : {role} = "ENTREPENEUR"} = useLocation() || {};
+    
+    const {state : {role} = "ENTREPENEUR"} = useLocation();
     return (
         <>
             {
