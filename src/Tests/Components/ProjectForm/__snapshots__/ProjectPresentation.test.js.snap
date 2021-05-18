@@ -318,7 +318,10 @@ exports[`Testing Project Presentation should load <ProjectPresentation /> correc
               "startAdornment": <WithStyles(ForwardRef(InputAdornment))
                 position="start"
               >
-                <span>
+                <span
+                  aria-label=""
+                  role="img"
+                >
                   🏳️
                 </span>
               </WithStyles(ForwardRef(InputAdornment))>,
@@ -348,7 +351,10 @@ exports[`Testing Project Presentation should load <ProjectPresentation /> correc
                   "startAdornment": <WithStyles(ForwardRef(InputAdornment))
                     position="start"
                   >
-                    <span>
+                    <span
+                      aria-label=""
+                      role="img"
+                    >
                       🎥
                     </span>
                   </WithStyles(ForwardRef(InputAdornment))>,

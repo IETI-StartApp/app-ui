@@ -306,7 +306,7 @@ exports[`Testing Project Financing should load project financing 1`] = `
       className="makeStyles-investment-6"
       variant="body2"
     >
-      Inversion deseada: $ 0,00
+      Inversion deseada: COP 0.00
     </WithStyles(ForwardRef(Typography))>
     <div
       className="makeStyles-formContainer-4"

@@ -86,20 +86,15 @@ exports[`Testing comment page should render comment page 1`] = `
                   "value": 2,
                 },
                 Object {
-                  "label": "Chatear con un asesor",
-                  "trigger": "5",
-                  "value": 3,
-                },
-                Object {
                   "label": "Agregar Proyecto",
-                  "trigger": "6",
+                  "trigger": "5",
                   "value": 4,
                 },
               ],
             },
             Object {
               "component": <Link
-                to="projects"
+                to="/#features"
               >
                 <styled.button
                   className="button"
@@ -125,19 +120,6 @@ exports[`Testing comment page should render comment page 1`] = `
             },
             Object {
               "component": <Link
-                to="projects"
-              >
-                <styled.button
-                  className="button"
-                >
-                  Chatea!
-                </styled.button>
-              </Link>,
-              "end": true,
-              "id": "5",
-            },
-            Object {
-              "component": <Link
                 to="register-project"
               >
                 <styled.button
@@ -147,7 +129,7 @@ exports[`Testing comment page should render comment page 1`] = `
                 </styled.button>
               </Link>,
               "end": true,
-              "id": "6",
+              "id": "5",
             },
           ]
         }
