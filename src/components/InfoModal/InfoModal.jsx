@@ -5,7 +5,6 @@ import {
     MenuItem, Modal, Button, Typography, TextField
 } from '@material-ui/core';
 import { useHistory } from "react-router";
-import google from '../../icons/google.svg';
 import { postUser } from '../../services/userServices';
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -46,7 +45,7 @@ export const InfoModal = ({ open = true, userEmail, firstNameU="" }) => {
     const [lastName, setLastName] = useState("");
     const [identification, setIdentification] = useState("");
     const [description, setDescription] = useState("");
-    const [image, setImage] = useState("");
+    const [image] = useState("");
     const handleLogin = async () => {
         const user = {
             firstName,
