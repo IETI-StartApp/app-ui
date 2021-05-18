@@ -18,8 +18,7 @@ export const getUserByEmail = async(email) => {
     const url = `http://localhost:8080/api/v1/users/search/${email}`;
     const response = await fetch(url);
     if (response.ok){
-        let user = await response.json();
-        return user;
+        return await response.json();
     }else{
         return null;
     }
