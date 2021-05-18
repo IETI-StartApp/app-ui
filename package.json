@@ -35,10 +35,10 @@
     "react-test-renderer": "^17.0.1",
     "reactfire": "^3.0.0-rc.0",
     "reactstrap": "^8.9.0",
+    "smooth-scroll": "^16.1.3",
     "styled-components": "^5.2.1",
     "typeface-roboto": "^1.1.13",
-    "web-vitals": "^1.1.1",
-    "smooth-scroll": "^16.1.3"
+    "web-vitals": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -71,6 +71,7 @@
     "@wojtekmaj/enzyme-adapter-react-17": "^0.4.1",
     "emailjs-com": "^2.6.4",
     "enzyme": "^3.11.0",
+    "jest-fetch-mock": "^3.0.3",
     "pinst": "^2.1.6",
     "sinon": "^9.2.4",
     "smooth-scroll": "^16.1.3"

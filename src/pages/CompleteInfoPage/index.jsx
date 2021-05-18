@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 export const CompleteInfo = () => {
     const {state : {firstNameU} = ""} = useLocation();
     const openModal = true;
-    const {currentUser} = useAuth() || {currentUser: {photoURL: '', displayName: '', email: ''}};;
+    const {currentUser} = useAuth() || {currentUser: {photoURL: '', displayName: '', email: ''}};
     return (
         <ThemeProvider theme={globalTheme}>
             <InfoModal open={openModal} userEmail={currentUser.email} firstNameU={firstNameU} />    

@@ -57,13 +57,8 @@ export const InfoModal = ({ open = true, userEmail, firstNameU="" }) => {
             email: userEmail,
             projects: []
         }
-        try {
-            await postUser(user);
-            history.replace("/dashboard", { role: role });
-        } catch (e) {
-            alert("Error al crear usuario", e);
-        }
-
+        await postUser(user);
+        history.replace("/dashboard", { role: role });
     }
     return (
         <div>

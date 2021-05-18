@@ -18,4 +18,7 @@ describe('Testing complete information', () => {
         expect(wrapper).toMatchSnapshot(); 
     })
     
+    
+    
 })
+
