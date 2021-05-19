@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import {
-    Grid, Select, FormControl, InputLabel,
-    MenuItem, Modal, Button, Typography, TextField
-} from '@material-ui/core';
-import { useHistory } from "react-router";
-import { postUser } from '../../services/userServices';
+import React, {useState} from 'react';
+import {makeStyles} from '@material-ui/core/styles';
+import {Button, FormControl, Grid, InputLabel, MenuItem, Modal, Select, TextField, Typography} from '@material-ui/core';
+import {useHistory} from "react-router";
+import {postUser} from '../../services/userServices';
+
 const useStyles = makeStyles((theme) => ({
     paper: {
         backgroundColor: theme.palette.background.paper,
@@ -35,8 +33,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-
-export const InfoModal = ({ open = true, userEmail, firstNameU="" }) => {
+export const InfoModal = ({open = true, userEmail, firstNameU = ""}) => {
 
     const classes = useStyles();
     const history = useHistory();
@@ -58,7 +55,7 @@ export const InfoModal = ({ open = true, userEmail, firstNameU="" }) => {
             projects: []
         }
         await postUser(user);
-        history.replace("/dashboard", { role: role });
+        history.replace("/dashboard", {role: role});
     }
     return (
         <div>
@@ -68,7 +65,7 @@ export const InfoModal = ({ open = true, userEmail, firstNameU="" }) => {
                 <div className={classes.paper}>
                     <Typography variant="h4" color="primary" className={classes.header}>
                         Completa tu información
-                            </Typography>
+                    </Typography>
                     <form>
                         <Grid item xs={12}>
                             <TextField
@@ -78,7 +75,7 @@ export const InfoModal = ({ open = true, userEmail, firstNameU="" }) => {
                                 color="primary"
                                 name="projectName"
                                 value={firstName}
-                                onChange={({ target }) => setFirstName(target.value)}
+                                onChange={({target}) => setFirstName(target.value)}
                             />
                             <TextField
                                 label="Apellido"
@@ -87,7 +84,7 @@ export const InfoModal = ({ open = true, userEmail, firstNameU="" }) => {
                                 color="primary"
                                 name="lastName"
                                 value={lastName}
-                                onChange={({ target }) => setLastName(target.value)}
+                                onChange={({target}) => setLastName(target.value)}
                             />
                             <TextField
                                 label="Cédula"
@@ -97,7 +94,7 @@ export const InfoModal = ({ open = true, userEmail, firstNameU="" }) => {
                                 type="number"
                                 name="identification"
                                 value={identification}
-                                onChange={({ target }) => setIdentification(target.value)}
+                                onChange={({target}) => setIdentification(target.value)}
                             />
                             <TextField
                                 label="Descripción de tu perfil"
@@ -107,7 +104,7 @@ export const InfoModal = ({ open = true, userEmail, firstNameU="" }) => {
                                 multiline
                                 name="description"
                                 value={description}
-                                onChange={({ target }) => setDescription(target.value)}
+                                onChange={({target}) => setDescription(target.value)}
                                 rows={3}
                             />
                             <FormControl variant="outlined" className={classes.textField}>
@@ -116,7 +113,7 @@ export const InfoModal = ({ open = true, userEmail, firstNameU="" }) => {
                                     labelId="demo-simple-select-outlined-label"
                                     id="demo-simple-select-outlined"
                                     value={role}
-                                    onChange={({ target }) => setRole(target.value)}
+                                    onChange={({target}) => setRole(target.value)}
                                     label="Status"
                                 >
                                     <MenuItem value="ENTREPRENEUR">Emprendedor</MenuItem>
@@ -138,7 +135,7 @@ export const InfoModal = ({ open = true, userEmail, firstNameU="" }) => {
 
                             >
                                 Completar Registro.
-                                        
+
                             </Button>
                         </Grid>
                     </form>

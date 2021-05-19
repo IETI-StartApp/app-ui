@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { shallow } from 'enzyme';
 import React from 'react';
-import {InfoModal} from '../../../components/InfoModal/InfoModal';
+import {InfoModal} from '../../../components/InfoModal';
 import {TextField,Select,Button} from '@material-ui/core';
 
 describe('Testing Project Financing', () => {
@@ -10,7 +10,7 @@ describe('Testing Project Financing', () => {
     let wrapper = shallowWrapper;
     beforeEach( () =>{
         jest.clearAllMocks();
-        wrapper = shallowWrapper;    
+        wrapper = shallowWrapper;
     });
     test('should load info modal', () => {
         expect(wrapper).toMatchSnapshot();
@@ -50,4 +50,4 @@ describe('Testing Project Financing', () => {
         login.simulate('click');
     });
 
-});   
+});
