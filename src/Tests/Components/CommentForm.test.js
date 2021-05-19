@@ -3,6 +3,7 @@ import '@testing-library/jest-dom';
 import { shallow } from 'enzyme';
 import { render, screen } from '@testing-library/react';
 import { Comment } from '../../components/Comment/CommentForm';
+
 import { SlideBar } from '../../components/SlideBar/SlideBar';
 
 describe('Testing comment page', () => {
@@ -36,3 +37,4 @@ describe('Testing comment page', () => {
         expect(linkElement).toBeInTheDocument();
     });
 })
+

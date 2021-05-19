@@ -33,7 +33,7 @@ export const Comment = () => {
             ...values, [e.target.name]: e.target.value
         })
     }
-    
+
     const handleSubmit = (event) => {
         event.preventDefault();
         
@@ -41,6 +41,7 @@ export const Comment = () => {
     const ratingChanged = (e, newRating) => {
         setQualifier(newRating);
         
+
     };
     return (
         <div className="comment-box">
