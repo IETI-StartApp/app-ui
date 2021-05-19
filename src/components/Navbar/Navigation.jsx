@@ -4,7 +4,7 @@ import Navbar from './index';
 import MenuDrawer from './MenuDrawer';
 import {useStyles} from './styles';
 
-export default function Navigation() {
+export default function Navigation( ) {
 
     const classes = useStyles();
 
@@ -18,8 +18,14 @@ export default function Navigation() {
         <div className={classes.root}>
             <Navbar
                 handleDrawerToggle={handleDrawerToggle}/>
-            <Hidden>
-                <MenuDrawer
+            <Hidden smDown>
+                <MenuDrawer 
+                    variant="permanent"
+                    open={true}/>
+            </Hidden>
+            <Hidden mdUp>
+                <MenuDrawer 
+                    variant="temporary"
                     open={menuOpen}
                     onClose={handleDrawerToggle}/>
             </Hidden>

@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing projects card should projects card 1`] = `
+<WithStyles(ForwardRef(Card))
+  className="makeStyles-projects-6"
+  variant="outlined"
+>
+  <WithStyles(ForwardRef(CardContent))>
+    <WithStyles(ForwardRef(Typography))
+      className="makeStyles-mainColor-7"
+      display="block"
+      variant="button"
+    >
+      projects
+    </WithStyles(ForwardRef(Typography))>
+    <div
+      className="makeStyles-rootProjects-9"
+    >
+      <WithStyles(ForwardRef(GridList))
+        className="makeStyles-gridList-10"
+      >
+        <WithStyles(ForwardRef(GridListTile))
+          className="makeStyles-gridListTile-11"
+        >
+          <CardProject
+            project={
+              Object {
+                "finance": Object {
+                  "startDate": "10/03/2021",
+                  "valuation": 20000000,
+                  "value": 15000000,
+                },
+                "image": "https://www.binarias.org/wp-content/uploads/2020/12/tegnologia.jpeg",
+                "name": "Proyecto 1",
+              }
+            }
+          />
+        </WithStyles(ForwardRef(GridListTile))>
+        <WithStyles(ForwardRef(GridListTile))
+          className="makeStyles-gridListTile-11"
+        >
+          <CardProject
+            project={
+              Object {
+                "finance": Object {
+                  "startDate": "12/02/2021",
+                  "valuation": 17500000,
+                  "value": 10000000,
+                },
+                "image": "https://s3-us-west-2.amazonaws.com/wp-mpro-blog/wp-content/uploads/2016/03/14133959/s3-blog-tecnologia-como-prioridad-min.png",
+                "name": "Proyecto 2",
+              }
+            }
+          />
+        </WithStyles(ForwardRef(GridListTile))>
+        <WithStyles(ForwardRef(GridListTile))
+          className="makeStyles-gridListTile-11"
+        >
+          <CardProject
+            project={
+              Object {
+                "finance": Object {
+                  "startDate": "21/01/2021",
+                  "valuation": 12000000,
+                  "value": 8000000,
+                },
+                "image": "https://thelogisticsworld.com/wp-content/uploads/2020/02/empresario-analizando-informe-financiero-empresa-graficos-realidad-aumentada_34141-360.jpg",
+                "name": "Proyecto 3",
+              }
+            }
+          />
+        </WithStyles(ForwardRef(GridListTile))>
+      </WithStyles(ForwardRef(GridList))>
+    </div>
+  </WithStyles(ForwardRef(CardContent))>
+</WithStyles(ForwardRef(Card))>
+`;

@@ -3,6 +3,7 @@
 exports[`Testing card project should load CardProject 1`] = `
 <WithStyles(ForwardRef(Card))
   className="makeStyles-sizeCard-1"
+  variant="outlined"
 >
   <WithStyles(ForwardRef(CardHeader))
     avatar={
@@ -24,61 +25,111 @@ exports[`Testing card project should load CardProject 1`] = `
     height="210"
     image="https://images.unsplash.com/photo-1619537765439-1469ac26014a?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
   />
-  <WithStyles(ForwardRef(CardContent))>
-    <WithStyles(ForwardRef(Typography))
-      component="h2"
-      gutterBottom={true}
-      variant="h5"
-    >
-      Beach & talk
-    </WithStyles(ForwardRef(Typography))>
-    <WithStyles(ForwardRef(Typography))
-      component="p"
-      variant="body2"
-    >
-      $ 
-      50000
-       Meta de financiación
-    </WithStyles(ForwardRef(Typography))>
-    <Styled(MuiBox)
-      display="inline-flex"
-      mt={2}
-      position="relative"
-    >
-      <Styled(MuiBox)
-        mr={5}
+  <WithStyles(ForwardRef(CardActionArea))>
+    <WithStyles(ForwardRef(CardContent))>
+      <WithStyles(ForwardRef(Typography))
+        component="h2"
+        gutterBottom={true}
+        variant="h5"
       >
-        <Styled(MuiBox)
-          display="inline-flex"
-          position="relative"
+        Beach & talk
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Typography))
+        component="p"
+        variant="body2"
+      >
+        Meta de financiación: $ 
+        50000
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Grid))
+        alignItems="start"
+        className="makeStyles-cardGrid-4"
+        container={true}
+        direction="row"
+        justify="center"
+        spacing={5}
+      >
+        <WithStyles(ForwardRef(Grid))
+          item={true}
         >
-          <WithStyles(ForwardRef(Avatar))
-            className="makeStyles-avatar-3"
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "justifyContent": "center",
+              }
+            }
           >
-            <Memo([object Object]) />
-          </WithStyles(ForwardRef(Avatar))>
-        </Styled(MuiBox)>
-        <WithStyles(ForwardRef(Typography))>
-           Financiado 
-        </WithStyles(ForwardRef(Typography))>
-        <WithStyles(ForwardRef(Typography))
-          className="makeStyles-mainColor-2"
+            <WithStyles(ForwardRef(Avatar))
+              className="makeStyles-avatar-3"
+            >
+              <Memo([object Object]) />
+            </WithStyles(ForwardRef(Avatar))>
+          </div>
+          <WithStyles(ForwardRef(Typography))
+            align="center"
+          >
+             Financiado 
+          </WithStyles(ForwardRef(Typography))>
+          <WithStyles(ForwardRef(Typography))
+            align="center"
+            className="makeStyles-mainColor-2"
+          >
+             $ 
+            10000
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
         >
-           $ 
-          10000
-        </WithStyles(ForwardRef(Typography))>
-      </Styled(MuiBox)>
-      <Styled(MuiBox)
-        mr={5}
-      >
-        <ProgressGraph
-          progress={20}
-        />
-        <WithStyles(ForwardRef(Typography))>
-           Progreso 
-        </WithStyles(ForwardRef(Typography))>
-      </Styled(MuiBox)>
-    </Styled(MuiBox)>
-  </WithStyles(ForwardRef(CardContent))>
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <ProgressGraph
+              progress={20}
+            />
+          </div>
+          <WithStyles(ForwardRef(Typography))
+            align="center"
+          >
+             Progreso 
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+        <WithStyles(ForwardRef(Grid))
+          item={true}
+        >
+          <div
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <WithStyles(ForwardRef(Avatar))
+              className="makeStyles-avatar-3"
+            >
+               
+              5
+               
+            </WithStyles(ForwardRef(Avatar))>
+          </div>
+          <WithStyles(ForwardRef(Typography))
+            align="center"
+          >
+             Socios 
+          </WithStyles(ForwardRef(Typography))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(CardContent))>
+  </WithStyles(ForwardRef(CardActionArea))>
 </WithStyles(ForwardRef(Card))>
 `;

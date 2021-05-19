@@ -3,5 +3,7 @@ export * from './RegisterPage/RegisterForm';
 export * from './ProjectDescription/ProjectDescription';
 export * from './RegisterProjectPage';
 export * from './UserTypePage/UserSelect';
-export * from './LandingPage'
-export * from './ProjectsGridPage'
+export * from './LandingPage';
+export * from './ProjectsGridPage';
+export * from './Dashboard';
+export * from './CompleteInfoPage';

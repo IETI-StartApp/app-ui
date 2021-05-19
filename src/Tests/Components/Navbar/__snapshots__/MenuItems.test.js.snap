@@ -6,62 +6,62 @@ exports[`Testing menu items should load menu items 1`] = `
 >
   <WithStyles(ForwardRef(ListItem))
     button={true}
-    className="makeStyles-mainColor-3"
-    key="Opción 1"
+    className="makeStyles-mainColor-4"
+    key="Nuevo proyecto"
+    onClick={[Function]}
   >
-    <WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemIcon))
+      className="makeStyles-mainColor-4"
+    >
       <Memo([object Object]) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
-      primary="Opción 1"
+      primary="Nuevo proyecto"
     />
   </WithStyles(ForwardRef(ListItem))>
   <WithStyles(ForwardRef(ListItem))
     button={true}
-    className="makeStyles-mainColor-3"
-    key="Opción 2"
+    className="makeStyles-mainColor-4"
+    key="Mis proyectos"
+    onClick={[Function]}
   >
-    <WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemIcon))
+      className="makeStyles-mainColor-4"
+    >
       <Memo([object Object]) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
-      primary="Opción 2"
+      primary="Mis proyectos"
     />
   </WithStyles(ForwardRef(ListItem))>
   <WithStyles(ForwardRef(ListItem))
     button={true}
-    className="makeStyles-mainColor-3"
-    key="Opción 3"
+    className="makeStyles-mainColor-4"
+    key="Buscar proyectos"
+    onClick={[Function]}
   >
-    <WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemIcon))
+      className="makeStyles-mainColor-4"
+    >
       <Memo([object Object]) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
-      primary="Opción 3"
+      primary="Buscar proyectos"
     />
   </WithStyles(ForwardRef(ListItem))>
   <WithStyles(ForwardRef(ListItem))
     button={true}
-    className="makeStyles-mainColor-3"
-    key="Opción 4"
+    className="makeStyles-mainColor-4"
+    key="Comunicarse con un asesor"
+    onClick={[Function]}
   >
-    <WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemIcon))
+      className="makeStyles-mainColor-4"
+    >
       <Memo([object Object]) />
     </WithStyles(ForwardRef(ListItemIcon))>
     <WithStyles(ForwardRef(ListItemText))
-      primary="Opción 4"
-    />
-  </WithStyles(ForwardRef(ListItem))>
-  <WithStyles(ForwardRef(ListItem))
-    button={true}
-    className="makeStyles-mainColor-3"
-    key="Opción 5"
-  >
-    <WithStyles(ForwardRef(ListItemIcon))>
-      <Memo([object Object]) />
-    </WithStyles(ForwardRef(ListItemIcon))>
-    <WithStyles(ForwardRef(ListItemText))
-      primary="Opción 5"
+      primary="Comunicarse con un asesor"
     />
   </WithStyles(ForwardRef(ListItem))>
 </WithStyles(ForwardRef(List))>

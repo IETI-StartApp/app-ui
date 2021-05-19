@@ -1,14 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Testing navigation should load navigation  1`] = `
-<div>
+<div
+  className="makeStyles-root-1"
+>
   <Navbar
     handleDrawerToggle={[Function]}
   />
-  <Hidden>
+  <Hidden
+    smDown={true}
+  >
+    <MenuDrawer
+      open={true}
+      variant="permanent"
+    />
+  </Hidden>
+  <Hidden
+    mdUp={true}
+  >
     <MenuDrawer
       onClose={[Function]}
       open={false}
+      variant="temporary"
     />
   </Hidden>
 </div>

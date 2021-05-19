@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing dashboard should load dashboard  1`] = `
+<Fragment>
+  <Navigation />
+  <div
+    className="makeStyles-offset-13"
+  />
+  <div
+    className="makeStyles-root-1"
+  >
+    <WithStyles(ForwardRef(Grid))
+      alignItems="center"
+      className="makeStyles-allItems-8"
+      container={true}
+      direction="col"
+      justify="center"
+      spacing={2}
+    >
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        xs={12}
+      >
+        <ItemsGrid
+          items={Array []}
+        />
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        item={true}
+        xs={12}
+      >
+        <WithStyles(ForwardRef(Grid))
+          container={true}
+          direction="row"
+          justify="center"
+          spacing={2}
+        >
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            lg={6}
+            sm={10}
+            xs={12}
+          >
+            <ChartCard
+              title="Chart Title"
+            />
+          </WithStyles(ForwardRef(Grid))>
+          <WithStyles(ForwardRef(Grid))
+            item={true}
+            lg={6}
+            sm={10}
+            xs={12}
+          >
+            <ProjectsCard
+              projects={Array []}
+              title="Projects Title"
+            />
+          </WithStyles(ForwardRef(Grid))>
+        </WithStyles(ForwardRef(Grid))>
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+    <WithStyles(ForwardRef(Fab))
+      aria-label="Chat"
+      className="makeStyles-fab-12"
+    >
+      <Memo([object Object]) />
+    </WithStyles(ForwardRef(Fab))>
+  </div>
+</Fragment>
+`;

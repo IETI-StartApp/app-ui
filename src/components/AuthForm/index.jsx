@@ -9,7 +9,7 @@ import {CheckBoxArea, FooterWrapper, ForgotPasswdArea, InputArea, TextArea, Wrap
 import google from '../../icons/google.svg'
 import {Auth} from "../../authServices/firebase-config";
 import {CustomTypography} from "../index";
-
+import { getUserByEmail } from '../../services/userServices';
 
 export const AuthForm = ({functions}) => {
     const {signInWithEmailAndPassword, signInWithGoogle} = functions
@@ -21,23 +21,28 @@ export const AuthForm = ({functions}) => {
     function handleChange(event) {
         setChecked(event.target.checked)
     }
-
+    const redirectGoogle = async () =>{
+        await signInWithGoogle();
+        const user = await getUserByEmail(Auth.currentUser.email);
+        console.log(user)
+        redirect(user,Auth.currentUser)
+    } 
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            console.log(emailRef.current.value, passwdRef.current.value)
             await signInWithEmailAndPassword(emailRef.current.value, passwdRef.current.value)
-            if (Auth.currentUser) {
-                history.push('/register-project')
-            }
+            const user = await getUserByEmail(Auth.currentUser.email);
+            redirect(user,Auth.currentUser)
         } catch (error) {
             alert(error)
         }
     }
-
-    const googleSignIn = async () => {
-        await signInWithGoogle()
-        Auth.currentUser ? history.push('/projects') : history.push('/signin')
+    const redirect = (user, auth) =>{
+        if (user && auth) {
+            history.replace('/dashboard',{ role: user.role})
+        }else{
+            history.replace("/complete-info")
+        }
     }
     return (
         <Wrapper>
@@ -96,7 +101,7 @@ export const AuthForm = ({functions}) => {
                     Entrar
                 </Button>
             </form>
-            <Button onClick={googleSignIn}
+            <Button onClick={redirectGoogle}
                     fullWidth
                     style={{
                         background: "#2D3748",

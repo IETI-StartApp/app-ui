@@ -1,22 +1,16 @@
-import React, { useState } from 'react'
-import { ThemeProvider } from "@material-ui/core/styles";
-import {
-    Typography,
-    Button,
-    TextField,
-    InputAdornment,
-    Grid
-} from "@material-ui/core";
+import React, {useState} from 'react'
+import {ThemeProvider} from "@material-ui/core/styles";
+import {Button, Grid, InputAdornment, TextField, Typography} from "@material-ui/core";
 import globalTheme from "../../globalTheme";
 import styles from "./styles"
 import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
 import 'date-fns';
-import { Video } from '../Video/Video'
+import {Video} from '../Video/Video'
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
-export const ProjectPresentation = ({ formValues, handleChange, handleNext}) => {
+export const ProjectPresentation = ({formValues, handleChange, handleNext}) => {
     const classes = styles();
-    const { country,videoSource } = formValues;
+    const {country, videoSource} = formValues;
     const [isVisible, setVisible] = useState(false);
     return (
         <div className={classes.mainContainer}>
@@ -37,7 +31,8 @@ export const ProjectPresentation = ({ formValues, handleChange, handleNext}) => 
                             className={classes.inputField}
                             onChange={handleChange}
                             InputProps={{
-                                startAdornment: <InputAdornment position="start"><span>🏳️</span></InputAdornment>,
+                                startAdornment: <InputAdornment position="start"><span role="img"
+                                                                                       aria-label={""}>🏳️</span></InputAdornment>,
                             }}
                         />
                         <Grid container direction="row" justify="center" alignItems="center" spacing={1}>
@@ -50,7 +45,8 @@ export const ProjectPresentation = ({ formValues, handleChange, handleNext}) => 
                                     className={classes.inputField}
                                     onChange={handleChange}
                                     InputProps={{
-                                        startAdornment: <InputAdornment position="start"><span>🎥</span></InputAdornment>,
+                                        startAdornment: <InputAdornment
+                                            position="start"><span role="img" aria-label={""}>🎥</span></InputAdornment>,
                                     }}
                                 />
                             </Grid>
@@ -58,7 +54,7 @@ export const ProjectPresentation = ({ formValues, handleChange, handleNext}) => 
                                 <Button
                                     variant="contained"
                                     className={classes.btn}
-                                    endIcon={<ArrowForwardIosIcon />}
+                                    endIcon={<ArrowForwardIosIcon/>}
                                     onClick={() => setVisible(true)}
                                 >
                                     Update
@@ -66,12 +62,12 @@ export const ProjectPresentation = ({ formValues, handleChange, handleNext}) => 
                             </Grid>
 
                         </Grid>
-                        {isVisible ? <Video video={videoSource} ancho="100%" alto="100%" /> : null}
+                        {isVisible ? <Video video={videoSource} ancho="100%" alto="100%"/> : null}
                         <>
                             <Button
                                 variant="contained"
                                 className={classes.btn}
-                                endIcon={<EmojiObjectsIcon />}
+                                endIcon={<EmojiObjectsIcon/>}
                                 onClick={handleNext}
                             >
                                 Registra tu proyecto

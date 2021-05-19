@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing chart card 1`] = `
+<Card variant="outlined" className={classes.cardChart}>
+            <CardContent>
+                <Typography className={classes.mainColor} variant="button" display="block">{ title }</Typography>
+                <Box p={3}>
+                    {
+                        chart
+                    }
+                </Box>
+            </CardContent>
+        </Card>
+`;
