@@ -3,13 +3,32 @@ import {Avatar, Card, CardActionArea, CardContent, CardHeader, CardMedia, Grid, 
 import {useStyles} from './styles';
 import ProgressGraph from './ProgressGraph';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
+import {useHistory} from "react-router";
 
 export default function CardProject({project}) {
+    const [state, setState] = React.useState({
+        name: '',
+        image: '',
+        finance: {}
+    });
+    React.useEffect(() => {
+        setState(project);
+    }, [])
+    
     const {name, image, finance} = project;
     const {value, valuation, startDate} = finance;
     const classes = useStyles();
     const owner = "Nombre de usuario";
     const partners = 5;
+    const history = useHistory() || [];
+
+    const handleClick = (event) => {
+        event.preventDefault();
+        history.push({
+            pathname: '/project-description',
+            state
+        });
+    };
 
     return (
         <Card variant="outlined" className={classes.sizeCard}>
@@ -27,7 +46,7 @@ export default function CardProject({project}) {
                 height="210"
                 image={image}
             />
-            <CardActionArea onClick={() => console.log("hola")}>
+            <CardActionArea onClick={handleClick}>
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                         {name}

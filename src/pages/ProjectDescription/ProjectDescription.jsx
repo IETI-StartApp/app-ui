@@ -1,54 +1,48 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import {Video} from '../../components/Video/Video';
-import Navigation from "../../components/Navbar";
-import {BarInfo, InformacionFinazas, InformacioProyecto} from "../../components";
-import { Comment } from '../../components/Comment/CommentForm';
+import Navigation from "../../components/Navbar/Navigation";
+import {BarInfo, InformacionFinazas, ProjectInfo} from "../../components";
+import {Comment} from '../../components/Comment/CommentForm';
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
-export const ProjectDescription = () => {
-    const json = {
-        "nombre": "WI buckets",
-        "imagen": "https://cdn.discordapp.com/attachments/471909299753451523/814307715815309352/unknown.png",
-        "emprendedor": "Sergio Alejandro",
-        "video": "https://www.youtube.com/watch?v=T2xLJ-rU3wQ",
-        "link": "https://en.wikipedia.org/wiki/Bucket",
-        "pais": "Colombia",
-        "descripcion": "Por una ciudad limpia, ordenada e inteligente"
-    }
-    const finanzas = {
-        "valor": "$1.000.000",
-        "numeroInversionistas": "8",
-        "valoracion": "50.000",
-        "inversionMinima": "30.000",
-        "socios": "465",
-        "fechaInicio": "25/01/2017",
-        "fechaFin": "24/02/2022"
-    }
-    const {nombre, imagen, emprendedor, video, link, pais, descripcion} = json;
+export const ProjectDescription = (props) => {
+    const {country, description, name, image, finance, video, user} = (props.location && props.location.state) || {};
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
 
+        // These options are needed to round to whole numbers if that's what you want.
+        //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+        //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
+    });
+    const {height, width} = useWindowDimensions() || {};
     return (
         <>
             <Navigation/>
             <br/>
-            <InformacioProyecto nombreProyecto={nombre} nombreUsuario={emprendedor} fotoPerfil={imagen}/>
-            <Grid container alignItems="center">
-                <Grid item xs={7}>
-                    <Video video={video} ancho='100%' alto='460px'/>
-                    <BarInfo link={link} pais={pais} texto={descripcion}/>
+            <div style={{paddingLeft: (width < 960 ? 0 : width * 0.22), paddingTop: (height * 0.1)}}>
+                <ProjectInfo nombreProyecto={name} nombreUsuario={user.firstName + " " + user.lastName}
+                             fotoPerfil={image}/>
+                <Grid container alignItems="center">
+                    <Grid item xs={7}>
+                        <Video video={video} ancho='100%' alto='460px'/>
+                        <BarInfo pais={country} texto={description}/>
+                    </Grid>
+                    <Grid item xs={5}>
+                        <InformacionFinazas
+                            valor={formatter.format(finance.value)}
+                            inversionistas={finance.investorNumber}
+                            valoracion={formatter.format(finance.valuation)}
+                            InversionMinima={formatter.format(finance.minimumInvestment)}
+                            socios={finance.investorNumber}
+                            fechaInicio={finance.startDate.substring(0, 10)}
+                            FechaFin={finance.endDate.substring(0, 10)}/>
+                    </Grid>
                 </Grid>
-                <Grid item xs={5}>
-                    <InformacionFinazas
-                        valor={finanzas.valor}
-                        inversionistas={finanzas.numeroInversionistas}
-                        valoracion={finanzas.valoracion}
-                        InversionMinima={finanzas.inversionMinima}
-                        socios={finanzas.socios}
-                        fechaInicio={finanzas.fechaInicio}
-                        FechaFin={finanzas.fechaFin}/>
-                </Grid>
-            </Grid>
-            <Comment/>
-            
+                <Comment/>
+            </div>
+
 
         </>
     );
