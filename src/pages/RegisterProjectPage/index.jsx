@@ -36,7 +36,7 @@ export const RegisterProjectPage = ({testing}) => {
     const handleNext = useCallback(() => {
             setActiveStep(prevActiveStep => testing ? prevActiveStep - 1 : prevActiveStep + 1)
         }
-        , []);
+        , [testing]);
     const handlePrev = () => {
         setActiveStep(prevActiveStep => prevActiveStep - 1)
     }
