@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import { Avatar } from '@material-ui/core';
 
 /*<InformacioProyecto nombreProyecto = "Nombre del proyecto" nombreUsuario = "Nombre del emprendedor" fotoPerfil = 'Ruta de la foto de perfil'/>*/
-export const InformacioProyecto = ({
+export const ProjectInfo = ({
                                     fotoPerfil,
                                     nombreProyecto,
                                     nombreUsuario,
@@ -14,7 +14,7 @@ export const InformacioProyecto = ({
     <div>
       <Grid container spacing={0} justify="center" alignItems="flex-start">
         <Grid item xs={1}>
-          <Avatar variant = 'square'src={fotoPerfil}/> 
+          <Avatar variant = 'square'src={fotoPerfil}/>
         </Grid>
         <Grid item xs={8}>
             <Titulo>
