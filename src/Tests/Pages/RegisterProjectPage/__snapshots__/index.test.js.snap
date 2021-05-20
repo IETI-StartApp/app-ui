@@ -298,9 +298,9 @@ exports[`Testing register page should render register page 1`] = `
     className="makeStyles-root-1"
   >
     <ProgressBar
-      activeStep={0}
+      activeStep={2}
     />
-    <Memo()
+    <ProjectPresentation
       formValues={
         Object {
           "country": "",
@@ -312,8 +312,15 @@ exports[`Testing register page should render register page 1`] = `
         }
       }
       handleChange={[Function]}
-      handleNext={[Function]}
     />
+    <WithStyles(ForwardRef(Fab))
+      aria-label="edit"
+      color="primary"
+      onClick={[Function]}
+      size="small"
+    >
+      <Memo([object Object]) />
+    </WithStyles(ForwardRef(Fab))>
   </div>
 </ThemeProvider>
 `;
