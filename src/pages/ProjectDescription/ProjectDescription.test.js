@@ -53,7 +53,7 @@ test('renders learn react link', () => {
 });
 test('renders learn react link', () => {
     render(<ProjectDescription location={object}/>);
-    const linkElement = screen.getByText(/2019-02-16T05:00:00.000/i);
+    const linkElement = screen.getByText(/2019-02-16/i);
     expect(linkElement).toBeInTheDocument();
 });
 test('renders learn react link', () => {
@@ -83,7 +83,7 @@ test('renders learn react link', () => {
 });
 test('renders learn react link', () => {
     render(<ProjectDescription location={object}/>);
-    const linkElement = screen.getByText(/2019-02-17T05:00:00.000Z/i);
+    const linkElement = screen.getByText(/2019-02-17/i);
     expect(linkElement).toBeInTheDocument();
 });
 test('renders learn react link', () => {
