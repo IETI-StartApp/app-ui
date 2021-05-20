@@ -25,7 +25,9 @@ exports[`Testing card project should load CardProject 1`] = `
     height="210"
     image="https://images.unsplash.com/photo-1619537765439-1469ac26014a?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80"
   />
-  <WithStyles(ForwardRef(CardActionArea))>
+  <WithStyles(ForwardRef(CardActionArea))
+    onClick={[Function]}
+  >
     <WithStyles(ForwardRef(CardContent))>
       <WithStyles(ForwardRef(Typography))
         component="h2"
