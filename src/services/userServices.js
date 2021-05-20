@@ -14,8 +14,7 @@ export const postUser = async(user) => {
 };
 
 export const postProject = async(project) => {
-    const url = `${process.env.REACT_APP_API_PROTOCOL}://${process.env.REACT_APP_API_HOST}/api/v1/projects`;
-    const data = JSON.stringify(project)
+    const url = 'http://localhost:8080/api/v1/users'; const data = JSON.stringify(project)
     console.log(data)
 
     await fetch(url, {
