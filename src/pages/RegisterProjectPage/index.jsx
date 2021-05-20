@@ -31,10 +31,10 @@ const useStyles = makeStyles({
     }
 });
 
-export const RegisterProjectPage = () => {
-    const [activeStep, setActiveStep] = useState(0);
+export const RegisterProjectPage = ({testing}) => {
+    const [activeStep, setActiveStep] = useState(testing ? 2 : 0);
     const handleNext = useCallback(() => {
-            setActiveStep(prevActiveStep => prevActiveStep + 1)
+            setActiveStep(prevActiveStep => testing ? prevActiveStep - 1 : prevActiveStep + 1)
         }
         , []);
     const handlePrev = () => {
@@ -77,7 +77,7 @@ export const RegisterProjectPage = () => {
     }
     console.log(inputValues)
 
-    if (inputValues.videoSource!==""){
+    if (inputValues.videoSource !== "") {
         const project = {
             name: inputValues.projectName,
             image: inputValues.image,
