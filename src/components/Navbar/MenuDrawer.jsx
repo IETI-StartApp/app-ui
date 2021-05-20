@@ -7,20 +7,10 @@ import Typography from "@material-ui/core/Typography";
 import {getUserByEmail} from "../../services/userServices";
 import {Auth} from "../../authServices/firebase-config";
 
-export default function MenuDrawer({open, onClose, variant}) {
+export default function MenuDrawer({open, onClose, variant,role}) {
     const classes = useStyles();
     const {currentUser} = useAuth() || {currentUser: {photoURL: '', displayName: ''}};
 
-    const [role, setRole] = useState("");
-    useEffect(() => {
-        async function fetchUser() {
-            const user = await getUserByEmail(Auth.currentUser.email)
-            setRole(user.role);
-        }
-
-        fetchUser();
-    }, [role])
-    console.log(role)
     return (
         <Drawer
             className={classes.drawer}
