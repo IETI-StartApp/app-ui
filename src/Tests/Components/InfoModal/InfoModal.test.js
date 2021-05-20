@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom';
 import { shallow } from 'enzyme';
 import React from 'react';
-import {InfoModal} from '../../../components/InfoModal';
 import {TextField,Select,Button} from '@material-ui/core';
+import {InfoModal} from "../../../components/InfoModal";
 
 describe('Testing Project Financing', () => {
     const handleLogin = jest.fn()
