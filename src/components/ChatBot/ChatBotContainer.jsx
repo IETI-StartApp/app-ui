@@ -3,8 +3,7 @@ import ChatBot from 'react-simple-chatbot';
 import { Link } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components';
 import { Grid, Drawer, Divider, IconButton } from '@material-ui/core';
-import { ButtonDesign } from "./styleChatBot";
-import { useStyles } from './styleChatBot';
+import { ButtonDesign, useStyles } from "./styleChatBot";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
