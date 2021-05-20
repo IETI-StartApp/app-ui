@@ -5,16 +5,16 @@ import { useStyles } from './styles';
 import { Grid } from '@material-ui/core/';
 import {getAllTickets} from '../../services/ticketServices'
 import {Auth} from "../../authServices/firebase-config";
-export const ConsultorDashboard = () => {
+export const ConsultorDashboard = ({testing, objects}) => {
     const classes = useStyles();
     const [allTickets, setTickets] = useState([]);
     useEffect(() => {
         async function fetchTickets(){
-            const receivedTickets = await getAllTickets();
+            const receivedTickets = testing?objects : await getAllTickets();
             setTickets(receivedTickets);
         }
         fetchTickets();
-    }, [allTickets]);
+    }, [allTickets,testing,objects]);
 
     return (
         <>
