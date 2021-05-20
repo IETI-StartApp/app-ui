@@ -91,9 +91,17 @@ exports[`Testing comment page should render comment page 1`] = `
             Tus comentarios ayudaran a la mejora del proyecto!
           </h2>
         </WithStyles(ForwardRef(Grid))>
+        <div>
+          <styled.button
+            onClick={[Function]}
+          >
+            Mostrar Comentarios
+          </styled.button>
+        </div>
       </styled.form>
     </WithStyles(ForwardRef(Grid))>
   </WithStyles(ForwardRef(Grid))>
+  <br />
 </div>
 `;
 

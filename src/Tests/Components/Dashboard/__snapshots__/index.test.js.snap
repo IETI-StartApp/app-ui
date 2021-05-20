@@ -59,12 +59,6 @@ exports[`Testing dashboard should load dashboard  1`] = `
         </WithStyles(ForwardRef(Grid))>
       </WithStyles(ForwardRef(Grid))>
     </WithStyles(ForwardRef(Grid))>
-    <WithStyles(ForwardRef(Fab))
-      aria-label="Chat"
-      className="makeStyles-fab-12"
-    >
-      <Memo([object Object]) />
-    </WithStyles(ForwardRef(Fab))>
   </div>
 </Fragment>
 `;

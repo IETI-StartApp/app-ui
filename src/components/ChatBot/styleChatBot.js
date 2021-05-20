@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { makeStyles } from '@material-ui/core';
 
 export const ButtonDesign = styled.button`
 width: 100%;
@@ -15,3 +16,16 @@ color: #fff;
 font-size: 1rem;
 
 `;
+
+export const useStyles = makeStyles((theme) => ({
+    drawer: {
+        flexShrink: 0,
+    },
+    chatContainer: {
+        margin: theme.spacing(2),
+        height:"90vh", 
+        display:"flex", 
+        alignItems: "flex-end",
+    },
+    offset: theme.mixins.toolbar,
+}));

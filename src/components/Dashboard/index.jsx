@@ -1,7 +1,6 @@
 import React from 'react';
 import Navigation from '../Navbar/Navigation';
-import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-import { Grid, Fab } from '@material-ui/core/';
+import { Grid } from '@material-ui/core/';
 import { useStyles } from './styles';
 import { ItemsGrid } from './ItemsGrid';
 import { ProjectsCard } from './ProjectsCard';
@@ -30,9 +29,6 @@ export const Dashboard = ( { items, projects, chart, projectsTitle, chartTitle }
                         </Grid>
                     </Grid>
                 </Grid>
-                <Fab aria-label="Chat" className={classes.fab}>
-                    <ChatBubbleOutlineIcon />
-                </Fab>
             </div>
         </>
     );

@@ -34,7 +34,7 @@ exports[`Testing menu drawer should load menu drawer 1`] = `
     />
   </div>
   <MenuItems
-    userType="Investor"
+    userType="Entrepreneur"
   />
 </WithStyles(ForwardRef(Drawer))>
 `;

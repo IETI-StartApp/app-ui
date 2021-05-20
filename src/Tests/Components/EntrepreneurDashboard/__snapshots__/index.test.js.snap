@@ -1,76 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Testing Entrepreneur Dashboard should load Entrepreneur Dashboard 1`] = `
-<Dashboard
-  chart={<ProjectsChart />}
-  chartTitle="Mis proyectos: porcentaje financiado"
-  items={
-    Array [
-      Object {
-        "description": "Proyectos Creados",
-        "icon": <Memo
-          fontSize="large"
-        />,
-        "number": "5",
-        "path": "/",
-      },
-      Object {
-        "description": "Capital recaudado",
-        "icon": <Memo
-          fontSize="large"
-        />,
-        "number": "4.5M",
-        "path": "/dashboard",
-      },
-      Object {
-        "description": "Socios",
-        "icon": <Memo
-          fontSize="large"
-        />,
-        "number": "17",
-        "path": "/",
-      },
-      Object {
-        "description": "Proyectos exitosos",
-        "icon": <Memo
-          fontSize="large"
-        />,
-        "number": "0",
-        "path": "/",
-      },
-    ]
-  }
-  projects={
-    Array [
-      Object {
-        "finance": Object {
-          "startDate": "10/03/2021",
-          "valuation": 20000000,
-          "value": 15000000,
+<Fragment>
+  <Dashboard
+    chart={<ProjectsChart />}
+    chartTitle="Mis proyectos: porcentaje financiado"
+    items={
+      Array [
+        Object {
+          "description": "Proyectos Creados",
+          "icon": <Memo
+            fontSize="large"
+          />,
+          "number": "5",
+          "path": "/",
         },
-        "image": "https://www.binarias.org/wp-content/uploads/2020/12/tegnologia.jpeg",
-        "name": "Proyecto 1",
-      },
-      Object {
-        "finance": Object {
-          "startDate": "12/02/2021",
-          "valuation": 17500000,
-          "value": 10000000,
+        Object {
+          "description": "Capital recaudado",
+          "icon": <Memo
+            fontSize="large"
+          />,
+          "number": "4.5M",
+          "path": "/dashboard",
         },
-        "image": "https://s3-us-west-2.amazonaws.com/wp-mpro-blog/wp-content/uploads/2016/03/14133959/s3-blog-tecnologia-como-prioridad-min.png",
-        "name": "Proyecto 2",
-      },
-      Object {
-        "finance": Object {
-          "startDate": "21/01/2021",
-          "valuation": 12000000,
-          "value": 8000000,
+        Object {
+          "description": "Socios",
+          "icon": <Memo
+            fontSize="large"
+          />,
+          "number": "17",
+          "path": "/",
         },
-        "image": "https://thelogisticsworld.com/wp-content/uploads/2020/02/empresario-analizando-informe-financiero-empresa-graficos-realidad-aumentada_34141-360.jpg",
-        "name": "Proyecto 3",
-      },
-    ]
-  }
-  projectsTitle="Mis proyectos"
-/>
+        Object {
+          "description": "Proyectos exitosos",
+          "icon": <Memo
+            fontSize="large"
+          />,
+          "number": "0",
+          "path": "/",
+        },
+      ]
+    }
+    projects={
+      Array [
+        Object {
+          "finance": Object {
+            "startDate": "10/03/2021",
+            "valuation": 20000000,
+            "value": 15000000,
+          },
+          "image": "https://www.binarias.org/wp-content/uploads/2020/12/tegnologia.jpeg",
+          "name": "Proyecto 1",
+        },
+        Object {
+          "finance": Object {
+            "startDate": "12/02/2021",
+            "valuation": 17500000,
+            "value": 10000000,
+          },
+          "image": "https://s3-us-west-2.amazonaws.com/wp-mpro-blog/wp-content/uploads/2016/03/14133959/s3-blog-tecnologia-como-prioridad-min.png",
+          "name": "Proyecto 2",
+        },
+        Object {
+          "finance": Object {
+            "startDate": "21/01/2021",
+            "valuation": 12000000,
+            "value": 8000000,
+          },
+          "image": "https://thelogisticsworld.com/wp-content/uploads/2020/02/empresario-analizando-informe-financiero-empresa-graficos-realidad-aumentada_34141-360.jpg",
+          "name": "Proyecto 3",
+        },
+      ]
+    }
+    projectsTitle="Mis proyectos"
+  />
+  <WithStyles(ForwardRef(Fab))
+    aria-label="Chat"
+    className="makeStyles-fab-1"
+    onClick={[Function]}
+  >
+    <Memo([object Object]) />
+  </WithStyles(ForwardRef(Fab))>
+  <ChatBotContainer
+    onClose={[Function]}
+    open={true}
+  />
+</Fragment>
 `;
