@@ -24,7 +24,7 @@ export const ProjectDescription = (props) => {
                 <Grid container alignItems="center">
                     <Grid item xs={7}>
                         <Video video={video} ancho='100%' alto='460px'/>
-                        <BarInfo pais={country} texto={description}/>
+                        <BarInfo link={video} pais={country} texto={description}/>
                     </Grid>
                     <Grid item xs={5}>
                         <InformacionFinazas
@@ -33,8 +33,8 @@ export const ProjectDescription = (props) => {
                             valoracion={formatter.format(finance.valuation)}
                             InversionMinima={formatter.format(finance.minimumInvestment)}
                             socios={finance.investorNumber}
-                            fechaInicio={finance.startDate}
-                            FechaFin={finance.endDate}/>
+                            fechaInicio={finance.startDate.substring(0,10)}
+                            FechaFin={finance.endDate.substring(0,10)}/>
                     </Grid>
                 </Grid>
                 <Comment/>
