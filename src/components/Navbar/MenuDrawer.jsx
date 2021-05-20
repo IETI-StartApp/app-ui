@@ -20,7 +20,7 @@ export default function MenuDrawer({open, onClose, variant}) {
 
         fetchUser();
     }, [role])
-    console.log(role)
+
     return (
         <Drawer
             className={classes.drawer}
