@@ -1,6 +1,6 @@
 import React from 'react'
 import { useAuth } from '../../authServices/Auth';
-import {InfoModal} from '../../components/InfoModal/InfoModal'
+import {InfoModal} from '../../components/InfoModal'
 import globalTheme from '../../globalTheme'
 import { ThemeProvider } from "@material-ui/core/styles";
 import { useLocation } from "react-router-dom";
