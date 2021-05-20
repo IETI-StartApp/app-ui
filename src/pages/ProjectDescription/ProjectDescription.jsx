@@ -18,7 +18,7 @@ export const ProjectDescription = (props) => {
         <>
             <Navigation/>
             <br/>
-            <div style={{paddingLeft: (width * 0.22), paddingTop: (height * 0.1)}}>
+            <div style={{paddingLeft: (width < 960 ? 0 : width * 0.22), paddingTop: (height * 0.1)}}>
                 <ProjectInfo nombreProyecto={name} nombreUsuario={user.firstName + " " + user.lastName}
                              fotoPerfil={image}/>
                 <Grid container alignItems="center">
