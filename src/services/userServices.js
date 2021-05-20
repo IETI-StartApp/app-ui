@@ -1,6 +1,5 @@
-
 export const postUser = async(user) => {
-    const url = `${process.env.REACT_APP_API_PROTOCOL}://${process.env.REACT_APP_API_HOST}/api/v1/users`;
+    const url = 'http://localhost:8080/api/v1/users';
     const data = JSON.stringify(user)
     console.log(user);
 
@@ -15,8 +14,7 @@ export const postUser = async(user) => {
 };
 
 export const getUserByEmail = async(email) => {
-    const url = `${process.env.REACT_APP_API_PROTOCOL}://${process.env.REACT_APP_API_HOST}/api/v1/users/search/${email}`;
-    console.log(url)
+    const url = `http://localhost:8080/api/v1/users/search/${email}`;
     const response = await fetch(url);
     if (response.ok){
         return response.json();
@@ -25,5 +23,3 @@ export const getUserByEmail = async(email) => {
     }
 
 };
-
-
