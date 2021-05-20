@@ -1,8 +1,7 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles,ThemeProvider } from '@material-ui/core/styles';
 import {Typography} from '@material-ui/core';
 import globalTheme from '../../globalTheme'
-import { ThemeProvider } from "@material-ui/core/styles";
 import { TicketTable } from './TicketTable';
 const useStyles = makeStyles((theme) => ({
     paper: {
