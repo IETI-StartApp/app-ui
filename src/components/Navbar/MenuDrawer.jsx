@@ -12,9 +12,13 @@ export default function MenuDrawer({open, onClose, variant}) {
     const {currentUser} = useAuth() || {currentUser: {photoURL: '', displayName: ''}};
 
     const [role, setRole] = useState("");
-    useEffect(async () => {
-        const user = await getUserByEmail(Auth.currentUser.email)
-        setRole(user.role);
+    useEffect(() => {
+        async function fetchUser() {
+            const user = await getUserByEmail(Auth.currentUser.email)
+            setRole(user.role);
+        }
+
+        fetchUser();
     }, [role])
     console.log(role)
     return (

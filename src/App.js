@@ -13,7 +13,7 @@ import {
     RegisterProjectPage,
     UserSelect
 } from "./pages";
-import {PrivateRoute, ProjectInfo} from "./components";
+import {PrivateRoute} from "./components";
 import './App.css';
 
 function App() {

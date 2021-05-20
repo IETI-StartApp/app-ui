@@ -13,8 +13,8 @@ export default function CardProject({project}) {
     });
     React.useEffect(() => {
         setState(project);
-    }, [])
-    
+    }, [project])
+
     const {name, image, finance} = project;
     const {value, valuation, startDate} = finance;
     const classes = useStyles();
