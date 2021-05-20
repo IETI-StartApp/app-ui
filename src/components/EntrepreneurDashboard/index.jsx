@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 import { Dashboard } from '../Dashboard/index';
 import { ProjectsChart } from './ProjectsChart';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import CheckIcon from '@material-ui/icons/Check';
+import { Fab } from '@material-ui/core/';
+import { ChatBotContainer } from '../ChatBot/ChatBotContainer';
+import { useStyles } from './styles';
+import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 
 export const EntrepreneurDashboard = () => {
     const items = [
@@ -15,23 +19,35 @@ export const EntrepreneurDashboard = () => {
     ];
     const projects = [
         {
-            name: "Proyecto 1", 
-            image:"https://www.binarias.org/wp-content/uploads/2020/12/tegnologia.jpeg", 
-            finance: { value:15000000, valuation:20000000, startDate: "10/03/2021"}
+            name: "Proyecto 1",
+            image: "https://www.binarias.org/wp-content/uploads/2020/12/tegnologia.jpeg",
+            finance: { value: 15000000, valuation: 20000000, startDate: "10/03/2021" }
         },
         {
-            name: "Proyecto 2", 
-            image:"https://s3-us-west-2.amazonaws.com/wp-mpro-blog/wp-content/uploads/2016/03/14133959/s3-blog-tecnologia-como-prioridad-min.png", 
-            finance: { value:10000000, valuation:17500000, startDate: "12/02/2021"},
+            name: "Proyecto 2",
+            image: "https://s3-us-west-2.amazonaws.com/wp-mpro-blog/wp-content/uploads/2016/03/14133959/s3-blog-tecnologia-como-prioridad-min.png",
+            finance: { value: 10000000, valuation: 17500000, startDate: "12/02/2021" },
         },
         {
-            name: "Proyecto 3", 
-            image:"https://thelogisticsworld.com/wp-content/uploads/2020/02/empresario-analizando-informe-financiero-empresa-graficos-realidad-aumentada_34141-360.jpg", 
-            finance: { value:8000000, valuation:12000000, startDate: "21/01/2021"},
+            name: "Proyecto 3",
+            image: "https://thelogisticsworld.com/wp-content/uploads/2020/02/empresario-analizando-informe-financiero-empresa-graficos-realidad-aumentada_34141-360.jpg",
+            finance: { value: 8000000, valuation: 12000000, startDate: "21/01/2021" },
         },
     ];
 
+    const [chatOpen, setChatOpen] = useState(true);
+    const classes = useStyles();
+    const handleDrawerToggle = () => {
+        setChatOpen(!chatOpen);
+    };
+
     return (
+        <>
         <Dashboard items={ items } projects={ projects } chart={ <ProjectsChart /> } projectsTitle={ "Mis proyectos" } chartTitle={ "Mis proyectos: porcentaje financiado" } />
+        <Fab aria-label="Chat" className={classes.fab} onClick={() => handleDrawerToggle()}>
+            <ChatBubbleOutlineIcon />
+        </Fab>
+        <ChatBotContainer open={chatOpen} onClose={handleDrawerToggle}/>
+        </>
     );
 }

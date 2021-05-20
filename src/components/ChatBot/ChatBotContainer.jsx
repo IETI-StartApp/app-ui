@@ -2,11 +2,15 @@ import React from 'react'
 import ChatBot from 'react-simple-chatbot';
 import { Link } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components';
-import { Grid } from '@material-ui/core';
-import { ButtonDesign} from "./styleChatBot";
-export const ChatBotContainer = () => {
+import { Grid, Drawer, Divider, IconButton } from '@material-ui/core';
+import { ButtonDesign } from "./styleChatBot";
+import { useStyles } from './styleChatBot';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+
+export const ChatBotContainer = ({ onClose, open }) => {
   const theme = {
-    
+
     background: '#f5f8fb',
     fontFamily: 'Helvetica Neue',
     headerBgColor: '#950740',
@@ -30,7 +34,7 @@ export const ChatBotContainer = () => {
         { value: 1, label: 'Ver Proyectos', trigger: '3' },
         { value: 2, label: 'Ver mis proyectos', trigger: '4' },
         { value: 4, label: 'Agregar Proyecto', trigger: '5' },
-       
+
       ],
     },
     {
@@ -66,20 +70,35 @@ export const ChatBotContainer = () => {
       ),
       end: true,
     },
-  ]
+  ];
+  const classes = useStyles();
+
   return (
-    <div>
-      <Grid container
-                direction="row"
-                justify="flex-end"
-                alignItems="stretch"
-                style={{ overflowY: "auto" }}>
-                  <ThemeProvider theme={theme}>
-        <ChatBot steps={steps} />;
-            </ThemeProvider>
-      </Grid>
-      
-    </div>
+    <Drawer
+      variant="persistent"
+      anchor="right"
+      open={open}
+      className={classes.drawer}
+    >
+      <div className={classes.offset}></div>
+      <div className={classes.drawerHeader}>
+        <IconButton onClick={onClose ? onClose : null}>
+          {theme.direction === 'rtl' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+        </IconButton>
+      </div>
+      <Divider />
+      <div className={classes.chatContainer}>
+        <Grid container
+          direction="row"
+          justify="flex-end"
+          alignItems="stretch"
+          style={{ overflowY: "auto" }}>
+          <ThemeProvider theme={theme}>
+            <ChatBot steps={steps} />;
+                  </ThemeProvider>
+        </Grid>
+      </div>
+    </Drawer>
   )
 }
 
