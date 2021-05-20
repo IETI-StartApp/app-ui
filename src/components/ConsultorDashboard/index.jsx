@@ -1,21 +1,20 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState} from 'react';
 import Navigation from '../Navbar/Navigation';
 import { TicketCard } from '../Support/TicketCard';
 import { useStyles } from './styles';
 import { Grid } from '@material-ui/core/';
 import {getAllTickets} from '../../services/ticketServices'
 import {Auth} from "../../authServices/firebase-config";
-export const ConsultorDashboard = ({testing, objects}) => {
+export const ConsultorDashboard = () => {
     const classes = useStyles();
     const [allTickets, setTickets] = useState([]);
-    useEffect(() => {
+    React.useEffect(() => {
         async function fetchTickets(){
-            const receivedTickets = testing?objects : await getAllTickets();
+            const receivedTickets = await getAllTickets();
             setTickets(receivedTickets);
         }
         fetchTickets();
-    }, [allTickets,testing,objects]);
-
+    }, [allTickets]);
     return (
         <>
             <Navigation />
