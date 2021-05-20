@@ -20,6 +20,22 @@ describe('ticket services test', () => {
         const receptor = await getAllReceptor();
         expect(receptor.user).toBe("test");
     });
+    test('should not return receptors', async() => {
+        window.fetch.mockResolvedValueOnce({
+            ok: false,
+            json: async () => ({error: "error"}),
+        })
+        const receptor = await getAllReceptor();
+        expect(receptor).toBe(null);
+    });
+    test('should not return tickets', async() => {
+        window.fetch.mockResolvedValueOnce({
+            ok: false,
+            json: async () => ({error: "error"}),
+        })
+        const ticket = await getAllTickets();
+        expect(ticket).toBe(null);
+    });
 })
 
 
