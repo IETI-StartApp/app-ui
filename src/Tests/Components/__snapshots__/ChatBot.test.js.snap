@@ -4,6 +4,7 @@ exports[`Testing comment page should render comment page 1`] = `
 <WithStyles(ForwardRef(Drawer))
   anchor="right"
   className="makeStyles-drawer-1"
+  open={true}
   variant="persistent"
 >
   <div
@@ -11,7 +12,7 @@ exports[`Testing comment page should render comment page 1`] = `
   />
   <div>
     <WithStyles(ForwardRef(IconButton))
-      onClick={null}
+      onClick={[MockFunction]}
     >
       <Memo([object Object]) />
     </WithStyles(ForwardRef(IconButton))>
