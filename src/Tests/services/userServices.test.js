@@ -23,6 +23,4 @@ describe('Test user services', () => {
         expect(user).toBe(null);
     });
 
-    
-
 })

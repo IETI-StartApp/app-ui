@@ -12,7 +12,6 @@ export const CompleteInfo = () => {
     return (
         <ThemeProvider theme={globalTheme}>
             <InfoModal open={openModal} userEmail={currentUser.email} firstNameU={firstNameU} />    
-        </ThemeProvider>
-            
+        </ThemeProvider>    
     )
 }
