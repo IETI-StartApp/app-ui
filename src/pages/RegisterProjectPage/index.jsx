@@ -11,7 +11,7 @@ import {ThemeProvider} from "@material-ui/core/styles";
 import globalTheme from "../../globalTheme";
 import Navigation from "../../components/Navbar/Navigation";
 import {useAuth} from "../../authServices/Auth";
-import {postProject} from "../../services/userServices";
+import {postProject} from "../../services/projectServices";
 
 const useStyles = makeStyles({
     root: {
