@@ -4,6 +4,7 @@ import { Grid, TextField } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import "./styleComment.js";
 import { ButtonDesign, FormDesign } from "./styleComment";
+import { ShowCardComment } from '../ShowCommentCard/ShowCardComment.jsx';
 
 
 
@@ -19,6 +20,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const Comment = () => {
+    const [showText, setShowText] = useState(false);
+    const onClick = () => setShowText(true);
 
     const classes = useStyles();
     const [values, setValues] = useState({
@@ -33,14 +36,14 @@ export const Comment = () => {
             ...values, [e.target.name]: e.target.value
         })
     }
-    
+
     const handleSubmit = (event) => {
         event.preventDefault();
-        
+        console.log(qualifier, values.data, values.author)
     }
     const ratingChanged = (e, newRating) => {
         setQualifier(newRating);
-        
+
     };
     return (
         <div className="comment-box">
@@ -72,18 +75,26 @@ export const Comment = () => {
                                     rows={4}
                                     defaultValue="Default Value"
                                     required name="data" value={values.data} onChange={handleChange}
-                                />                                
+                                />
                             </div>
                             <div className="comment-form-actions">
                                 <ButtonDesign className="button" type="submit">
                                     ¡Comentar!
                         </ButtonDesign>
+
                             </div>
                             <h2>Tus comentarios ayudaran a la mejora del proyecto!</h2>
                         </Grid>
+                        <div>
+                            <ButtonDesign onClick={onClick}>Mostrar Comentarios</ButtonDesign>
+
+                        </div>
                     </FormDesign>
                 </Grid>
+
             </Grid>
+            <br />
+            {showText ? <ShowCardComment author={values.author} comment={values.data} qualifier={qualifier} /> : null}
         </div>
     )
 }
