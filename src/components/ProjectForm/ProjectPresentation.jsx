@@ -46,7 +46,8 @@ export const ProjectPresentation = ({formValues, handleChange, handleNext}) => {
                                     onChange={handleChange}
                                     InputProps={{
                                         startAdornment: <InputAdornment
-                                            position="start"><span role="img" aria-label={""}>🎥</span></InputAdornment>,
+                                            position="start"><span role="img"
+                                                                   aria-label={""}>🎥</span></InputAdornment>,
                                     }}
                                 />
                             </Grid>

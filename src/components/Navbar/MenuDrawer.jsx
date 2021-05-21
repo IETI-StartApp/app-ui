@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Drawer} from '@material-ui/core/';
+import Drawer from '@material-ui/core/Drawer';
 import {useStyles} from './styles';
 import MenuItems from './MenuItems';
 import {useAuth} from "../../authServices/Auth";
@@ -20,7 +20,7 @@ export default function MenuDrawer({open, onClose, variant}) {
 
         fetchUser();
     }, [role])
-    console.log(role)
+
     return (
         <Drawer
             className={classes.drawer}
